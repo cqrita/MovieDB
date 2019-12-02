@@ -1,13 +1,14 @@
 package com.example.MovieDB;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
+import android.widget.SearchView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 import com.mancj.materialsearchbar.MaterialSearchBar;
@@ -16,9 +17,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements MaterialSearchBar.OnSearchActionListener, NavigationView.OnNavigationItemSelectedListener {
     private List<String> lastSearches;
-    private MaterialSearchBar searchBar;
     private DrawerLayout drawer;
-
+    private SearchView searchBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,12 +26,7 @@ public class MainActivity extends AppCompatActivity implements MaterialSearchBar
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        searchBar = (MaterialSearchBar) findViewById(R.id.searchBar);
-        searchBar.setHint("Custom hint");
-        searchBar.setSpeechMode(true);
-        //enable searchbar callbacks
-        searchBar.setOnSearchActionListener(this);
-        //restore last queries from disk
+
 
 
 
