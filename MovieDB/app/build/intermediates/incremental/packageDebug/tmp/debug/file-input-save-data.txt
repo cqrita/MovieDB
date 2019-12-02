@@ -1,0 +1,19 @@
+#Internal package file, do not edit.
+#Tue Dec 03 00:21:29 KST 2019
+1.base=D\:\\Users\\user\\gitProjects\\MovieDB\\MovieDB\\app\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+2.path=classes.dex
+0.baseType=DIRECTORY
+3.baseType=DIRECTORY
+2.base=D\:\\Users\\user\\gitProjects\\MovieDB\\MovieDB\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+3.set=ASSET
+2.set=DEX
+1.baseType=DIRECTORY
+3.path=movie.db
+count=4
+1.set=ASSET
+0.path=fonts/materialdrawerfont.ttf
+3.base=D\:\\Users\\user\\gitProjects\\MovieDB\\MovieDB\\app\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+0.set=ASSET
+0.base=D\:\\Users\\user\\gitProjects\\MovieDB\\MovieDB\\app\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+2.baseType=DIRECTORY
+1.path=fonts/fontawesome-webfont-4.4.0.ttf
