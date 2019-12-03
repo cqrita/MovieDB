@@ -1,34 +1,33 @@
 package com.example.MovieDB;
 
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.widget.SearchView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
-import com.mancj.materialsearchbar.MaterialSearchBar;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements MaterialSearchBar.OnSearchActionListener, NavigationView.OnNavigationItemSelectedListener {
+import butterknife.BindView;
+
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private List<String> lastSearches;
     private DrawerLayout drawer;
+    @BindView(R.id.Msearchbar)
     private SearchView searchBar;
+    @BindView(R.id.fragment)
+    private Fragment fragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
-
-
+        searchBar= new SearchBar(this);
 
     }
     @Override
@@ -38,26 +37,7 @@ public class MainActivity extends AppCompatActivity implements MaterialSearchBar
 
     }
 
-    @Override
-    public void onSearchStateChanged(boolean enabled) {
-        String s = enabled ? "enabled" : "disabled";
-        Toast.makeText(MainActivity.this, "Search " + s, Toast.LENGTH_SHORT).show();
-    }
 
-    @Override
-    public void onSearchConfirmed(CharSequence text) {
-        startSearch(text.toString(), true, null, true);
-    }
-
-    @Override
-    public void onButtonClicked(int buttonCode) {
-        switch (buttonCode){
-            case MaterialSearchBar.BUTTON_NAVIGATION:
-                drawer.openDrawer(Gravity.LEFT);
-                break;
-            case MaterialSearchBar.BUTTON_SPEECH:
-        }
-    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {

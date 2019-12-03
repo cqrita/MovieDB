@@ -47,9 +47,6 @@ public class MovieDetailFragment extends Fragment
     TextView overview;
     @BindView(R.id.favorite)
     FloatingActionButton favorite;
-    @BindView(R.id.toolbar)
-    @Nullable
-    Toolbar toolbar;
     private Movie movie;
     private Unbinder unbinder;
     @BindView(R.id.list_cast)
@@ -58,6 +55,7 @@ public class MovieDetailFragment extends Fragment
     private RecyclerView trailerAdapter;
     @BindView(R.id.list_reviews)
     private RecyclerView reviewAdapter;
+
 
     public MovieDetailFragment()
     {
@@ -115,7 +113,6 @@ public class MovieDetailFragment extends Fragment
     public void setView(MovieDetailFragment view) {
         this.view = view;
     }
-
 
 
     public void showDetails(Movie movie)
