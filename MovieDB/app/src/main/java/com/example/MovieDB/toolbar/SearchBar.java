@@ -1,6 +1,7 @@
 package com.example.MovieDB.toolbar;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.Spinner;
@@ -16,6 +17,8 @@ public class SearchBar extends RelativeLayout {
     private Spinner spinner;
     public SearchBar(Context context) {
         super(context);
+        LayoutInflater inflater =(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater.inflate(R.layout.searchbar,this,true);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -28,4 +31,5 @@ public class SearchBar extends RelativeLayout {
             }
         });
     }
+
 }

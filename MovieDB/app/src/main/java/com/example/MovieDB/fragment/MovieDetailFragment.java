@@ -56,7 +56,6 @@ public class MovieDetailFragment extends Fragment
     @BindView(R.id.list_reviews)
     private RecyclerView reviewAdapter;
 
-
     public MovieDetailFragment()
     {
         // Required empty public constructor
