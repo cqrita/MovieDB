@@ -2,50 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d9b9d3e-3929-40ce-9bfa-c2b0beff6898" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MovieDB/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/androidTest/java/com/example/recyclerviewpractice/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/java/com/example/recyclerviewpractice/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/test/java/com/example/recyclerviewpractice/ExampleUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/java/com/example/recyclerviewpractice/MyAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/layout/holder_view.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/fragment/FavoriteFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/fragment/FavoriteFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecyclerViewPractice/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/java/com/example/recyclerviewpractice/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/java/com/example/recyclerviewpractice/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RecyclerViewPractice/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecyclerViewPractice/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/RecyclerViewPractice/build.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +32,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
@@ -78,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MovieDB/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+            <state relative-caret-position="450">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -325,6 +288,14 @@
       <option name="presentableId" value="Default" />
       <updated>1575022220412</updated>
     </task>
+    <task id="LOCAL-00001" summary="RecyclerView">
+      <created>1575591408582</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575591408582</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -350,6 +321,22 @@
       <window_info anchor="right" id="Assistant" order="3" visible="true" weight="0.3336887" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="RecyclerView" />
+    <option name="LAST_COMMIT_MESSAGE" value="RecyclerView" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MovieDB/build.gradle</url>
+          <line>7</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.github/workflows/android.yml" />
     <entry file="file://$PROJECT_DIR$/MovieDB/app/build.gradle">
@@ -361,13 +348,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/data/MovieParser.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/fragment/MovieDetailFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/fragment/FavoriteFragment.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -383,17 +363,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MovieDB/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/fragment/MovieDetailFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MovieDB/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
         </state>
       </provider>
     </entry>
