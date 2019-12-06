@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8a5fec54-07d1-41c7-9ddd-d69232214a91" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;MovieDB/.gradle/5.4.1/executionHistory/executionHistory.bin&#10;#&#9;MovieDB/.gradle/5.4.1/executionHistory/executionHistory.lock&#10;#&#9;MovieDB/.gradle/5.4.1/fileHashes/fileHashes.bin&#10;#&#9;MovieDB/.gradle/5.4.1/fileHashes/fileHashes.lock&#10;#&#9;MovieDB/.gradle/buildOutputCleanup/buildOutputCleanup.lock&#10;#&#9;MovieDB/.gradle/buildOutputCleanup/outputFiles.bin&#10;#&#9;MovieDB/.idea/caches/build_file_checksums.ser&#10;#&#9;MovieDB/.idea/caches/gradle_models.ser&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_core_core_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_fragment_fragment_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_transition_transition_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_github_mancj_MaterialSearchBar_0_8_2_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_jakewharton_butterknife_8_5_1_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_melnykov_floatingactionbutton_1_3_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_mikepenz_fontawesome_typeface_4_4_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_mikepenz_iconics_core_1_7_5_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_mikepenz_materialdrawer_4_0_5_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_mikepenz_materialize_0_2_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_yqritc_recyclerview_flexibledivider_1_2_5_aar.xml&#10;#&#9;MovieDB/app/app.iml&#10;#&#9;MovieDB/app/build/outputs/logs/manifest-merger-debug-report.txt">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/FavoriteFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/FavoriteFragment.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3_API_23" />
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8a5fec54-07d1-41c7-9ddd-d69232214a91" name="Default Changelist" comment="" />
+      <created>1575359468556</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575359468556</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.3297568" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Build Variants" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Logcat" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Build" visible="true" weight="0.32891566" />
+      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Gradle" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;MovieDB/.gradle/5.4.1/executionHistory/executionHistory.bin&#10;#&#9;MovieDB/.gradle/5.4.1/executionHistory/executionHistory.lock&#10;#&#9;MovieDB/.gradle/5.4.1/fileHashes/fileHashes.bin&#10;#&#9;MovieDB/.gradle/5.4.1/fileHashes/fileHashes.lock&#10;#&#9;MovieDB/.gradle/buildOutputCleanup/buildOutputCleanup.lock&#10;#&#9;MovieDB/.gradle/buildOutputCleanup/outputFiles.bin&#10;#&#9;MovieDB/.idea/caches/build_file_checksums.ser&#10;#&#9;MovieDB/.idea/caches/gradle_models.ser&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_core_core_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_fragment_fragment_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_transition_transition_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_github_mancj_MaterialSearchBar_0_8_2_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_jakewharton_butterknife_8_5_1_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_melnykov_floatingactionbutton_1_3_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_mikepenz_fontawesome_typeface_4_4_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_mikepenz_iconics_core_1_7_5_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_mikepenz_materialdrawer_4_0_5_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_mikepenz_materialize_0_2_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_yqritc_recyclerview_flexibledivider_1_2_5_aar.xml&#10;#&#9;MovieDB/app/app.iml&#10;#&#9;MovieDB/app/build/outputs/logs/manifest-merger-debug-report.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;MovieDB/.gradle/5.4.1/executionHistory/executionHistory.bin&#10;#&#9;MovieDB/.gradle/5.4.1/executionHistory/executionHistory.lock&#10;#&#9;MovieDB/.gradle/5.4.1/fileHashes/fileHashes.bin&#10;#&#9;MovieDB/.gradle/5.4.1/fileHashes/fileHashes.lock&#10;#&#9;MovieDB/.gradle/buildOutputCleanup/buildOutputCleanup.lock&#10;#&#9;MovieDB/.gradle/buildOutputCleanup/outputFiles.bin&#10;#&#9;MovieDB/.idea/caches/build_file_checksums.ser&#10;#&#9;MovieDB/.idea/caches/gradle_models.ser&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_core_core_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_fragment_fragment_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_transition_transition_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_github_mancj_MaterialSearchBar_0_8_2_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_jakewharton_butterknife_8_5_1_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_melnykov_floatingactionbutton_1_3_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_mikepenz_fontawesome_typeface_4_4_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_mikepenz_iconics_core_1_7_5_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_mikepenz_materialdrawer_4_0_5_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_mikepenz_materialize_0_2_0_aar.xml&#10;#&#9;MovieDB/.idea/libraries/Gradle__com_yqritc_recyclerview_flexibledivider_1_2_5_aar.xml&#10;#&#9;MovieDB/app/app.iml&#10;#&#9;MovieDB/app/build/outputs/logs/manifest-merger-debug-report.txt" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/data/MovieParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/data/Movie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="127" column="32" lean-forward="true" selection-start-line="127" selection-start-column="32" selection-end-line="127" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/MapFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/MovieDetailFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/MovieListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/SearchFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/FavoriteFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

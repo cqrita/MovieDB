@@ -36,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
         searchBar= new SearchBar(this);
         menuBar =new MenuBar(this);
         menuBar.getMenu();
+
+
+        //승록
+        
+
     }
     @Override
     protected void onDestroy() {
