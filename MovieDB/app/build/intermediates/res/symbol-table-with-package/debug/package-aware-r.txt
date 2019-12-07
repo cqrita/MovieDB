@@ -1623,6 +1623,7 @@ id card_trailer
 id center
 id center_horizontal
 id center_vertical
+id cgv
 id chains
 id checkbox
 id chronometer

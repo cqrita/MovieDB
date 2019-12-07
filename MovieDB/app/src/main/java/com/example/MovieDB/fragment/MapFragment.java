@@ -26,6 +26,7 @@ import androidx.fragment.app.FragmentActivity;
 import com.example.MovieDB.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -42,17 +43,17 @@ import java.io.OutputStream;
 import butterknife.BindView;
 
 
-public class MapFragment extends FragmentActivity implements OnMapReadyCallback {
-    @BindView(R.id.theater_name)
-    TextView theater_name;
+public class MapFragment extends Fragment implements OnMapReadyCallback {
+
     String theaterCode;
     LatLng location;
     String markerTitle;
     String markerId;
+    private MapView mapView = null;
 
     private void setDB(Context ctx) {
         AssetManager assetManager = ctx.getResources().getAssets();
-        File dbFile = getDatabasePath("theater.db");
+        File dbFile = ctx.getDatabasePath("theater.db");
 //        File outfile = new File("movie.db");
         InputStream is = null;
         FileOutputStream fo = null;
@@ -102,16 +103,7 @@ public class MapFragment extends FragmentActivity implements OnMapReadyCallback 
         super();
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.mapview);
 
-        // SupportMapFragment을 통해 레이아웃에 만든 fragment의 ID를 참조하고 구글맵을 호출한다.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this); //getMapAsync must be called on the main thread.
-
-    }
 
     @Override
     //구글맵을 띄울 준비가 되었으면 자동 호출
@@ -123,6 +115,17 @@ public class MapFragment extends FragmentActivity implements OnMapReadyCallback 
         manyMarker();
     }
 
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.mapview, container, false);
+        mapView = (MapView)rootView.findViewById(R.id.map);
+        mapView.onCreate(savedInstanceState);
+        mapView.onResume();
+        mapView.getMapAsync(this); // 비동기적 방식으로 구글 맵 실행
+        return rootView;
+
+    }
     //마커하나찍는 기본 예제
 
     /*
@@ -169,8 +172,8 @@ public class MapFragment extends FragmentActivity implements OnMapReadyCallback 
     ////////////////////////  구글맵 마커 여러개생성 및 띄우기 //////////////////////////
     public void manyMarker() {
 
-        setDB(this);
-        ProductDBHelper mHelper = new ProductDBHelper(this);
+        setDB(getActivity());
+        ProductDBHelper mHelper = new ProductDBHelper(getActivity());
         SQLiteDatabase db = mHelper.getWritableDatabase();
 
 
@@ -212,7 +215,7 @@ public class MapFragment extends FragmentActivity implements OnMapReadyCallback 
         @Override
         public void onInfoWindowClick(Marker marker) {
             String markerId = marker.getId();
-            Toast.makeText(MapFragment.this, "정보창 클릭 Marker ID : "+markerId, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "정보창 클릭 Marker ID : "+markerId, Toast.LENGTH_SHORT).show();
             theaterCode = marker.getSnippet();
             mWebView.loadUrl("http://section.cgv.co.kr/theater/timetable/Default.aspx?code="+theaterCode);
         }
@@ -226,7 +229,7 @@ public class MapFragment extends FragmentActivity implements OnMapReadyCallback 
             //선택한 타겟위치
             location = marker.getPosition();
             markerTitle = marker.getTitle();
-            Toast.makeText(MapFragment.this, "마커 클릭 Marker ID : "+markerId+"("+location.latitude+" "+location.longitude+")", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "마커 클릭 Marker ID : "+markerId+"("+location.latitude+" "+location.longitude+")", Toast.LENGTH_SHORT).show();
             theaterCode = marker.getSnippet();
             return false;
         }
@@ -238,10 +241,9 @@ public class MapFragment extends FragmentActivity implements OnMapReadyCallback 
     private WebView mWebView;
     private WebSettings mWebSettings;
 
-    protected void onCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-
-        mWebView = (WebView)findViewById(R.id.cgv);
+        mWebView = (WebView) mWebView.findViewById(R.id.cgv);
         mWebView.setWebViewClient(new WebViewClient());
         mWebSettings = mWebView.getSettings();
         mWebSettings.setJavaScriptEnabled(true);

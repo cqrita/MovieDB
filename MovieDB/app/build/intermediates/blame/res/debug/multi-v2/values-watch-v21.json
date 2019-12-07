@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Sujin_Kim\\AndroidStudioProjects\\MovieDB\\MovieDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v21\\values-watch-v21.xml",
+            "outputFile": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v21\\values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Sujin_Kim\\.gradle\\caches\\transforms-2\\files-2.1\\b7f8713f1d26f9d3941fd68837ae72d6\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\8d42cc561e8b8b8064355721884550b0\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

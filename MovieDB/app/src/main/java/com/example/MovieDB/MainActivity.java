@@ -23,7 +23,11 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import com.example.MovieDB.fragment.MapFragment;
 import com.google.android.material.navigation.NavigationView;
 import com.mancj.materialsearchbar.MaterialSearchBar;
 
@@ -31,9 +35,9 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity  {
-    private List<String> lastSearches;
-    private DrawerLayout drawer;
-    private SearchView searchBar;
+    private FragmentManager fragmentManager;
+    private FragmentTransaction transaction;
+    private MapFragment mapFragment;
     LocationManager locationManager;
     Location recentlocation;
     double latitude;
@@ -77,6 +81,10 @@ public class MainActivity extends AppCompatActivity  {
                 requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 12345);  //request하기
             }
         }
+        fragmentManager = getSupportFragmentManager();
+        mapFragment=new MapFragment();
+        transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.fragment, mapFragment);
     }
 
 

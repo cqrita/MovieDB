@@ -7,14 +7,10 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <com.mancj.materialsearchbar.MaterialSearchBar
-        style="@style/MaterialSearchBarLight"
-        app:mt_speechMode="true"
-        app:mt_hint="Custom hint"
-        app:mt_maxSuggestionsCount="10"
+    <fragment
+        android:id="@+id/fragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/searchBar" />
+        android:layout_height="match_parent"/>
 
 
 
