@@ -14,12 +14,9 @@ public class Movie implements Parcelable {
     private List<Review> reviewList;
     private String id;
     private String overview;
-    @Json(name = "release_date")
     private String releaseDate;
-    @Json(name = "poster_path")
     private String posterPath;
     private String title;
-    @Json(name = "vote_average")
     private double voteAverage;
 
     public String getId() {

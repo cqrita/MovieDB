@@ -1,6 +1,7 @@
 package com.example.MovieDB.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,69 +20,57 @@ import java.util.ArrayList;
 
 /**
  * @author arun
- */
-public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.MyViewHolder >{
-    private ArrayList movieList;
-    private Context context;
+ */public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.RecyclerViewHolders>{
 
-    public MovieListAdapter (Context context, ArrayList movieList){
-        this.context = context;
-        this.movieList = movieList;
+    private ArrayList<Movie> mMovieList;
+    private LayoutInflater mInflate;
+    private Context mContext;
+
+    //constructor
+    public MovieListAdapter(Context context, ArrayList<Movie> itemList) {
+        this.mContext = context;
+        this.mInflate = LayoutInflater.from(context);
+        this.mMovieList = itemList;
     }
 
-
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
-        public ImageView moviePoster;
-        public TextView movieName;
-
-        public MyViewHolder(View view) {
-            super(view);
-            this.moviePoster = view.findViewById(R.id.movie_poster);
-            this.movieName = view.findViewById(R.id.movie_title);
-        }
-
-
-//            implements View.OnClickListener {
-//        @BindView(R.id.movie_poster)
-//        ImageView poster;
-//        @BindView(R.id.movie_name)
-//        TextView name;
-//
-//        public Movie movie;
-//
-//        public ViewHolder(View root) {
-//            super(root);
-//            ButterKnife.bind(this, root);
-//        }
-//
-//        @Override
-//        public void onClick(View view) {
-//            MovieListAdapter.this.view.onMovieClicked(movie);
-//        }
-//        }
-//
-//        public MovieListAdapter(List<Movie> movies) {
-//            this.movies = movies;
-//        }
-        }
+    @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        Context context = viewGroup.getContext();
-        View holderView= LayoutInflater.from(context).inflate(R.layout.movie_item, viewGroup,
-                false);
-        return new MyViewHolder(holderView);
+    public RecyclerViewHolders onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        Log.d("www","www1");
+        View view = mInflate.inflate(R.layout.movie_item, parent, false);
+        return new RecyclerViewHolders(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
-        Movie movie = (Movie) movieList.get(i);
-        Glide.with(context).load("https://image.tmdb.org/t/p/"+movie.getPosterPath()).into(myViewHolder.moviePoster);
-        myViewHolder.movieName.setText(movie.getTitle());
+    public void onBindViewHolder(@NonNull RecyclerViewHolders holder, int position) {
+
+        //포스터만 출력하자.
+        String url = "https://image.tmdb.org/t/p/w500" + mMovieList.get(position).getPosterPath();
+        Glide.with(mContext)
+                .load(url)
+                .centerCrop()
+                .crossFade()
+                .error(R.drawable.ic_launcher_background)
+                .into(holder.imageView);
+        holder.textView.setText(mMovieList.get(position).getTitle());
     }
 
     @Override
     public int getItemCount() {
-        return movieList.size();
+        return this.mMovieList.size();
     }
-}
 
+
+    //뷰홀더 - 따로 클래스 파일로 만들어도 된다.
+    public static class RecyclerViewHolders extends RecyclerView.ViewHolder {
+        public ImageView imageView;
+        public TextView textView;
+        public RecyclerViewHolders(View itemView) {
+            super(itemView);
+            Log.d("www","www2");
+            imageView = (ImageView) itemView.findViewById(R.id.movie_poster);
+            textView = itemView.findViewById(R.id.movie_title);
+        }
+    }
+
+}

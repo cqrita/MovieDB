@@ -81,10 +81,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                SearchFragment search= new SearchFragment();
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.add(R.id.fragment, search);
-                ft.commit();
                 return false;
             }
         });
