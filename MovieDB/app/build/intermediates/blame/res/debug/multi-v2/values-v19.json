@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Users\\user\\gitProjects\\MovieDB\\MovieDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v19\\values-v19.xml",
+            "outputFile": "C:\\Users\\Sujin_Kim\\AndroidStudioProjects\\MovieDB\\MovieDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v19\\values-v19.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-2\\files-2.1\\37bb20549dbb9a5766b9eabd10c7bf1c\\res\\values-v19\\values-v19.xml",
+                    "source": "C:\\Users\\Sujin_Kim\\.gradle\\caches\\transforms-2\\files-2.1\\46aa6bee40ad88a9cdb98c0a3712786c\\res\\values-v19\\values-v19.xml",
                     "from": {
                         "startLines": "4,7,10,13,16,19,22",
                         "startColumns": "4,4,4,4,4,4,4",
