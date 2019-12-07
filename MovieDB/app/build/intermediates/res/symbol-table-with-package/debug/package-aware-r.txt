@@ -1553,7 +1553,6 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id favorite
-id favorite_recycler_view
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1566,7 +1565,6 @@ id ghost_view
 id group_divider
 id home
 id homeAsUp
-id home_recycler_view
 id icon
 id icon_group
 id ifRoom
@@ -1674,7 +1672,6 @@ id search_edit_frame
 id search_go_btn
 id search_mag_icon
 id search_plate
-id search_recycler_view
 id search_src_text
 id search_voice_btn
 id select_dialog_listview

@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/home_recycler_view"
-        android:scrollbars="vertical"
-        android:background="@android:color/transparent"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_orange_light"
+        android:text="Home"
+        android:textSize="50sp" />
 
-</FrameLayout>
+<!--    <android.support.v7.widget.RecyclerView-->
+<!--        android:id="@+id/home_recycler_view"-->
+<!--        android:scrollbars="vertical"-->
+<!--        android:background="@android:color/holo_blue_dark"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+
+</LinearLayout>
