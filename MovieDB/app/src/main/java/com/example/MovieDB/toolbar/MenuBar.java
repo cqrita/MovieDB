@@ -1,6 +1,7 @@
 package com.example.MovieDB.toolbar;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,7 @@ public class MenuBar extends LinearLayout {
     private int getMenu=1;
     public MenuBar(Context context) {
         super(context);
+        Log.d("a", "menubar");
         LayoutInflater inflater =(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.menubar,this,true);
         button1.setOnClickListener(new OnClickListener() {

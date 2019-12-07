@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Users\\user\\gitProjects\\MovieDB\\MovieDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+            "outputFile": "/Users/yoonseungrok/AndroidStudioProjects/MovieDB/MovieDB/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-2\\files-2.1\\37bb20549dbb9a5766b9eabd10c7bf1c\\res\\values-v11\\values-v11.xml",
+                    "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/5f5268d2e482b11e815002998da85f80/jetified-materialize-0.2.0/res/values-v11/values-v11.xml",
                     "from": {
                         "startLines": "4,10,14,19,25,29,38,43,47,51",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

@@ -430,6 +430,7 @@ attr radioButtonStyle
 attr ratingBarStyle
 attr ratingBarStyleIndicator
 attr ratingBarStyleSmall
+attr recyclerViewStyle
 attr reverseLayout
 attr rippleColor
 attr scrimAnimationDuration
@@ -1445,8 +1446,43 @@ id ALT
 id CTRL
 id FUNCTION
 id META
+id Mmenubar
+id Msearchbar
 id SHIFT
 id SYM
+id accessibility_action_clickable_span
+id accessibility_custom_action_0
+id accessibility_custom_action_1
+id accessibility_custom_action_10
+id accessibility_custom_action_11
+id accessibility_custom_action_12
+id accessibility_custom_action_13
+id accessibility_custom_action_14
+id accessibility_custom_action_15
+id accessibility_custom_action_16
+id accessibility_custom_action_17
+id accessibility_custom_action_18
+id accessibility_custom_action_19
+id accessibility_custom_action_2
+id accessibility_custom_action_20
+id accessibility_custom_action_21
+id accessibility_custom_action_22
+id accessibility_custom_action_23
+id accessibility_custom_action_24
+id accessibility_custom_action_25
+id accessibility_custom_action_26
+id accessibility_custom_action_27
+id accessibility_custom_action_28
+id accessibility_custom_action_29
+id accessibility_custom_action_3
+id accessibility_custom_action_30
+id accessibility_custom_action_31
+id accessibility_custom_action_4
+id accessibility_custom_action_5
+id accessibility_custom_action_6
+id accessibility_custom_action_7
+id accessibility_custom_action_8
+id accessibility_custom_action_9
 id action0
 id action_bar
 id action_bar_activity_content
@@ -1477,6 +1513,9 @@ id auto
 id beginning
 id blocking
 id bottom
+id button1
+id button2
+id button3
 id buttonPanel
 id cancel_action
 id card_trailer
@@ -1503,6 +1542,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id dialog_button
 id disableHome
 id edit_query
 id end
@@ -1513,12 +1553,14 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id favorite
+id favorite_recycler_view
 id fill
 id fill_horizontal
 id fill_vertical
 id filled
 id fixed
 id forever
+id fragment
 id frame
 id ghost_view
 id group_divider
@@ -1584,10 +1626,12 @@ id media_actions
 id message
 id middle
 id mini
+id movie_container
 id movie_description
 id movie_name
 id movie_poster
 id movie_rating
+id movie_title
 id movie_year
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
@@ -1621,7 +1665,7 @@ id scrollIndicatorUp
 id scrollView
 id scrollable
 id scrolling_container
-id searchBar
+id searchView
 id search_badge
 id search_bar
 id search_button
@@ -1630,6 +1674,7 @@ id search_edit_frame
 id search_go_btn
 id search_mag_icon
 id search_plate
+id search_recycler_view
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
@@ -1644,6 +1689,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spinner
 id split_action_bar
 id src_atop
 id src_in
@@ -1654,6 +1700,11 @@ id stretch
 id submenuarrow
 id submit_area
 id tabMode
+id tag_accessibility_actions
+id tag_accessibility_clickable_spans
+id tag_accessibility_heading
+id tag_accessibility_pane_title
+id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
@@ -1745,6 +1796,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout cast
+layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1781,6 +1833,7 @@ layout material_drawer_recycler_view
 layout material_drawer_slider
 layout materialize
 layout menubar
+layout movie_item
 layout moviedetails
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -2528,7 +2581,7 @@ styleable NavigationView android_background android_fitsSystemWindows android_ma
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
-styleable RecyclerView android_orientation android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
+styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrimInsetsView siv_insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop

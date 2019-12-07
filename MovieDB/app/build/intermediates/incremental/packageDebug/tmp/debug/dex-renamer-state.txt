@@ -1,4 +1,4 @@
-#Tue Dec 03 00:21:29 KST 2019
-base.0=D\:\\Users\\user\\gitProjects\\MovieDB\\MovieDB\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+#Sat Dec 07 17:47:54 KST 2019
+base.0=/Users/yoonseungrok/AndroidStudioProjects/MovieDB/MovieDB/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

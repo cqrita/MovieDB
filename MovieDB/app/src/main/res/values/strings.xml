@@ -11,4 +11,5 @@
     <string name="cast">cast</string>
     <string name="movieposter">MoviePoster</string>
     <string name="moviePoster">moviePoster</string>
+    <string name="favorite">Favorite</string>
 </resources>
