@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d9b9d3e-3929-40ce-9bfa-c2b0beff6898" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/app/app.iml" afterDir="false" />
-    </list>
+    <list default="true" id="8d9b9d3e-3929-40ce-9bfa-c2b0beff6898" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +22,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/data/Cast.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -341,47 +342,16 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.github/workflows/android.yml" />
-    <entry file="file://$PROJECT_DIR$/MovieDB/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/MovieDB/app/build.gradle" />
+    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/fragment/MovieDetailFragment.java" />
+    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/MainActivity.java" />
+    <entry file="file://$PROJECT_DIR$/MovieDB/build.gradle" />
+    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/res/layout/activity_main.xml" />
+    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/data/MovieParser.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/fragment/MovieDetailFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MovieDB/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/fragment/FavoriteFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/data/Movie.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/adapter/MovieListAdapter.java">
       <provider selected="true" editor-type-id="text-editor" />
@@ -401,14 +371,19 @@
     <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/data/TheaterParser.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/data/MovieParser.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/data/Movie.java">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/fragment/FavoriteFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/data/Cast.java">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

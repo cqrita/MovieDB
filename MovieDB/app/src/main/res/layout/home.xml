@@ -11,11 +11,11 @@
         android:text="Home"
         android:textSize="50sp" />
 
-<!--    <android.support.v7.widget.RecyclerView-->
-<!--        android:id="@+id/home_recycler_view"-->
-<!--        android:scrollbars="vertical"-->
-<!--        android:background="@android:color/holo_blue_dark"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"/>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_recycler_view"
+        android:scrollbars="vertical"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

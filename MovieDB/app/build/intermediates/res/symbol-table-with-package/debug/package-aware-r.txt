@@ -1565,6 +1565,7 @@ id ghost_view
 id group_divider
 id home
 id homeAsUp
+id home_recycler_view
 id icon
 id icon_group
 id ifRoom
