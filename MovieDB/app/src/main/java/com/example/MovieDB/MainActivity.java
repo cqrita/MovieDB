@@ -2,25 +2,17 @@ package com.example.MovieDB;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.SearchView;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-
 import com.example.MovieDB.fragment.FavoriteFragment;
 import com.example.MovieDB.fragment.HomeFragment;
 import com.example.MovieDB.fragment.SearchFragment;
 import com.example.MovieDB.toolbar.MenuBar;
 import com.example.MovieDB.toolbar.SearchBar;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.navigation.NavigationView;
 
 import java.util.List;
 
@@ -38,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("a", "MainActivity");
         super.onCreate(savedInstanceState);
+        Log.d("a", "MainActivity");
         setContentView(R.layout.activity_main);
         searchBar= new SearchBar(this);
         menuBar =new MenuBar(this);

@@ -1916,6 +1916,7 @@ string define_materialdrawer
 string define_materialize
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string favorite
 string hide_bottom_view_on_scroll_behavior
 string library_AndroidIconics_author
 string library_AndroidIconics_authorWebsite

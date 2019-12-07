@@ -81,9 +81,10 @@ public class HomeFragment extends Fragment {
         String[] textSet = new String[100];
         String[] imgSet = new String[100];
         // db 불러온 후
+        Log.d("start", "start");
 
-        setDB(getActivity());
-        ProductDBHelper mHelper = new ProductDBHelper(getActivity());
+        setDB(getContext());
+        ProductDBHelper mHelper = new ProductDBHelper(getContext());
         SQLiteDatabase db = mHelper.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM popular_movie", null); //쿼리문
         if(cursor.moveToFirst()){
