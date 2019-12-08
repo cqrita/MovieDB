@@ -1732,6 +1732,8 @@ id progress
 id progress_circular
 id progress_horizontal
 id radio
+id recommend
+id recommend_recycler_view
 id recycler_view
 id requestItem
 id right
@@ -1947,6 +1949,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout recommend
 layout review
 layout search
 layout searchbar
@@ -2008,6 +2011,7 @@ string define_materialize
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string favorite
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string library_AndroidIconics_author
 string library_AndroidIconics_authorWebsite

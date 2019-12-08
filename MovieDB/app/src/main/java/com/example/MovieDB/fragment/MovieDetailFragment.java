@@ -7,10 +7,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -45,6 +47,7 @@ public class MovieDetailFragment extends Fragment
     TextView releaseDate;
     TextView rating;
     TextView overview;
+    Button recommend;
     ArrayList<Trailer> trailerList =new ArrayList<>();
     ArrayList<Cast> castList =new ArrayList<>();
     ArrayList<Review> reviewList = new ArrayList<>();
@@ -101,6 +104,7 @@ public class MovieDetailFragment extends Fragment
                 releaseDate=view.findViewById(R.id.movie_year);
                 rating =view.findViewById(R.id.movie_rating);
                 overview= view.findViewById(R.id.movie_description);
+                recommend = view.findViewById(R.id.recommend);
                 Glide.with(getContext())
                         .load("https://image.tmdb.org/t/p/w500"+movie.getPoster_path())
                         .centerCrop()
@@ -110,6 +114,15 @@ public class MovieDetailFragment extends Fragment
                 releaseDate.setText(movie.getRelease_date());
                 rating.setText(String.valueOf(movie.getVote_average()));
                 overview.setText(movie.getOverview());
+                recommend.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        RecommendFragment recommendFragment =RecommendFragment.getInstance(String.valueOf(movie.getId()));
+                        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                        ft.replace(R.id.fragment, recommendFragment);
+                        ft.commit();
+                    }
+                });
                 TrailerAsyncTask trailerAsyncTask = new TrailerAsyncTask();
                 trailerAsyncTask.execute(movie.getId());
                 CastAsyncTask castAsyncTask = new CastAsyncTask();
