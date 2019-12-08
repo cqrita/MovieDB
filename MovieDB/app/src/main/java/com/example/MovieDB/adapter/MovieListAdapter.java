@@ -9,11 +9,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.MovieDB.R;
 import com.example.MovieDB.data.Movie;
+import com.example.MovieDB.fragment.MovieDetailFragment;
 
 import java.util.ArrayList;
 
@@ -23,29 +26,26 @@ import java.util.ArrayList;
  */public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.RecyclerViewHolders>{
 
     private ArrayList<Movie> mMovieList;
-    private LayoutInflater mInflate;
     private Context mContext;
 
     //constructor
     public MovieListAdapter(Context context, ArrayList<Movie> itemList) {
         this.mContext = context;
-        this.mInflate = LayoutInflater.from(context);
         this.mMovieList = itemList;
     }
 
     @NonNull
     @Override
     public RecyclerViewHolders onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        Log.d("www","www1");
-        View view = mInflate.inflate(R.layout.movie_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_item, parent, false);
         return new RecyclerViewHolders(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerViewHolders holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerViewHolders holder, final int position) {
 
         //포스터만 출력하자.
-        String url = "https://image.tmdb.org/t/p/w500" + mMovieList.get(position).getPosterPath();
+        String url = "https://image.tmdb.org/t/p/w500" + mMovieList.get(position).getPoster_path();
         Glide.with(mContext)
                 .load(url)
                 .centerCrop()
@@ -53,6 +53,14 @@ import java.util.ArrayList;
                 .error(R.drawable.ic_launcher_background)
                 .into(holder.imageView);
         holder.textView.setText(mMovieList.get(position).getTitle());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MovieDetailFragment movieDetailFragment = MovieDetailFragment.getInstance(mMovieList.get(position));
+                FragmentTransaction transaction = ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.fragment, movieDetailFragment).commitAllowingStateLoss();
+            }
+        });
     }
 
     @Override
@@ -72,5 +80,4 @@ import java.util.ArrayList;
             textView = itemView.findViewById(R.id.movie_title);
         }
     }
-
 }

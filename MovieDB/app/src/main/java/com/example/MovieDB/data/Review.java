@@ -4,38 +4,28 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Review implements Parcelable {
-    private String imageAuthor;
-    private String textAuthor;
-    private String textContent;
+    private String author;
+    private String content;
 
-    public String getImageAuthor() {
-        return imageAuthor;
+    public String getAuthor() {
+        return author;
     }
 
-    public String getTextAuthor() {
-        return textAuthor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
-    public String getTextContent() {
-        return textContent;
+    public String getContent() {
+        return content;
     }
 
-    public void setImageAuthor(String imageAuthor) {
-        this.imageAuthor = imageAuthor;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public void setTextAuthor(String textAuthor) {
-        this.textAuthor = textAuthor;
-    }
-
-    public void setTextContent(String textContent) {
-        this.textContent = textContent;
-    }
-
-    private Review(Parcel in) {
-        imageAuthor = in.readString();
-        textAuthor= in.readString();
-        textContent = in.readString();
+    protected Review(Parcel in) {
+        author = in.readString();
+        content = in.readString();
     }
 
     public static final Creator<Review> CREATOR = new Creator<Review>() {
@@ -57,8 +47,7 @@ public class Review implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(imageAuthor);
-        dest.writeString(textAuthor);
-        dest.writeString(textContent);
+        dest.writeString(author);
+        dest.writeString(content);
     }
 }

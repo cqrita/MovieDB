@@ -22,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private List<String> lastSearches;
     private DrawerLayout drawer;
     private Spinner spinner;
-
+    long first_time;
+    long second_time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,9 +62,9 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SearchFragment search= new SearchFragment();
+                SearchFragment search= SearchFragment.getInstance("Nothing");
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.add(R.id.fragment, search);
+                ft.replace(R.id.fragment, search);
                 ft.commit();
             }
         });
@@ -72,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 Toast.makeText(MainActivity.this,"Our word : ",Toast.LENGTH_SHORT).show();
-                SearchFragment search= new SearchFragment();
+                SearchFragment search= SearchFragment.getInstance(query);
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.add(R.id.fragment, search);
+                ft.replace(R.id.fragment, search);
                 ft.commit();
                 return false;
             }
@@ -92,5 +93,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        second_time = System.currentTimeMillis();
+        if(second_time - first_time < 2000){
+            super.onBackPressed();
+            finishAffinity();
+        }else{
+            HomeFragment homeFragment = new HomeFragment();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment, homeFragment).commitAllowingStateLoss();
+        }
+        first_time = System.currentTimeMillis();
+    }
 }
 

@@ -1,74 +1,83 @@
 package com.example.MovieDB.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.MovieDB.R;
 import com.example.MovieDB.data.Trailer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
 import java.util.List;
 
 /**
  * @author Yassin Ajdi.
  */
-public class TrailersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-    private Context context;
-    private VideoView videoTrailer;
-    private TextView trailerName;
-    private List<Trailer> trailerList;
-
-
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        private MyViewHolder(View view) {
+public class TrailersAdapter extends RecyclerView.Adapter<TrailersAdapter.RecyclerViewHolders>  {
+    public List<Trailer> trailerList;
+    public Context context;
+    public YouTubePlayerView videoTrailerView;
+    public com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer videoTrailer;
+    public class RecyclerViewHolders extends RecyclerView.ViewHolder {
+        public TextView trailerName;
+        private String currentVideoId;
+        public RecyclerViewHolders(View view) {
             super(view);
-            videoTrailer = view.findViewById(R.id.videoTrailer);
+            videoTrailerView = view.findViewById(R.id.videoTrailer);
             trailerName =view.findViewById(R.id.trailerName);
+            videoTrailerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
+                public void onReady(@NonNull YouTubePlayer initializedYouTubePlayer) {
+                    videoTrailer = initializedYouTubePlayer;
+                    videoTrailer.cueVideo(currentVideoId, 0);
+                }
+            });
+        }
+
+        void cueVideo(String videoId) {
+            currentVideoId = videoId;
+            if(videoTrailer == null)
+                return;
+            videoTrailer.cueVideo(videoId, 0);
         }
     }
+
 
     public TrailersAdapter(Context context, List<Trailer> trailerList) {
         this.trailerList = trailerList;
         this.context =context;
     }
 
+    public void setTrailerList(List<Trailer> trailerList) {
+        this.trailerList = trailerList;
+    }
+
+
+
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.trailer, parent, false);
-        return new TrailersAdapter.MyViewHolder(itemView);
+    public RecyclerViewHolders onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.trailer, parent, false);
+        return new RecyclerViewHolders(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        Trailer trailer = trailerList.get(position);
-        videoTrailer.setVideoPath("https://www.youtube.com/watch?v="+trailer.getKey());
-        final MediaController mediaController =
-                new MediaController(context);
-        videoTrailer.setMediaController(mediaController);
-        videoTrailer.start();
-        videoTrailer.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                mediaController.show(0);
-                videoTrailer.pause();
-            }
-        }, 100);
-        trailerName.setText(trailer.getTitle());
+    public void onBindViewHolder(@NonNull TrailersAdapter.RecyclerViewHolders holder, int position) {
+        final Trailer trailer = trailerList.get(position);
+        Log.d("trailer","https://www.youtube.com/watch?v="+trailer.getKey());
+        holder.cueVideo(trailerList.get(position).getKey());
+        holder.trailerName.setText(trailer.getName());
     }
 
     @Override
     public int getItemCount() {
-        return trailerList != null ? trailerList.size() : 0;
+        return trailerList.size();
     }
-
 }

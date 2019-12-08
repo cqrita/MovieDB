@@ -5,57 +5,47 @@ import android.os.Parcelable;
 
 public class Trailer implements Parcelable {
     private String id;
-    private String movieId;
     private String key;
     private String site;
-    private String title;
+    private String name;
 
     public String getId() {
         return id;
-    }
-
-    public String getMovieId() {
-        return movieId;
-    }
-
-    public String getKey() {
-        return key;
-    }
-
-    public String getSite() {
-        return site;
-    }
-
-    public String getTitle() {
-        return title;
     }
 
     public void setId(String id) {
         this.id = id;
     }
 
-    public void setMovieId(String movieId) {
-        this.movieId = movieId;
+    public String getKey() {
+        return key;
     }
 
     public void setKey(String key) {
         this.key = key;
     }
 
+    public String getSite() {
+        return site;
+    }
+
     public void setSite(String site) {
         this.site = site;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getName() {
+        return name;
     }
 
-    private Trailer(Parcel in) {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    protected Trailer(Parcel in) {
         id = in.readString();
-        movieId = in.readString();
         key = in.readString();
         site = in.readString();
-        title = in.readString();
+        name = in.readString();
     }
 
     public static final Creator<Trailer> CREATOR = new Creator<Trailer>() {
@@ -78,9 +68,8 @@ public class Trailer implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(id);
-        dest.writeString(movieId);
         dest.writeString(key);
         dest.writeString(site);
-        dest.writeString(title);
+        dest.writeString(name);
     }
 }

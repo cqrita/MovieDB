@@ -5,8 +5,10 @@ import android.os.Parcelable;
 
 public class Cast implements Parcelable {
     private String id;
-    private String actorName;
-    private String profileImagePath;
+    private String name;
+    private String profile_path;
+    private String order;
+    private String character;
 
     public String getId() {
         return id;
@@ -16,26 +18,44 @@ public class Cast implements Parcelable {
         this.id = id;
     }
 
-    public void setActorName(String actorName) {
-        this.actorName = actorName;
+    public String getName() {
+        return name;
     }
 
-    public void setProfileImagePath(String profileImagePath) {
-        this.profileImagePath = profileImagePath;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getActorName() {
-        return actorName;
+    public String getProfile_path() {
+        return profile_path;
     }
 
-    public String getProfileImagePath() {
-        return profileImagePath;
+    public void setProfile_path(String profile_path) {
+        this.profile_path = profile_path;
+    }
+
+    public String getOrder() {
+        return order;
+    }
+
+    public void setOrder(String order) {
+        this.order = order;
+    }
+
+    public String getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(String character) {
+        this.character = character;
     }
 
     protected Cast(Parcel in) {
         id = in.readString();
-        actorName = in.readString();
-        profileImagePath = in.readString();
+        name = in.readString();
+        profile_path = in.readString();
+        order = in.readString();
+        character = in.readString();
     }
 
     public static final Creator<Cast> CREATOR = new Creator<Cast>() {
@@ -58,7 +78,9 @@ public class Cast implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(id);
-        dest.writeString(actorName);
-        dest.writeString(profileImagePath);
+        dest.writeString(name);
+        dest.writeString(profile_path);
+        dest.writeString(order);
+        dest.writeString(character);
     }
 }

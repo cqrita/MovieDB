@@ -4,13 +4,11 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.MovieDB.R;
 import com.example.MovieDB.data.Review;
 
@@ -20,17 +18,15 @@ import java.util.List;
 public class ReviewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private List<Review> reviewList;
-    private ImageView imageAuthor;
-    private TextView textAuthor;
-    private TextView textContent;
+    private TextView author;
+    private TextView content;
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         private MyViewHolder(View view) {
             super(view);
-            imageAuthor = view.findViewById(R.id.imageAuthor);
-            textAuthor =view.findViewById(R.id.textAuthor);
-            textContent =view.findViewById(R.id.textContent);
+            author =view.findViewById(R.id.textAuthor);
+            content =view.findViewById(R.id.textContent);
         }
     }
 
@@ -50,12 +46,8 @@ public class ReviewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         Review review = reviewList.get(position);
-        Glide.with(context)
-                .load(review.getImageAuthor())
-                .dontAnimate()
-                .into(imageAuthor);
-        textAuthor.setText(review.getTextAuthor());
-        textContent.setText(review.getTextContent());
+        author.setText(review.getAuthor());
+        content.setText(review.getContent());
     }
 
     @Override

@@ -1,16 +1,15 @@
 package com.example.MovieDB.fragment;
 
 
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toolbar;
 
-import androidx.annotation.Nullable;
-import androidx.core.view.ViewCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,37 +24,34 @@ import com.example.MovieDB.data.Movie;
 import com.example.MovieDB.data.Review;
 import com.example.MovieDB.data.Trailer;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class MovieDetailFragment extends Fragment
 {
-    private MovieDetailFragment view;
-    @BindView(R.id.movie_poster)
+    Movie movie;
     ImageView poster;
-    @BindView(R.id.movie_name)
     TextView title;
-    @BindView(R.id.movie_year)
     TextView releaseDate;
-    @BindView(R.id.movie_rating)
     TextView rating;
-    @BindView(R.id.movie_description)
     TextView overview;
-    @BindView(R.id.favorite)
+    ArrayList<Trailer> trailerList =new ArrayList<>();
+    ArrayList<Cast> castList =new ArrayList<>();
+    ArrayList<Review> reviewList = new ArrayList<>();
     FloatingActionButton favorite;
-    private Movie movie;
-    private Unbinder unbinder;
-    @BindView(R.id.list_cast)
-    private RecyclerView castAdapter;
-    @BindView(R.id.list_trailers)
-    private RecyclerView trailerAdapter;
-    @BindView(R.id.list_reviews)
-    private RecyclerView reviewAdapter;
-
+    private RecyclerView castView;
+    private RecyclerView trailerView;
+    private RecyclerView reviewView;
     public MovieDetailFragment()
     {
         // Required empty public constructor
@@ -82,74 +78,194 @@ public class MovieDetailFragment extends Fragment
                              Bundle savedInstanceState)
     {
         View rootView = inflater.inflate(R.layout.moviedetails, container, false);
-        unbinder = ButterKnife.bind(this, rootView);
+        trailerView = rootView.findViewById(R.id.list_trailers);
+        trailerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
+        castView = rootView.findViewById(R.id.list_cast);
+        castView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
+        reviewView = rootView.findViewById(R.id.list_reviews);
+        reviewView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
         return rootView;
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState)
-    {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         if (getArguments() != null)
         {
             this.movie = (Movie) getArguments().get("movie");
+            Log.d("detail",movie.getTitle());
             if (movie != null) {
-                setView(this);
-                showDetails(movie);
-                if(movie.getCastList()!= null){
-                    setupCastAdapter(movie.getCastList());
-                }
-                if(movie.getReviewList() != null){
-                    setupReviewsAdapter(movie.getReviewList());
-                }
-                if(movie.getTrailerList()!= null){
-                    setupTrailersAdapter(movie.getTrailerList());
-                }
+                Log.d("detail",movie.getPoster_path());
+                poster = view.findViewById(R.id.movie_poster);
+                title =view.findViewById(R.id.movie_name);
+                releaseDate=view.findViewById(R.id.movie_year);
+                rating =view.findViewById(R.id.movie_rating);
+                overview= view.findViewById(R.id.movie_description);
+                Glide.with(getContext())
+                        .load("https://image.tmdb.org/t/p/w500"+movie.getPoster_path())
+                        .centerCrop()
+                        .crossFade()
+                        .into(poster);
+                title.setText(movie.getTitle());
+                releaseDate.setText(movie.getRelease_date());
+                rating.setText(String.valueOf(movie.getVote_average()));
+                overview.setText(movie.getOverview());
+                TrailerAsyncTask trailerAsyncTask = new TrailerAsyncTask();
+                trailerAsyncTask.execute(movie.getId());
+                CastAsyncTask castAsyncTask = new CastAsyncTask();
+                castAsyncTask.execute(movie.getId());
+                ReviewAsyncTask reviewAsyncTask = new ReviewAsyncTask();
+                reviewAsyncTask.execute(movie.getId());
             }
         }
     }
 
-    public void setView(MovieDetailFragment view) {
-        this.view = view;
+
+//    private void setupTrailersAdapter(List<Trailer> trailerList) {
+//        trailerAdapter.setLayoutManager(
+//                new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
+//        trailerAdapter.setHasFixedSize(true);
+//        trailerAdapter.setAdapter(new TrailersAdapter(getContext(),trailerList));
+//        ViewCompat.setNestedScrollingEnabled(trailerAdapter, false);
+//    }
+//
+//    private void setupCastAdapter(List<Cast> castList) {
+//        castAdapter.setLayoutManager(
+//                new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
+//        castAdapter.setAdapter(new CastAdapter(getContext(), castList));
+//        ViewCompat.setNestedScrollingEnabled(castAdapter, false);
+//    }
+//
+//    private void setupReviewsAdapter(List<Review> reviewList) {
+//        reviewAdapter.setLayoutManager(
+//                new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
+//        reviewAdapter.setAdapter(new ReviewsAdapter(getContext(), reviewList));
+//        ViewCompat.setNestedScrollingEnabled(reviewAdapter, false);
+//    }
+    public class TrailerAsyncTask extends AsyncTask<Integer, Void, Trailer[]> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(Trailer[] trailers) {
+            super.onPostExecute(trailers);
+            Collections.addAll(trailerList, trailers);
+            TrailersAdapter adapter=new TrailersAdapter(getContext(),trailerList);
+            trailerView.setAdapter(adapter);
+            Log.d("trailers",String.valueOf(adapter.getItemCount()));
+        }
+
+        @Override
+        protected Trailer[] doInBackground(Integer... ints) {
+            String m_id = String.valueOf(ints[0]);
+            Log.d("Trailer","https://api.themoviedb.org/3/movie/"+m_id+"/videos?api_key=ee74e4df4dd623e8eb831f2fd274328f");
+            OkHttpClient client = new OkHttpClient();
+            Request request = new Request.Builder()
+                    .url("https://api.themoviedb.org/3/movie/"+m_id+"/videos?api_key=ee74e4df4dd623e8eb831f2fd274328f")
+                    .build();
+            try {
+                Response response = client.newCall(request).execute();
+                Gson gson = new GsonBuilder().create();
+                JsonParser parser = new JsonParser();
+                JsonElement rootObject = parser.parse(response.body().charStream())
+                        .getAsJsonObject().get("results");
+                Trailer[] posts = gson.fromJson(rootObject, Trailer[].class);
+                return posts;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
     }
+    public class CastAsyncTask extends AsyncTask<Integer, Void, Cast[]> {
 
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
 
-    public void showDetails(Movie movie)
-    {
-        Glide.with(getContext()).load("http://image.tmdb.org/t/p/w342"+movie.getPosterPath()).dontAnimate().into(poster);
-        title.setText(movie.getTitle());
-        releaseDate.setText(movie.getReleaseDate());
-        rating.setText(Double.toString(movie.getVoteAverage()));
-        overview.setText(movie.getOverview());
+        @Override
+        protected void onPostExecute(Cast[] casts) {
+            super.onPostExecute(casts);
+            if(casts != null){
+                castList.addAll(Arrays.asList(casts));
+                Log.d("Cast",String.valueOf(castList.size()));
+            }else {
+                Log.d("Cast","error");
+            }
+            CastAdapter adapter=new CastAdapter(getContext(),castList);
+            castView.setAdapter(adapter);
+        }
+
+        @Override
+        protected Cast[] doInBackground(Integer... ints) {
+            String m_id = String.valueOf(ints[0]);
+            Log.d("Cast","https://api.themoviedb.org/3/movie/"+m_id+"/casts?api_key=ee74e4df4dd623e8eb831f2fd274328f&language=ko-KR");
+            OkHttpClient client = new OkHttpClient();
+            Request request = new Request.Builder()
+                    .url("https://api.themoviedb.org/3/movie/"+m_id+"/casts?api_key=ee74e4df4dd623e8eb831f2fd274328f&language=ko-KR")
+                    .build();
+            try {
+                Response response = client.newCall(request).execute();
+                Gson gson = new GsonBuilder().create();
+                JsonParser parser = new JsonParser();
+                JsonElement rootObject = parser.parse(response.body().charStream())
+                        .getAsJsonObject().get("cast");
+                Cast[] posts = gson.fromJson(rootObject, Cast[].class);
+                return posts;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
     }
+    public class ReviewAsyncTask extends AsyncTask<Integer, Void, Review[]> {
 
-    private void setupTrailersAdapter(List<Trailer> trailerList) {
-        trailerAdapter.setLayoutManager(
-                new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
-        trailerAdapter.setHasFixedSize(true);
-        trailerAdapter.setAdapter(new TrailersAdapter(getActivity(),trailerList));
-        ViewCompat.setNestedScrollingEnabled(trailerAdapter, false);
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(Review[] reviews) {
+            super.onPostExecute(reviews);
+            if(reviews != null){
+                Collections.addAll(reviewList, reviews);
+            }
+            ReviewsAdapter adapter=new ReviewsAdapter(getContext(),reviewList);
+            reviewView.setAdapter(adapter);
+            Log.d("reviews",String.valueOf(adapter.getItemCount()));
+        }
+
+        @Override
+        protected Review[]doInBackground(Integer... ints) {
+            String m_id = String.valueOf(ints[0]);
+            Log.d("Review","https://api.themoviedb.org/3/movie/"+m_id+"/reviews?api_key=ee74e4df4dd623e8eb831f2fd274328f");
+            OkHttpClient client = new OkHttpClient();
+            Request request = new Request.Builder()
+                    .url("https://api.themoviedb.org/3/movie/"+m_id+"/reviews?api_key=ee74e4df4dd623e8eb831f2fd274328f")
+                    .build();
+            try {
+                Response response = client.newCall(request).execute();
+                Gson gson = new GsonBuilder().create();
+                JsonParser parser = new JsonParser();
+                JsonElement rootObject = parser.parse(response.body().charStream())
+                        .getAsJsonObject().get("results");
+                Review[] posts = gson.fromJson(rootObject, Review[].class);
+                return posts;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
     }
-
-    private void setupCastAdapter(List<Cast> castList) {
-        castAdapter.setLayoutManager(
-                new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
-        castAdapter.setAdapter(new CastAdapter(getActivity(), castList));
-        ViewCompat.setNestedScrollingEnabled(castAdapter, false);
-    }
-
-    private void setupReviewsAdapter(List<Review> reviewList) {
-        reviewAdapter.setLayoutManager(
-                new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
-        reviewAdapter.setAdapter(new ReviewsAdapter(getActivity(), reviewList));
-        ViewCompat.setNestedScrollingEnabled(reviewAdapter, false);
-    }
-
     @Override
     public void onDestroyView()
     {
         super.onDestroyView();
-        unbinder.unbind();
     }
 
     @Override
