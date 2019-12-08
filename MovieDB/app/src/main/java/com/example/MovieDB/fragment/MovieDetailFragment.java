@@ -98,7 +98,6 @@ public class MovieDetailFragment extends Fragment
             this.movie = (Movie) getArguments().get("movie");
             Log.d("detail",movie.getTitle());
             if (movie != null) {
-                Log.d("detail",movie.getPoster_path());
                 poster = view.findViewById(R.id.movie_poster);
                 title =view.findViewById(R.id.movie_name);
                 releaseDate=view.findViewById(R.id.movie_year);

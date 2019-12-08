@@ -30,8 +30,10 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class HomeFragment extends Fragment {
+    private int page=0;
     private RecyclerView recyclerView;
     private ArrayList<Movie> movieList = new ArrayList<>();
+    MovieListAdapter adapter;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -43,6 +45,18 @@ public class HomeFragment extends Fragment {
         Log.d("IMDBNetwork","2");
         recyclerView = view.findViewById(R.id.home_recycler_view) ;
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(),4));
+        adapter = new MovieListAdapter(getContext(), movieList);
+        recyclerView.setAdapter(adapter);
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+                if (!recyclerView.canScrollVertically(1)) {
+                    MyAsyncTask mAsyncTask = new MyAsyncTask();
+                    mAsyncTask.execute();
+                }
+            }
+        });
         return view;
     }
     public class MyAsyncTask extends AsyncTask<String, Void, Movie[]> {
@@ -58,8 +72,9 @@ public class HomeFragment extends Fragment {
         @Override
         protected Movie[] doInBackground(String... strings) {
             OkHttpClient client = new OkHttpClient();
+            page=page+1;
             Request request = new Request.Builder()
-                    .url("https://api.themoviedb.org/3/movie/upcoming?api_key=ee74e4df4dd623e8eb831f2fd274328f&language=ko-KR")
+                    .url("https://api.themoviedb.org/3/movie/upcoming?api_key=ee74e4df4dd623e8eb831f2fd274328f&language=ko-KR&page="+page)
                     .build();
             try {
                 Response response = client.newCall(request).execute();
@@ -78,14 +93,13 @@ public class HomeFragment extends Fragment {
         protected void onPostExecute(Movie[] result) {
             super.onPostExecute(result);
             progressDialog.dismiss();
+            ArrayList<Movie> movieList = new ArrayList<>();
             if(result.length > 0){
                 movieList.addAll(Arrays.asList(result));
             }
             Log.d("IMDBNetwork","adapter");
-            MovieListAdapter adapter = new MovieListAdapter(getContext(), movieList);
-            recyclerView.setAdapter(adapter) ;
-            Movie movie= movieList.get(1);
-            Log.d("IMDBNetwork",movie.getTitle());
+            adapter.addMovieList(movieList);
+            adapter.notifyDataSetChanged();
         }
     }
 }

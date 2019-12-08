@@ -30,7 +30,9 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class SearchFragment extends Fragment {
+    private int page=0;
     String string;
+    MovieListAdapter adapter;
     private RecyclerView recyclerView;
     private ArrayList<Movie> movieList = new ArrayList<>();
     public static SearchFragment getInstance(String string)
@@ -51,6 +53,18 @@ public class SearchFragment extends Fragment {
         mAsyncTask.execute();
         recyclerView = view.findViewById(R.id.search_recycler_view) ;
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(),4));
+        adapter = new MovieListAdapter(getContext(), movieList);
+        recyclerView.setAdapter(adapter);
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+                if (!recyclerView.canScrollVertically(1)) {
+                    MyAsyncTask mAsyncTask = new MyAsyncTask();
+                    mAsyncTask.execute();
+                }
+            }
+        });
         return view;
     }
     public class MyAsyncTask extends AsyncTask<String, Void, Movie[]> {
@@ -68,8 +82,9 @@ public class SearchFragment extends Fragment {
             OkHttpClient client = new OkHttpClient();
             string =  (String)getArguments().get("String");
             Log.d("string",string);
+            page=page+1;
             Request request = new Request.Builder()
-                    .url("https://api.themoviedb.org/3/search/movie?api_key=ee74e4df4dd623e8eb831f2fd274328f&language=ko-KR&query="+string)
+                    .url("https://api.themoviedb.org/3/search/movie?api_key=ee74e4df4dd623e8eb831f2fd274328f&language=ko-KR&query="+string+"&page="+page)
                     .build();
             try {
                 Response response = client.newCall(request).execute();
@@ -88,12 +103,13 @@ public class SearchFragment extends Fragment {
         protected void onPostExecute(Movie[] result) {
             super.onPostExecute(result);
             progressDialog.dismiss();
+            ArrayList<Movie> movieList = new ArrayList<>();
             if(result!=null){
                 movieList.addAll(Arrays.asList(result));
             }
             Log.d("IMDBNetwork","adapter");
-            MovieListAdapter adapter = new MovieListAdapter(getContext(), movieList);
-            recyclerView.setAdapter(adapter) ;
+            adapter.addMovieList(movieList);
+            adapter.notifyDataSetChanged();
         }
     }
 }

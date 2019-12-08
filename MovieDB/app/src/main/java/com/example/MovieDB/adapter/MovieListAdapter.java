@@ -33,12 +33,16 @@ import java.util.ArrayList;
         this.mContext = context;
         this.mMovieList = itemList;
     }
-
+    public void addMovieList(ArrayList<Movie> itemList){
+        this.mMovieList.addAll(itemList);
+    }
     @NonNull
     @Override
     public RecyclerViewHolders onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_item, parent, false);
-        return new RecyclerViewHolders(view);
+        RecyclerViewHolders holder =new RecyclerViewHolders(view);
+        holder.setIsRecyclable(false);
+        return holder;
     }
 
     @Override
