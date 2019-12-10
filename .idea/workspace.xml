@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d9b9d3e-3929-40ce-9bfa-c2b0beff6898" name="Default Changelist" comment="RecyclerView">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle____local_aars___D__Users_user_gitProjects_MovieDB_MovieDB_app_libs_YouTubeAndroidPlayerApi_1_2_2_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle____local_aars___D__Users_user_gitProjects_MovieDB_MovieDB_app_libs_YouTubeAndroidPlayerApi_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__android_android_29.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__androidx_annotation_annotation_1_0_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__androidx_arch_core_core_common_2_0_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__androidx_collection_collection_1_0_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__androidx_core_core_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__androidx_fragment_fragment_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_0_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_github_mancj_MaterialSearchBar_0_8_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_github_mancj_MaterialSearchBar_0_8_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_jakewharton_butterknife_8_5_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_jakewharton_butterknife_8_5_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_melnykov_floatingactionbutton_1_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_melnykov_floatingactionbutton_1_3_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_mikepenz_iconics_core_1_7_5_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_mikepenz_iconics_core_1_7_5_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_mikepenz_materialdrawer_4_0_5_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_mikepenz_materialdrawer_4_0_5_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_mikepenz_materialize_0_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_mikepenz_materialize_0_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_squareup_okio_okio_1_6_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_yqritc_recyclerview_flexibledivider_1_2_5_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_yqritc_recyclerview_flexibledivider_1_2_5_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/render.experimental.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/MovieDB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/MovieDB.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieDB/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/local.properties" afterDir="false" />
-    </list>
+    <list default="true" id="8d9b9d3e-3929-40ce-9bfa-c2b0beff6898" name="Default Changelist" comment="RecyclerView" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +13,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
+            <state relative-caret-position="152">
               <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
             </state>
           </provider>
@@ -57,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/res/layout/activity_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="76">
+              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -86,9 +51,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -96,121 +61,15 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="FinalMovieDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalMovieDB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FinalMovieDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalMovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FinalMovieDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalMovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FinalMovieDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalMovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FinalMovieDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalMovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FinalMovieDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalMovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FinalMovieDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalMovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FinalMovieDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalMovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FinalMovieDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalMovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FinalMovieDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalMovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FinalMovieDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalMovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FinalMovieDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalMovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MovieDB" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
@@ -254,10 +113,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.33547926" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.33528784" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -272,8 +132,8 @@
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="right" id="Assistant" order="3" visible="true" weight="0.3336887" />
-      <window_info anchor="right" id="Preview" order="4" />
+      <window_info anchor="right" id="Assistant" order="3" weight="0.33742005" />
+      <window_info active="true" anchor="right" id="Preview" order="4" visible="true" weight="0.32995737" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -342,7 +202,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="152">
           <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
         </state>
       </provider>
@@ -352,8 +212,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="76">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
         </state>
       </provider>
     </entry>

@@ -40,15 +40,6 @@ public class FavoriteFragment extends Fragment {
         mDb = dbHelper.getWritableDatabase();
 
 
-
-
-
-
-
-
-
-
-
         return inflater.inflate(R.layout.favorite, container, false);
 
     }
