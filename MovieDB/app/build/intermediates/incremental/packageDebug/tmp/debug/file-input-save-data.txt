@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Dec 07 16:16:54 KST 2019
+#Sat Dec 07 19:14:43 KST 2019
 2.base=C\:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
 0.path=theater.db
 2.baseType=DIRECTORY

@@ -38,53 +38,39 @@ public class MainActivity extends AppCompatActivity  {
     private FragmentManager fragmentManager;
     private FragmentTransaction transaction;
     private MapFragment mapFragment;
-    LocationManager locationManager;
-    Location recentlocation;
-    double latitude;
-    double longitude;
 
-    //지속적으로 위치 공급자로부터 위치정보를 받아온다.
-    LocationListener IListener = new LocationListener() { //계속 듣고 있다가 반응한다.
 
-        @Override
-        public void onLocationChanged(Location location) { //위치의 변화가 있을 때.
-            latitude = location.getLatitude();
-            longitude = location.getLongitude();
-        }
-
-        @Override
-        public void onStatusChanged(String s, int i, Bundle bundle) {
-        }
-        @Override
-        public void onProviderEnabled(String s) {
-        }
-        @Override
-        public void onProviderDisabled(String s) {
-        }
-    };
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("onCreate","1");
         super.onCreate(savedInstanceState);
+        Log.d("version check","a");
         setContentView(R.layout.activity_main);
+        Log.d("version check","b");
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-            getLocationManager();
+            fragmentManager = getSupportFragmentManager();
+            mapFragment=new MapFragment();
+            transaction = fragmentManager.beginTransaction();
+            transaction.replace(R.id.fragment, mapFragment);
         } else {
             if (checkPermission()) {
-                getLocationManager(); //2
-                recentlocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-                longitude = recentlocation.getLongitude();
-                latitude = recentlocation.getLatitude();
+                Log.d("onCreate","4");
+                fragmentManager = getSupportFragmentManager();
+                mapFragment=new MapFragment();
+                Log.d("permission","a");
+                transaction = fragmentManager.beginTransaction();
+                transaction.add(R.id.fragment, mapFragment);
+                transaction.commit();
+                Log.d("permission","b");
             } else {
                 requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 12345);  //request하기
             }
         }
-        fragmentManager = getSupportFragmentManager();
-        mapFragment=new MapFragment();
-        transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.fragment, mapFragment);
+
+
     }
 
 
@@ -100,10 +86,12 @@ public class MainActivity extends AppCompatActivity  {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) { //결과받기
         if (requestCode == 12345) {
             if (checkPermission()) {
-                getLocationManager(); //3
-                recentlocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-                longitude = recentlocation.getLongitude();
-                latitude = recentlocation.getLatitude();
+                Log.d("onCreate","5");
+                fragmentManager = getSupportFragmentManager();
+                mapFragment=new MapFragment();
+                transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.fragment, mapFragment);
+
             } else {
                 Toast.makeText(this, "위치권한 필요", Toast.LENGTH_LONG).show();
                 finish(); //MainActivity.java종료(앱종료)
@@ -120,24 +108,26 @@ public class MainActivity extends AppCompatActivity  {
         }
     }
 
-    private void getLocationManager() { //LOCATION_SERVICE 시스템 서비스를 이용할 수 있다.
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-    }
 
     @Override
     protected void onPause() {
         super.onPause();
+        /*
         if(locationManager != null)
             //위치수신종료
             locationManager.removeUpdates(IListener);
+
+         */
     }
 
     @SuppressLint("MissingPermission")
     @Override
     protected void onResume() {
         super.onResume(); //꼭필요
+        /*
         //위치수신시작
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 10, IListener); //위치수신시간
+         */
 
     }
 }

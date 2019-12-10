@@ -1,10 +1,17 @@
 package com.example.MovieDB.fragment;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
@@ -50,14 +57,20 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     String markerTitle;
     String markerId;
     private MapView mapView = null;
+    LocationManager locationManager;
+    Location recentlocation;
+    double latitude;
+    double longitude;
 
     private void setDB(Context ctx) {
+        Log.d("theater","1");
         AssetManager assetManager = ctx.getResources().getAssets();
         File dbFile = ctx.getDatabasePath("theater.db");
+        Log.d("theater",dbFile.getName());
 //        File outfile = new File("movie.db");
-        InputStream is = null;
+        InputStream is;
         FileOutputStream fo = null;
-        long filesize = 0;
+        Log.d("theater","3");
         try {
             is = assetManager.open("theater.db", AssetManager.ACCESS_BUFFER);
             OutputStream os = new FileOutputStream(dbFile);
@@ -72,11 +85,12 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         } catch (IOException e) {
             Log.e("DB", e.getLocalizedMessage(), e);
         }
+        Log.d("theater","4");
     }
 
     class ProductDBHelper extends SQLiteOpenHelper {  //새로 생성한 adapter 속성은 SQLiteOpenHelper이다.
         public ProductDBHelper(Context context) {
-            super(context, "movie.db", null, 1);    // db명과 버전만 정의 한다.
+            super(context, "theater.db", null, 1);    // db명과 버전만 정의 한다.
             // TODO Auto-generated constructor stub
         }
 
@@ -92,18 +106,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     }
 
 
-
-
-
-
-
     GoogleMap mMap;
 
     public MapFragment() {
         super();
     }
-
-
 
     @Override
     //구글맵을 띄울 준비가 되었으면 자동 호출
@@ -113,19 +120,54 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         //oneMarker();
         manyMarker();
+        Log.d("onMapReady","the map is ready");
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Log.d("onCreateMapView","yes!");
         View rootView = inflater.inflate(R.layout.mapview, container, false);
-        mapView = (MapView)rootView.findViewById(R.id.map);
+        mapView = (MapView) rootView.findViewById(R.id.map);
+        Log.d("onCreateMapView","1");
         mapView.onCreate(savedInstanceState);
+        Log.d("onCreateMapView","2");
         mapView.onResume();
+        Log.d("onCreateMapView","3");
         mapView.getMapAsync(this); // 비동기적 방식으로 구글 맵 실행
+        Log.d("onCreateMapView","4");
+
+        mWebView =  rootView.findViewById(R.id.cgv);
+        Log.d("Web","1");
+        mWebView.setWebViewClient(new WebViewClient());
+        Log.d("Web","2");
+        mWebSettings = mWebView.getSettings();
+        Log.d("Web","3");
+        mWebSettings.setJavaScriptEnabled(true);
+        Log.d("Web","4");
+
+        mWebView.loadUrl("https://www.cgv.co.kr/");
+        Log.d("Web","5 - loadUrl");
         return rootView;
 
     }
+
+    @SuppressLint("MissingPermission")
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(locationManager != null) {
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10, 200, IListener);
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if(locationManager != null)
+            locationManager.removeUpdates(IListener);
+    }
+
     //마커하나찍는 기본 예제
 
     /*
@@ -177,12 +219,15 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         SQLiteDatabase db = mHelper.getWritableDatabase();
 
 
-        Cursor cursor = db.rawQuery("SELECT name,lon,lat,theaterCode from skku_db.login where uid = 1;", null); //쿼리문
+        Cursor cursor = db.rawQuery("SELECT name,lon,lat,theaterCode from theater_address;", null); //쿼리문
         cursor.moveToFirst();
-        
-        if (cursor.moveToFirst()){
+        Log.d("cursor",cursor.getString(0));
+        Log.d("cursor", String.valueOf(cursor.getDouble(1)));
+
+        if (cursor.moveToFirst()) {
+            Log.d("cursor", String.valueOf(cursor.getDouble(01)));
             // for loop를 통한 n개의 마커 생성
-            for (int idx = 0; idx < 28; idx++) {
+            for (int idx = 0; idx < 27; idx++) {
                 // 1. 마커 옵션 설정 (만드는 과정)
                 MarkerOptions makerOptions = new MarkerOptions();
 
@@ -194,7 +239,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
 
                 // 2. 마커 생성 (마커를 나타냄)
                 mMap.addMarker(makerOptions);
+                Log.d("cursor",cursor.getString(0));
                 cursor.moveToNext();
+                Log.d("cursor",cursor.getString(0));
             }
         }
         //정보창 클릭 리스너
@@ -204,7 +251,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         mMap.setOnMarkerClickListener(markerClickListener);
 
         // 카메라를 위치로 옮긴다.
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(37.52487, 126.92723)));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(37.52487, 126.92723), 16));
+        Log.d("marker","finished!");
     }
 
     //마커정보창 클릭리스너는 다작동하나, 마커클릭리스너는 snippet정보가 있으면 중복되어 이벤트처리가 안되는거같다.
@@ -215,9 +263,15 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         @Override
         public void onInfoWindowClick(Marker marker) {
             String markerId = marker.getId();
-            Toast.makeText(getActivity(), "정보창 클릭 Marker ID : "+markerId, Toast.LENGTH_SHORT).show();
             theaterCode = marker.getSnippet();
-            mWebView.loadUrl("http://section.cgv.co.kr/theater/timetable/Default.aspx?code="+theaterCode);
+
+            while(theaterCode.length() <4){
+                theaterCode = "0"+theaterCode;
+            }
+
+            Toast.makeText(getActivity(), "정보창 클릭 Marker ID : " + theaterCode, Toast.LENGTH_SHORT).show();
+            mWebView.loadUrl("http://section.cgv.co.kr/theater/timetable/Default.aspx?code=" + theaterCode);
+            Log.d("url","http://section.cgv.co.kr/theater/timetable/Default.aspx?code=" + theaterCode);
         }
     };
 
@@ -229,26 +283,82 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
             //선택한 타겟위치
             location = marker.getPosition();
             markerTitle = marker.getTitle();
-            Toast.makeText(getActivity(), "마커 클릭 Marker ID : "+markerId+"("+location.latitude+" "+location.longitude+")", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "마커 클릭 Marker ID : " + markerId + "(" + location.latitude + " " + location.longitude + ")", Toast.LENGTH_SHORT).show();
             theaterCode = marker.getSnippet();
             return false;
         }
     };
 
 
-
     //여기서 부터 웹뷰
     private WebView mWebView;
     private WebSettings mWebSettings;
 
-    public void onCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState) {
+        Log.d("WebView","1");
         super.onCreate(savedInstanceState);
-        mWebView = (WebView) mWebView.findViewById(R.id.cgv);
-        mWebView.setWebViewClient(new WebViewClient());
-        mWebSettings = mWebView.getSettings();
-        mWebSettings.setJavaScriptEnabled(true);
+        Log.d("WebView","2");
 
-        mWebView.loadUrl("http://section.cgv.co.kr/theater/timetable/Default.aspx");
+        getLocationManager(); //2
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (getActivity().checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && getActivity().checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                //    Activity#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for Activity#requestPermissions for more details.
+                return;
+            }
+        }
+        Log.d("WebView","3");
+        getLocationManager();
+        Log.d("WebView","4");
+    }
+
+
+
+
+    //지속적으로 위치 공급자로부터 위치정보를 받아온다.
+    LocationListener IListener = new LocationListener() { //계속 듣고 있다가 반응한다.
+
+        @Override
+        public void onLocationChanged(Location location) { //위치의 변화가 있을 때.
+            latitude = location.getLatitude();
+            longitude = location.getLongitude();
+            Log.d("Location", "The location is changed");
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 16));
+
+        }
+
+        @Override
+        public void onStatusChanged(String s, int i, Bundle bundle) {
+        }
+
+        @Override
+        public void onProviderEnabled(String s) {
+        }
+
+        @Override
+        public void onProviderDisabled(String s) {
+        }
+    };
+
+    private void getLocationManager() { //LOCATION_SERVICE 시스템 서비스를 이용할 수 있다.
+        Log.d("locationManager","locationManager activated");
+        locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+    }
+
+    private boolean checkPermission() {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (PackageManager.PERMISSION_GRANTED != getActivity().checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+        return false;
     }
 
 
@@ -256,4 +366,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
 
 
 
-    }
+
+
+
+
+
+
+}

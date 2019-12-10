@@ -17,7 +17,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
@@ -41,7 +41,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_in_bottom.xml.flat",
@@ -61,7 +61,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-hdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-hdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_list_divider_material.xml.flat",
@@ -72,12 +72,12 @@
         "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\8ef3992b18d0e4a2ea9ccc1904c60739\\res\\layout\\materialize.xml"
     },
     {
-        "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\8d42cc561e8b8b8064355721884550b0\\res\\drawable-ldrtl-mdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_search_api_material.xml.flat",
         "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\8d42cc561e8b8b8064355721884550b0\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\8d42cc561e8b8b8064355721884550b0\\res\\drawable-ldrtl-mdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
@@ -85,7 +85,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_googleg_disabled_color_18.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-hdpi-v4\\googleg_disabled_color_18.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-hdpi-v4\\googleg_disabled_color_18.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -105,11 +105,11 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_googleg_standard_color_18.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-xhdpi-v4\\googleg_standard_color_18.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-xhdpi-v4\\googleg_standard_color_18.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_dark_focused.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable\\common_google_signin_btn_text_dark_focused.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable\\common_google_signin_btn_text_dark_focused.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_close_black_48dp.png.flat",
@@ -152,20 +152,20 @@
         "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\8d42cc561e8b8b8064355721884550b0\\res\\color-v21\\abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
-    },
-    {
-        "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\8d42cc561e8b8b8064355721884550b0\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+        "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_ic_history_black_48dp.png.flat",
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\9d70178d3f812fde46c2ce191a9d9658\\res\\drawable-hdpi-v4\\ic_history_black_48dp.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\animator-v21_design_appbar_state_list_animator.xml.flat",
         "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\ac8fd6b7d59623651183e9730f257df5\\res\\animator-v21\\design_appbar_state_list_animator.xml"
     },
     {
-        "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_ic_history_black_48dp.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\9d70178d3f812fde46c2ce191a9d9658\\res\\drawable-hdpi-v4\\ic_history_black_48dp.png"
+        "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\8d42cc561e8b8b8064355721884550b0\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_chronometer.xml.flat",
@@ -257,7 +257,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_full_open_on_phone.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-hdpi-v4\\common_full_open_on_phone.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-hdpi-v4\\common_full_open_on_phone.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_toolbar.xml.flat",
@@ -501,7 +501,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
@@ -597,7 +597,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\layout_material_drawer_item_toggle.xml.flat",
@@ -609,7 +609,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light_focused.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -665,7 +665,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_googleg_standard_color_18.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-xxhdpi-v4\\googleg_standard_color_18.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-xxhdpi-v4\\googleg_standard_color_18.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_view.xml.flat",
@@ -729,7 +729,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
@@ -789,7 +789,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_text_dark.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\color\\common_google_signin_btn_text_dark.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\color\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -821,7 +821,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_text_color_selector.xml.flat",
@@ -889,7 +889,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_text_light.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\color\\common_google_signin_btn_text_light.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\color\\common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
@@ -969,7 +969,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-hdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-hdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_longpressed_holo.9.png.flat",
@@ -989,7 +989,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -1029,7 +1029,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_googleg_disabled_color_18.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-xhdpi-v4\\googleg_disabled_color_18.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-xhdpi-v4\\googleg_disabled_color_18.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_ic_magnify_black_48dp.png.flat",
@@ -1073,7 +1073,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_full_open_on_phone.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-xhdpi-v4\\common_full_open_on_phone.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-xhdpi-v4\\common_full_open_on_phone.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\animator_menu_to_back_rotation.xml.flat",
@@ -1085,7 +1085,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light_normal.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable\\common_google_signin_btn_icon_light_normal.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable\\common_google_signin_btn_icon_light_normal.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\layout_material_drawer_item_secondary.xml.flat",
@@ -1149,7 +1149,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable\\common_google_signin_btn_text_light.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -1237,7 +1237,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_dark.xml.flat",
@@ -1389,7 +1389,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_light.xml.flat",
@@ -1449,7 +1449,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_tint.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\color\\common_google_signin_btn_tint.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\color\\common_google_signin_btn_tint.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
@@ -1513,7 +1513,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_action_bar_item_background_material.xml.flat",
@@ -1549,7 +1549,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_dark.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
@@ -1565,7 +1565,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_tab_indicator_material.xml.flat",
@@ -1665,7 +1665,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark_normal.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable\\common_google_signin_btn_icon_dark_normal.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable\\common_google_signin_btn_icon_dark_normal.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -1713,7 +1713,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light_focused.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\color_design_tint_password_toggle.xml.flat",
@@ -1777,7 +1777,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
@@ -1789,7 +1789,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_design_ic_visibility.png.flat",
@@ -1853,7 +1853,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_out_left.xml.flat",
@@ -1861,7 +1861,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_dark_normal.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
@@ -1913,7 +1913,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light_normal.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\layout_material_drawer_recycler_view.xml.flat",
@@ -1926,6 +1926,10 @@
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_title_item.xml.flat",
         "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\8d42cc561e8b8b8064355721884550b0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\xml_network_security_config.xml.flat",
+        "source": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\src\\main\\res\\xml\\network_security_config.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_focused_holo.9.png.flat",
@@ -1989,7 +1993,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -1997,7 +2001,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_googleg_standard_color_18.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-hdpi-v4\\googleg_standard_color_18.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-hdpi-v4\\googleg_standard_color_18.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
@@ -2157,7 +2161,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_googleg_disabled_color_18.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-xxhdpi-v4\\googleg_disabled_color_18.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-xxhdpi-v4\\googleg_disabled_color_18.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_focused_holo.9.png.flat",
@@ -2165,7 +2169,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_disabled.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -2189,11 +2193,11 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark_focused.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_disabled.xml.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_vector_test.xml.flat",
@@ -2305,7 +2309,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_googleg_standard_color_18.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-mdpi-v4\\googleg_standard_color_18.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-mdpi-v4\\googleg_standard_color_18.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_snackbar_background.xml.flat",
@@ -2329,7 +2333,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_googleg_disabled_color_18.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -2421,7 +2425,7 @@
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\adab2d401f144cc1abd5b72ee5f079ec\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+        "source": "C:\\Users\\edc87\\.gradle\\caches\\transforms-2\\files-2.1\\04a3610ec09de6a3d4646093879946c8\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\edc87\\Desktop\\movieapp-master\\MovieDB\\MovieDB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
