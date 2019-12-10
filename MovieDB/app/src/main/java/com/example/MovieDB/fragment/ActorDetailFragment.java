@@ -136,10 +136,10 @@ public class ActorDetailFragment extends Fragment {
         @Override
         protected Cast doInBackground(Integer... ints) {
             String m_id = String.valueOf(ints[0]);
-            Log.d("CastDetail", "https://api.themoviedb.org/3/"+m_id+"/20738?api_key=ee74e4df4dd623e8eb831f2fd274328f");
+            Log.d("CastDetail", "https://api.themoviedb.org/3/person/"+m_id+"?api_key=ee74e4df4dd623e8eb831f2fd274328f");
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
-                    .url("https://api.themoviedb.org/3/"+m_id+"/20738?api_key=ee74e4df4dd623e8eb831f2fd274328f")
+                    .url("https://api.themoviedb.org/3/person/"+m_id+"?api_key=ee74e4df4dd623e8eb831f2fd274328f")
                     .build();
             try {
                 Response response = client.newCall(request).execute();
@@ -147,7 +147,6 @@ public class ActorDetailFragment extends Fragment {
                 JsonParser parser = new JsonParser();
                 JsonElement rootObject = parser.parse(response.body().charStream())
                         .getAsJsonObject();
-                Log.d("show json",rootObject.getAsString());
                 Cast post = gson.fromJson(rootObject, Cast.class);
                 return post;
             } catch (Exception e) {
