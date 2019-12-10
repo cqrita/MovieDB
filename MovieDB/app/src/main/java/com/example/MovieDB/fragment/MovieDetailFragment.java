@@ -29,7 +29,7 @@ import com.example.MovieDB.data.Cast;
 import com.example.MovieDB.data.Movie;
 import com.example.MovieDB.data.Review;
 import com.example.MovieDB.data.Trailer;
-import com.example.MovieDB.database.FavoriteDBHelper;
+//import com.example.MovieDB.database.FavoriteDBHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

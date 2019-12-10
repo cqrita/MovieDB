@@ -103,18 +103,20 @@ public class ActorDetailFragment extends Fragment {
             super.onPostExecute(cast1);
             cast=cast1;
             Log.d("show error",cast1.getName());
+            Log.d("show error",cast1.getBirthday());
+            Log.d("show error",cast1.getProfile_path());
             Glide.with(getContext())
-                    .load("https://image.tmdb.org/t/p/w500"+cast.getProfile_path())
+                    .load("https://image.tmdb.org/t/p/w500"+cast1.getProfile_path())
                     .centerCrop()
                     .crossFade()
                     .into(poster);
-            name.setText(cast.getName());
-            biography.setText(cast.getBiography());
-            if(cast.getDeathday()==null){
+            name.setText(cast1.getName());
+            biography.setText(cast1.getBiography());
+            if(cast1.getDeathday()==null){
                 SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
                 Date date = null;
                 try {
-                    date = formatter.parse(cast.getBirthday());
+                    date = formatter.parse(cast1.getBirthday());
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
@@ -129,7 +131,7 @@ public class ActorDetailFragment extends Fragment {
                 if (today.get(Calendar.DAY_OF_YEAR) < cal.get(Calendar.DAY_OF_YEAR)){
                     age--;
                 }
-                castYear.setText(age);
+                castYear.setText(String.valueOf(age));
             }
         }
 

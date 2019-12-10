@@ -17,7 +17,6 @@ import com.bumptech.glide.Glide;
 import com.example.MovieDB.R;
 import com.example.MovieDB.data.Movie;
 import com.example.MovieDB.fragment.MovieDetailFragment;
-
 import java.util.ArrayList;
 
 

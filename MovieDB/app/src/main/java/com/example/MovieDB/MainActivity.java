@@ -14,8 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.MovieDB.database.FavoriteDBHelper;
-import com.example.MovieDB.fragment.FavoriteFragment;
+//import com.example.MovieDB.database.FavoriteDBHelper;
+//import com.example.MovieDB.fragment.FavoriteFragment;
 import com.example.MovieDB.fragment.HomeFragment;
 import com.example.MovieDB.fragment.SearchActorFragment;
 import com.example.MovieDB.fragment.SearchFragment;
