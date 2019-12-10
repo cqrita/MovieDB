@@ -147,6 +147,7 @@ public class ActorDetailFragment extends Fragment {
                 JsonParser parser = new JsonParser();
                 JsonElement rootObject = parser.parse(response.body().charStream())
                         .getAsJsonObject();
+                Log.d("show json",rootObject.getAsString());
                 Cast post = gson.fromJson(rootObject, Cast.class);
                 return post;
             } catch (Exception e) {
