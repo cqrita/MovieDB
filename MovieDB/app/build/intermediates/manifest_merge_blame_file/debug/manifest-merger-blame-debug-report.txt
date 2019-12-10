@@ -6,47 +6,47 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="23"
-8-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml
+8-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml
+9-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:4:5-66
-11-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:4:22-64
+11-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:4:5-66
+11-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:4:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] C:\Users\user\.gradle\caches\transforms-2\files-2.1\7d34aeb7ddb19ff1b3ba84e40e1569ec\core-10.0.5\AndroidManifest.xml:12:5-79
-12-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] C:\Users\user\.gradle\caches\transforms-2\files-2.1\7d34aeb7ddb19ff1b3ba84e40e1569ec\core-10.0.5\AndroidManifest.xml:12:22-76
+12-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/7d34aeb7ddb19ff1b3ba84e40e1569ec/core-10.0.5/AndroidManifest.xml:12:5-79
+12-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/7d34aeb7ddb19ff1b3ba84e40e1569ec/core-10.0.5/AndroidManifest.xml:12:22-76
 13
 14    <application
-14-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:5:5-19:19
+14-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:5:5-19:19
 15        android:allowBackup="true"
-15-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:6:9-35
+15-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:6:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-16-->[androidx.core:core:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
+16-->[androidx.core:core:1.1.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:24:18-86
 17        android:debuggable="true"
 18        android:icon="@mipmap/ic_launcher"
-18-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:7:9-43
+18-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:7:9-43
 19        android:label="@string/app_name"
-19-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:8:9-41
+19-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:8:9-41
 20        android:roundIcon="@mipmap/ic_launcher_round"
-20-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:9:9-54
+20-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:9:9-54
 21        android:supportsRtl="true"
-21-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:10:9-35
+21-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:10:9-35
 22        android:testOnly="true"
 23        android:theme="@style/AppTheme" >
-23-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:11:9-40
+23-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:11:9-40
 24        <activity android:name="com.example.MovieDB.MainActivity" >
-24-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:12:9-18:20
-24-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:12:19-47
+24-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:12:9-18:20
+24-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:12:19-47
 25            <intent-filter>
-25-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:13:13-17:29
+25-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:13:13-17:29
 26                <action android:name="android.intent.action.MAIN" />
-26-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:14:17-69
-26-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:14:25-66
+26-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:14:17-69
+26-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:14:25-66
 27
 28                <category android:name="android.intent.category.LAUNCHER" />
-28-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:16:17-77
-28-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:16:27-74
+28-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:16:17-77
+28-->/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/src/main/AndroidManifest.xml:16:27-74
 29            </intent-filter>
 30        </activity>
 31    </application>

@@ -73,7 +73,7 @@ import java.util.ArrayList;
     }
 
 
-    //뷰홀더 - 따로 클래스 파일로 만들어도 된다.
+    //뷰홀더 - 따로 클래스 파일로 만들어도 된다.//
     public static class RecyclerViewHolders extends RecyclerView.ViewHolder {
         public ImageView imageView;
         public TextView textView;
