@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -48,7 +49,7 @@ public class MovieDetailFragment extends Fragment
     ImageView poster;
     TextView title;
     TextView releaseDate;
-    TextView rating;
+    RatingBar rating;
     TextView overview;
     Button recommend;
     ArrayList<Trailer> trailerList =new ArrayList<>();
@@ -132,7 +133,7 @@ public class MovieDetailFragment extends Fragment
                         .into(poster);
                 title.setText(movie.getTitle());
                 releaseDate.setText(movie.getRelease_date());
-                rating.setText("평점: "+String.valueOf(movie.getVote_average()));// 후에 ratingbar로 수정!
+                rating.setRating((float)movie.getVote_average());// 후에 ratingbar로 수정!
                 overview.setText(movie.getOverview());
                 recommend.setOnClickListener(new View.OnClickListener() {
                     @Override
