@@ -73,6 +73,8 @@ public class MovieDetailFragment extends Fragment
     {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
+
+        Log.d("test", this.movie.toString());
     }
 
     @Override
@@ -93,9 +95,8 @@ public class MovieDetailFragment extends Fragment
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        if (getArguments() != null)
-        {
-            this.movie = (Movie) getArguments().get("movie");
+
+
             Log.d("detail",movie.getTitle());
             if (movie != null) {
                 poster = view.findViewById(R.id.movie_poster);
@@ -143,7 +144,7 @@ public class MovieDetailFragment extends Fragment
                 reviewAsyncTask.execute(movie.getId());
 
 
-            }
+
         }
     }
 
@@ -294,20 +295,16 @@ public class MovieDetailFragment extends Fragment
     public void saveFavorite(){
 
         favoriteDbHelper = new FavoriteDBHelper(getActivity());
-        favoriteDbHelper.getAllFavorite();
-        favoriteDbHelper.addFavorite(movie);
-        Log.d("DB","added");
-
-//
+        favoriteDbHelper.getAllFavorite();//
         SQLiteDatabase db = favoriteDbHelper.getWritableDatabase();
         Cursor cursor = db.rawQuery("select * from favorite where _id=?",
                 new String[]{String.valueOf(this.movie.getId())});
         if(cursor != null && cursor.moveToFirst()) {
-//            favoriteDbHelper.update...
+            Log.d("DB", "DEleted");
         } else {
-//            insert
+            favoriteDbHelper.addFavorite(movie);
+            Log.d("DB", "Successfully added");
         }
-        Log.d("cursor", cursor.getString(0));
     }
     @Override
     public void onDestroyView()

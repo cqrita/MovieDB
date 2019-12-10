@@ -5,6 +5,7 @@ import android.os.Parcelable;
 
 import com.squareup.moshi.Json;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Movie implements Parcelable {
@@ -88,6 +89,22 @@ public class Movie implements Parcelable {
 
     public void setVote_average(double vote_average) {
         this.vote_average = vote_average;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", original_title='" + original_title + '\'' +
+                ", poster_path='" + poster_path + '\'' +
+                ", overview='" + overview + '\'' +
+                ", backdrop_path='" + backdrop_path + '\'' +
+                ", release_date='" + release_date + '\'' +
+                ", genre_ids=" + Arrays.toString(genre_ids) +
+                ", vote_average=" + vote_average +
+                '}';
     }
 
     protected Movie(Parcel in) {
