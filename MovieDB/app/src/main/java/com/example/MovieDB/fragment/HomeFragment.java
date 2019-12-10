@@ -44,7 +44,7 @@ public class HomeFragment extends Fragment {
         mAsyncTask.execute();
         Log.d("IMDBNetwork","2");
         recyclerView = view.findViewById(R.id.home_recycler_view) ;
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),4));
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
         adapter = new MovieListAdapter(getContext(), movieList);
         recyclerView.setAdapter(adapter);
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
