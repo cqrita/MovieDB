@@ -91,7 +91,7 @@ public class ActorDetailFragment extends Fragment {
             castAsyncTask.execute(castInt);
         }
     }
-    public class CastAsyncTask extends AsyncTask<Integer, Void, Cast> {
+    public class CastAsyncTask extends AsyncTask<Integer, Void, Cast[]> {
 
         @Override
         protected void onPreExecute() {
@@ -99,9 +99,9 @@ public class ActorDetailFragment extends Fragment {
         }
 
         @Override
-        protected void onPostExecute(Cast cast1) {
-            super.onPostExecute(cast1);
-            cast=cast1;
+        protected void onPostExecute(Cast[] casts) {
+            super.onPostExecute(casts);
+            cast=casts[0];
             Glide.with(getContext())
                     .load("https://image.tmdb.org/t/p/w500"+cast.getProfile_path())
                     .centerCrop()
@@ -133,7 +133,7 @@ public class ActorDetailFragment extends Fragment {
         }
 
         @Override
-        protected Cast doInBackground(Integer... ints) {
+        protected Cast[] doInBackground(Integer... ints) {
             String m_id = String.valueOf(ints[0]);
             Log.d("CastDetail", "https://api.themoviedb.org/3/"+m_id+"/20738?api_key=ee74e4df4dd623e8eb831f2fd274328f");
             OkHttpClient client = new OkHttpClient();
@@ -146,7 +146,7 @@ public class ActorDetailFragment extends Fragment {
                 JsonParser parser = new JsonParser();
                 JsonElement rootObject = parser.parse(response.body().charStream())
                         .getAsJsonObject().get("results");
-                Cast posts = gson.fromJson(rootObject, Cast.class);
+                Cast[] posts = gson.fromJson(rootObject, Cast[].class);
                 return posts;
             } catch (Exception e) {
                 e.printStackTrace();

@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b758465c-9892-4826-a2bc-0ca382806d3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/ActorDetailFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/ActorDetailFragment.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +50,7 @@
           <provider editor-type-id="android-designer2" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/cast_item.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -137,11 +138,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/ActorDetailFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1805">
-              <caret line="161" selection-start-line="161" selection-end-line="161" />
+            <state relative-caret-position="418">
+              <caret line="148" column="63" selection-start-line="148" selection-start-column="63" selection-end-line="148" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -178,12 +179,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/data/Cast.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/adapter/CastAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/adapter/CastListAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/ActorDetailFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/SearchActorFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/MovieDetailFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/moviedetails.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/ActorDetailFragment.java" />
       </list>
     </option>
   </component>
@@ -396,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575963005703</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="commit">
+      <created>1575963589794</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575963589794</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -654,13 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/ActorDetailFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1805">
-          <caret line="161" selection-start-line="161" selection-end-line="161" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/RecommendFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -728,6 +729,13 @@
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/MovieDB/fragment/ActorDetailFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="148" column="63" selection-start-line="148" selection-start-column="63" selection-end-line="148" selection-end-column="63" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
