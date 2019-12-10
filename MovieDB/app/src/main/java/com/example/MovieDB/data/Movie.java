@@ -101,6 +101,9 @@ public class Movie implements Parcelable {
         genre_ids = in.createIntArray();
         vote_average = in.readDouble();
     }
+    public Movie(){
+
+    }
 
     public static final Creator<Movie> CREATOR = new Creator<Movie>() {
         @Override
