@@ -60,7 +60,7 @@ public class SearchFragment extends Fragment {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                if (!recyclerView.canScrollVertically(1)&& stop==false)) {
+                if (!recyclerView.canScrollVertically(1)&& stop==false) {
                     MyAsyncTask mAsyncTask = new MyAsyncTask();
                     mAsyncTask.execute();
                 }

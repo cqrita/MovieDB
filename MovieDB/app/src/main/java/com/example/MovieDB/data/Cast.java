@@ -9,6 +9,9 @@ public class Cast implements Parcelable {
     private String profile_path;
     private String order;
     private String character;
+    private String biography;
+    private String birthday;
+    private String deathday;
 
     public String getId() {
         return id;
@@ -50,12 +53,39 @@ public class Cast implements Parcelable {
         this.character = character;
     }
 
+    public String getBiography() {
+        return biography;
+    }
+
+    public void setBiography(String biography) {
+        this.biography = biography;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getDeathday() {
+        return deathday;
+    }
+
+    public void setDeathday(String deathday) {
+        this.deathday = deathday;
+    }
+
     protected Cast(Parcel in) {
         id = in.readString();
         name = in.readString();
         profile_path = in.readString();
         order = in.readString();
         character = in.readString();
+        biography = in.readString();
+        birthday = in.readString();
+        deathday = in.readString();
     }
 
     public static final Creator<Cast> CREATOR = new Creator<Cast>() {
@@ -82,5 +112,8 @@ public class Cast implements Parcelable {
         dest.writeString(profile_path);
         dest.writeString(order);
         dest.writeString(character);
+        dest.writeString(biography);
+        dest.writeString(birthday);
+        dest.writeString(deathday);
     }
 }

@@ -9,11 +9,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.MovieDB.R;
 import com.example.MovieDB.data.Cast;
+import com.example.MovieDB.fragment.ActorDetailFragment;
 
 import java.util.List;
 
@@ -51,7 +54,7 @@ public class CastAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
         Log.d("cast1",castList.get(position).getName());
         Glide.with(context)
                 .load("https://image.tmdb.org/t/p/w185"+castList.get(position).getProfile_path())
@@ -59,6 +62,14 @@ public class CastAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         textCastName.setText(castList.get(position).getName());
         order.setText(castList.get(position).getOrder());
         character.setText(castList.get(position).getCharacter());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActorDetailFragment castDetailFragment = ActorDetailFragment.getInstance(Integer.parseInt(castList.get(position).getId()));
+                FragmentTransaction transaction = ((FragmentActivity)context).getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.fragment, castDetailFragment).commitAllowingStateLoss();
+            }
+        });
     }
 
     @Override

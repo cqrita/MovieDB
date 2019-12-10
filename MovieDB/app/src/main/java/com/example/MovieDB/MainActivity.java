@@ -3,6 +3,8 @@ package com.example.MovieDB;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.Spinner;
@@ -13,6 +15,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.MovieDB.fragment.FavoriteFragment;
 import com.example.MovieDB.fragment.HomeFragment;
+import com.example.MovieDB.fragment.SearchActorFragment;
 import com.example.MovieDB.fragment.SearchFragment;
 
 import java.util.List;
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private List<String> lastSearches;
     private DrawerLayout drawer;
     private Spinner spinner;
+    private boolean search=true;
     long first_time;
     long second_time;
 
@@ -34,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         Button button2 = findViewById(R.id.button2);
         Button button3 = findViewById(R.id.button3);
         SearchView searchView = findViewById(R.id.searchView);
+        Spinner spinner = findViewById(R.id.spinner);
         //시작 프레그먼트 지정
         HomeFragment homeFragment = new HomeFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -68,15 +73,39 @@ public class MainActivity extends AppCompatActivity {
                 ft.commit();
             }
         });
+        String[] category = new String[2];
+        category[0] = "영화";
+        category[1] = "배우";
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,category);
+        spinner.setAdapter(arrayAdapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(position==0){
+                    search=true;
+                }else{
+                    search=false;
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+        });
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                Toast.makeText(MainActivity.this,"Our word : ",Toast.LENGTH_SHORT).show();
-                SearchFragment search= SearchFragment.getInstance(query);
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.fragment, search);
-                ft.commit();
+                if(search){
+                    SearchFragment search= SearchFragment.getInstance(query);
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.fragment, search);
+                    ft.commit();
+                }else{
+                    SearchActorFragment search= SearchActorFragment.getInstance(query);
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.fragment, search);
+                    ft.commit();
+                }
                 return false;
             }
 
