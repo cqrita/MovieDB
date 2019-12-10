@@ -35,6 +35,7 @@ public class SearchFragment extends Fragment {
     MovieListAdapter adapter;
     private RecyclerView recyclerView;
     private ArrayList<Movie> movieList = new ArrayList<>();
+    private boolean stop = false;
     public static SearchFragment getInstance(String string)
     {
         Bundle args = new Bundle();
@@ -59,7 +60,7 @@ public class SearchFragment extends Fragment {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                if (!recyclerView.canScrollVertically(1)) {
+                if (!recyclerView.canScrollVertically(1)&& stop==false)) {
                     MyAsyncTask mAsyncTask = new MyAsyncTask();
                     mAsyncTask.execute();
                 }
@@ -104,6 +105,9 @@ public class SearchFragment extends Fragment {
             super.onPostExecute(result);
             progressDialog.dismiss();
             ArrayList<Movie> movieList = new ArrayList<>();
+            if(result== null){
+                stop=true;
+            }
             if(result!=null){
                 movieList.addAll(Arrays.asList(result));
             }

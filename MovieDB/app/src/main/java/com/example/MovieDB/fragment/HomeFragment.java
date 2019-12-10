@@ -34,6 +34,7 @@ public class HomeFragment extends Fragment {
     private RecyclerView recyclerView;
     private ArrayList<Movie> movieList = new ArrayList<>();
     MovieListAdapter adapter;
+    private boolean stop = false;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -51,7 +52,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                if (!recyclerView.canScrollVertically(1)) {
+                if (!recyclerView.canScrollVertically(1) && stop==false) {
                     MyAsyncTask mAsyncTask = new MyAsyncTask();
                     mAsyncTask.execute();
                 }
@@ -94,6 +95,9 @@ public class HomeFragment extends Fragment {
             super.onPostExecute(result);
             progressDialog.dismiss();
             ArrayList<Movie> movieList = new ArrayList<>();
+            if(result== null){
+                stop=true;
+            }
             if(result.length > 0){
                 movieList.addAll(Arrays.asList(result));
             }
