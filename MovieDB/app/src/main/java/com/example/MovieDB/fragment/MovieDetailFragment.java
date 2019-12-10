@@ -1,6 +1,7 @@
 package com.example.MovieDB.fragment;
 
 
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -45,7 +46,6 @@ import okhttp3.Response;
 public class MovieDetailFragment extends Fragment
 {
     Movie movie;
-    Movie movie_1;
     ImageView poster;
     TextView title;
     TextView releaseDate;
@@ -55,26 +55,17 @@ public class MovieDetailFragment extends Fragment
     ArrayList<Trailer> trailerList =new ArrayList<>();
     ArrayList<Cast> castList =new ArrayList<>();
     ArrayList<Review> reviewList = new ArrayList<>();
-    FloatingActionButton favorite;
+    FloatingActionButton favorite_button;
     private RecyclerView castView;
     private RecyclerView trailerView;
     private RecyclerView reviewView;
     private FavoriteDBHelper favoriteDbHelper;
     private SQLiteDatabase mDb;
 
-
-    public MovieDetailFragment()
+//    private Movie movie;
+    public MovieDetailFragment(Movie movie)
     {
-        // Required empty public constructor
-    }
-
-    public static MovieDetailFragment getInstance(Movie movie)
-    {
-        Bundle args = new Bundle();
-        MovieDetailFragment movieDetailsFragment = new MovieDetailFragment();
-        args.putParcelable("movie", movie);
-        movieDetailsFragment.setArguments(args);
-        return movieDetailsFragment;
+        this.movie = movie;
     }
 
     @Override
@@ -95,19 +86,6 @@ public class MovieDetailFragment extends Fragment
         castView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
         reviewView = rootView.findViewById(R.id.list_reviews);
         reviewView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-
-        //favoritebutton 클릭 이벤트 구현
-        FloatingActionButton favorite_button= rootView.findViewById(R.id.btn_favorite);
-        favorite_button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Log.d("favorite","favorite button clicked");
-                //DB에 저장
-                movie_1 = (Movie) getArguments().get("movie");
-                saveFavorite(movie_1);
-            }
-        });
-
 
         return rootView;
     }
@@ -144,12 +122,27 @@ public class MovieDetailFragment extends Fragment
                         ft.commit();
                     }
                 });
+
+                //favoritebutton 클릭 이벤트 구현
+                favorite_button= view.findViewById(R.id.btn_favorite);
+                favorite_button.setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        Log.d("favorite","favorite button clicked");
+                        //DB에 저장
+
+                        saveFavorite();
+
+                    }
+                });
                 TrailerAsyncTask trailerAsyncTask = new TrailerAsyncTask();
                 trailerAsyncTask.execute(movie.getId());
                 CastAsyncTask castAsyncTask = new CastAsyncTask();
                 castAsyncTask.execute(movie.getId());
                 ReviewAsyncTask reviewAsyncTask = new ReviewAsyncTask();
                 reviewAsyncTask.execute(movie.getId());
+
+
             }
         }
     }
@@ -298,10 +291,23 @@ public class MovieDetailFragment extends Fragment
     }
 
     //DB에 저장하는 함수
-    public void saveFavorite(Movie movie){
+    public void saveFavorite(){
+
         favoriteDbHelper = new FavoriteDBHelper(getActivity());
+        favoriteDbHelper.getAllFavorite();
         favoriteDbHelper.addFavorite(movie);
         Log.d("DB","added");
+
+//
+        SQLiteDatabase db = favoriteDbHelper.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from favorite where _id=?",
+                new String[]{String.valueOf(this.movie.getId())});
+        if(cursor != null && cursor.moveToFirst()) {
+//            favoriteDbHelper.update...
+        } else {
+//            insert
+        }
+        Log.d("cursor", cursor.getString(0));
     }
     @Override
     public void onDestroyView()

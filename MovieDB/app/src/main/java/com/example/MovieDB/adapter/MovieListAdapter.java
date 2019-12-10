@@ -61,7 +61,8 @@ import java.util.ArrayList;
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MovieDetailFragment movieDetailFragment = MovieDetailFragment.getInstance(mMovieList.get(position));
+                MovieDetailFragment movieDetailFragment =
+                        new MovieDetailFragment(mMovieList.get(position));
                 FragmentTransaction transaction = ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.fragment, movieDetailFragment).commitAllowingStateLoss();
             }

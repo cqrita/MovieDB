@@ -1589,6 +1589,11 @@ id button2
 id button3
 id buttonPanel
 id cancel_action
+id cast_biography
+id cast_name
+id cast_poster
+id cast_recycler_view
+id cast_year
 id center
 id center_horizontal
 id center_vertical
@@ -1894,6 +1899,8 @@ layout ayp_empty_layout
 layout ayp_menu_item
 layout ayp_player_menu
 layout cast
+layout cast_item
+layout castdetails
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1953,6 +1960,7 @@ layout notification_template_part_time
 layout recommend
 layout review
 layout search
+layout searchactor
 layout searchbar
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
