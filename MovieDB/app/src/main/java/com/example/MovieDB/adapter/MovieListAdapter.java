@@ -56,6 +56,7 @@ import java.util.ArrayList;
                 .crossFade()
                 .error(R.drawable.ic_launcher_background)
                 .into(holder.imageView);
+        holder.userrating.setText("평점: "+String.valueOf(mMovieList.get(position).getVote_average()));//나중에 레이팅바로변경
         holder.textView.setText(mMovieList.get(position).getTitle());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,11 +78,19 @@ import java.util.ArrayList;
     public static class RecyclerViewHolders extends RecyclerView.ViewHolder {
         public ImageView imageView;
         public TextView textView;
+        public TextView userrating;
         public RecyclerViewHolders(View itemView) {
             super(itemView);
             Log.d("www","www2");
             imageView = (ImageView) itemView.findViewById(R.id.movie_poster);
+            userrating = itemView.findViewById(R.id.vote_average);
             textView = itemView.findViewById(R.id.movie_title);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
         }
     }
 }

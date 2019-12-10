@@ -11,6 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"/>
+    <TextView
+        android:id="@+id/vote_average"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="bottom"
+        android:alpha="0.8"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/movie_title"

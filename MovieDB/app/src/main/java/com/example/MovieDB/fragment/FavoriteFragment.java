@@ -35,12 +35,12 @@ public class FavoriteFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Log.d("fragment","Favorite Fragment loaded");
 
-     //DB사용하여 불러오기
-        FavoriteDBHelper dbHelper = new FavoriteDBHelper(this);
-        mDb = dbHelper.getWritableDatabase();
-
-
-
+//     //DB사용하여 불러오기
+//        FavoriteDBHelper dbHelper = new FavoriteDBHelper(this);
+//        mDb = dbHelper.getWritableDatabase();
+//
+//
+//
 
 
 
