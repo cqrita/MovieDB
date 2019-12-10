@@ -111,7 +111,7 @@ public class MovieDetailFragment extends Fragment
                         .into(poster);
                 title.setText(movie.getTitle());
                 releaseDate.setText(movie.getRelease_date());
-                rating.setText(String.valueOf(movie.getVote_average()));
+                rating.setText("평점: "+String.valueOf(movie.getVote_average()));// 후에 ratingbar로 수정!
                 overview.setText(movie.getOverview());
                 recommend.setOnClickListener(new View.OnClickListener() {
                     @Override
