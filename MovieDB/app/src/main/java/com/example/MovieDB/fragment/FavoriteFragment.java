@@ -36,7 +36,7 @@ public class FavoriteFragment extends Fragment {
         Log.d("fragment","Favorite Fragment loaded");
 
      //DB사용하여 불러오기
-        FavoriteDBHelper dbHelper = new FavoriteDBHelper(this);
+        FavoriteDBHelper dbHelper = new FavoriteDBHelper(getActivity());
         mDb = dbHelper.getWritableDatabase();
 
 
