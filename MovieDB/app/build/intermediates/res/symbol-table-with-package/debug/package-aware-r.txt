@@ -1583,6 +1583,7 @@ id auto
 id beginning
 id blocking
 id bottom
+id btn_favorite
 id button1
 id button2
 id button3
@@ -1628,7 +1629,6 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id extra_views_container
-id favorite
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1825,6 +1825,7 @@ id videoTrailer
 id video_title
 id view_offset_helper
 id visible
+id vote_average
 id withText
 id wrap_content
 id youtube_button

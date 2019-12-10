@@ -1,6 +1,7 @@
 package com.example.MovieDB.fragment;
 
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +26,7 @@ import com.example.MovieDB.data.Cast;
 import com.example.MovieDB.data.Movie;
 import com.example.MovieDB.data.Review;
 import com.example.MovieDB.data.Trailer;
+import com.example.MovieDB.database.FavoriteDBHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -42,6 +44,7 @@ import okhttp3.Response;
 public class MovieDetailFragment extends Fragment
 {
     Movie movie;
+    Movie movie_1;
     ImageView poster;
     TextView title;
     TextView releaseDate;
@@ -55,6 +58,10 @@ public class MovieDetailFragment extends Fragment
     private RecyclerView castView;
     private RecyclerView trailerView;
     private RecyclerView reviewView;
+    private FavoriteDBHelper favoriteDbHelper;
+    private SQLiteDatabase mDb;
+
+
     public MovieDetailFragment()
     {
         // Required empty public constructor
@@ -87,6 +94,20 @@ public class MovieDetailFragment extends Fragment
         castView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
         reviewView = rootView.findViewById(R.id.list_reviews);
         reviewView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
+
+        //favoritebutton 클릭 이벤트 구현
+        FloatingActionButton favorite_button= rootView.findViewById(R.id.btn_favorite);
+        favorite_button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Log.d("favorite","favorite button clicked");
+                //DB에 저장
+                movie_1 = (Movie) getArguments().get("movie");
+                saveFavorite(movie_1);
+            }
+        });
+
+
         return rootView;
     }
 
@@ -111,7 +132,7 @@ public class MovieDetailFragment extends Fragment
                         .into(poster);
                 title.setText(movie.getTitle());
                 releaseDate.setText(movie.getRelease_date());
-                rating.setText(String.valueOf(movie.getVote_average()));
+                rating.setText("평점: "+String.valueOf(movie.getVote_average()));// 후에 ratingbar로 수정!
                 overview.setText(movie.getOverview());
                 recommend.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -274,6 +295,13 @@ public class MovieDetailFragment extends Fragment
             return null;
         }
     }
+
+    //DB에 저장하는 함수
+    public void saveFavorite(Movie movie){
+        favoriteDbHelper = new FavoriteDBHelper(getActivity());
+        favoriteDbHelper.addFavorite(movie);
+        Log.d("DB","added");
+    }
     @Override
     public void onDestroyView()
     {
@@ -285,5 +313,7 @@ public class MovieDetailFragment extends Fragment
     {
         super.onDestroy();
     }
+
+
 }
 
