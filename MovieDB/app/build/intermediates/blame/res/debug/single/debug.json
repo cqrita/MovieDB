@@ -40,12 +40,12 @@
         "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable/abc_ic_ab_back_material.xml"
     },
     {
-        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_ic_arrow_left_black_48dp.png.flat",
-        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/e022a6cc52aabb0757c7d338b532ca55/jetified-MaterialSearchBar-0.8.2/res/drawable-mdpi-v4/ic_arrow_left_black_48dp.png"
-    },
-    {
         "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_design_ic_visibility.png.flat",
         "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/res/drawable-hdpi-v4/design_ic_visibility.png"
+    },
+    {
+        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_ic_arrow_left_black_48dp.png.flat",
+        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/e022a6cc52aabb0757c7d338b532ca55/jetified-MaterialSearchBar-0.8.2/res/drawable-mdpi-v4/ic_arrow_left_black_48dp.png"
     },
     {
         "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
@@ -104,16 +104,16 @@
         "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_magnify_black_48dp.png.flat",
+        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/e022a6cc52aabb0757c7d338b532ca55/jetified-MaterialSearchBar-0.8.2/res/drawable-xxhdpi-v4/ic_magnify_black_48dp.png"
     },
     {
         "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/layout_material_drawer_item_section.xml.flat",
         "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/5389a29458a18ca5ab14ce0f1d57f49b/jetified-materialdrawer-4.0.5/res/layout/material_drawer_item_section.xml"
     },
     {
-        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_magnify_black_48dp.png.flat",
-        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/e022a6cc52aabb0757c7d338b532ca55/jetified-MaterialSearchBar-0.8.2/res/drawable-xxhdpi-v4/ic_magnify_black_48dp.png"
+        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
@@ -136,20 +136,20 @@
         "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/res/drawable/ic_mtrl_chip_checked_black.xml"
     },
     {
-        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ayp_ic_pause_36dp.png.flat",
-        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/7d34aeb7ddb19ff1b3ba84e40e1569ec/core-10.0.5/res/drawable-xhdpi-v4/ayp_ic_pause_36dp.png"
-    },
-    {
         "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
     {
-        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/layout_notification_template_big_media.xml.flat",
-        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/767612e54049c1347a891905a7e9d5e4/media-1.0.0/res/layout/notification_template_big_media.xml"
+        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ayp_ic_pause_36dp.png.flat",
+        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/7d34aeb7ddb19ff1b3ba84e40e1569ec/core-10.0.5/res/drawable-xhdpi-v4/ayp_ic_pause_36dp.png"
     },
     {
         "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/layout_notification_template_big_media.xml.flat",
+        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/767612e54049c1347a891905a7e9d5e4/media-1.0.0/res/layout/notification_template_big_media.xml"
     },
     {
         "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/layout_abc_popup_menu_header_item_layout.xml.flat",
@@ -164,20 +164,20 @@
         "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/res/drawable-v21/design_bottom_navigation_item_background.xml"
     },
     {
-        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
-        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
-    },
-    {
         "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
         "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/res/drawable-hdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
+        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
         "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/color-v23_abc_btn_colored_text_material.xml.flat",
         "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
@@ -196,12 +196,12 @@
         "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/res/color/mtrl_btn_text_color_selector.xml"
     },
     {
-        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable_btn_checkbox_checked_mtrl.xml.flat",
-        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable/btn_checkbox_checked_mtrl.xml"
-    },
-    {
         "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/anim_btn_radio_to_off_mtrl_ring_outer_path_animation.xml.flat",
         "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/anim/btn_radio_to_off_mtrl_ring_outer_path_animation.xml"
+    },
+    {
+        "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable_btn_checkbox_checked_mtrl.xml.flat",
+        "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable/btn_checkbox_checked_mtrl.xml"
     },
     {
         "merged": "/Users/yoonseungrok/Documents/FinalMovieDB/MovieDB/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
