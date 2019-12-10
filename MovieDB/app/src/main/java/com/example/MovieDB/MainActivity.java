@@ -13,6 +13,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.example.MovieDB.database.FavoriteDBHelper;
 import com.example.MovieDB.fragment.FavoriteFragment;
 import com.example.MovieDB.fragment.HomeFragment;
 import com.example.MovieDB.fragment.SearchActorFragment;
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean search=true;
     long first_time;
     long second_time;
+    private FavoriteDBHelper favoriteDbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         HomeFragment homeFragment = new HomeFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment, homeFragment).commitAllowingStateLoss();
-
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override

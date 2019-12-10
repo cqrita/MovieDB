@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -123,6 +124,8 @@ public class MovieDetailFragment extends Fragment
                         ft.commit();
                     }
                 });
+                //DB 생성
+                favoriteDbHelper = new FavoriteDBHelper(getActivity());//SQLlite OpenHelpr
 
                 //favoritebutton 클릭 이벤트 구현
                 favorite_button= view.findViewById(R.id.btn_favorite);
@@ -131,11 +134,30 @@ public class MovieDetailFragment extends Fragment
                     public void onClick(View v) {
                         Log.d("favorite","favorite button clicked");
                         //DB에 저장
+                        SQLiteDatabase db = favoriteDbHelper.getWritableDatabase();
+                        Cursor cursor = db.rawQuery("select * from favorite where id =?",
+                                new String[]{String.valueOf(movie.getId())});
+                        if(cursor != null &&cursor.moveToFirst()) {
+                            favoriteDbHelper.deleteFavorite(db,movie);
+                            Toast.makeText(getActivity().getApplicationContext(), "즐겨찾기에서 삭제되었습니다",Toast.LENGTH_SHORT).show();
+                            Log.d("seungrok", movie.getTitle()+ "삭제");
+                        } else {
+                            Log.d("seungrok",
+                                    "추가전 cursor movetofirst"+String.valueOf(cursor.moveToFirst()));
 
-                        saveFavorite();
+                            favoriteDbHelper.addFavorite(db,movie);
+                            Toast.makeText(getActivity().getApplicationContext(), "즐겨찾기에 추가되었습니다",
+                                    Toast.LENGTH_SHORT).show();
+                            Log.d("seungrok", movie.getTitle()+"추가");
 
+                            Cursor cursor2 = db.rawQuery("select * from favorite where id =?",
+                                    new String[]{String.valueOf(movie.getId())});
+                            Log.d("seungrok",
+                                    "추가후 cursor movetofirst"+String.valueOf(cursor2.moveToFirst()));
+                        }
                     }
                 });
+                Log.d("database", "++++++++++++++++++++++++");
                 TrailerAsyncTask trailerAsyncTask = new TrailerAsyncTask();
                 trailerAsyncTask.execute(movie.getId());
                 CastAsyncTask castAsyncTask = new CastAsyncTask();
@@ -291,21 +313,25 @@ public class MovieDetailFragment extends Fragment
         }
     }
 
-    //DB에 저장하는 함수
-    public void saveFavorite(){
-
-        favoriteDbHelper = new FavoriteDBHelper(getActivity());
-        favoriteDbHelper.getAllFavorite();//
-        SQLiteDatabase db = favoriteDbHelper.getWritableDatabase();
-        Cursor cursor = db.rawQuery("select * from favorite where _id=?",
-                new String[]{String.valueOf(this.movie.getId())});
-        if(cursor != null && cursor.moveToFirst()) {
-            Log.d("DB", "DEleted");
-        } else {
-            favoriteDbHelper.addFavorite(movie);
-            Log.d("DB", "Successfully added");
-        }
-    }
+//    //DB에 저장하는 함수
+//    public void saveOrDeleteFavorite(){
+//        favoriteDbHelper.getAllFavorite();
+////        Cursor cursor = db.rawQuery("select * from favorite where _id=?",
+////                new String[]{String.valueOf(this.movie.getId())});
+//        if(cursor != null &&cursor.moveToFirst()) {
+//            favoriteDbHelper.deleteFavorite(movie.getId());
+//            Toast.makeText(getActivity().getApplicationContext(), "즐겨찾기에서 삭제되었습니다",Toast.LENGTH_SHORT).show();
+//            Log.d("DB", String.valueOf(movie != null) );
+//            Log.d("DB", "Deleted");
+//        } else {
+//            favoriteDbHelper.addFavorite(movie);
+//            Toast.makeText(getActivity().getApplicationContext(), "즐겨찾기에 추가되었습니다",
+//                    Toast.LENGTH_SHORT).show();
+//            Log.d("DB", String.valueOf(movie.getTitle()) );
+//            Log.d("DB", "Successfully added");
+//
+//        }
+//    }
     @Override
     public void onDestroyView()
     {
