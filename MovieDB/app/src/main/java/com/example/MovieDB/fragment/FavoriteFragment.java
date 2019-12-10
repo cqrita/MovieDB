@@ -1,6 +1,7 @@
 package com.example.MovieDB.fragment;
 
 import android.app.ProgressDialog;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -49,7 +50,11 @@ public class FavoriteFragment extends Fragment {
         recyclerView = view.findViewById(R.id.favorite_recycler_view) ;
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(),4));
 
-        FavoriteDBHelper favoriteDbHelper=  new FavoriteDBHelper();
+        FavoriteDBHelper favoriteDbHelper=  new FavoriteDBHelper(getActivity());
+        movieList= favoriteDbHelper.getAllFavorite();
+//        SQLiteDatabase db = favoriteDbHelper.getReadableDatabase();
+//        Cursor cursor = db.rawQuery("select * from favorite");
+
 //        DB에서 movieLIst로 다 넣기
         adapter = new MovieListAdapter(getContext(), movieList);
 
