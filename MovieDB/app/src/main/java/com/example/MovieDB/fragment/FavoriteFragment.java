@@ -21,7 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.MovieDB.R;
 import com.example.MovieDB.adapter.MovieListAdapter;
 import com.example.MovieDB.data.Movie;
-//import com.example.MovieDB.database.FavoriteDBHelper;
+import com.example.MovieDB.database.FavoriteDBHelper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
