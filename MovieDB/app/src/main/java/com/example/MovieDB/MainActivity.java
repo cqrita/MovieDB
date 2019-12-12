@@ -1,5 +1,9 @@
 package com.example.MovieDB;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,8 +14,11 @@ import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.MovieDB.database.FavoriteDBHelper;
@@ -32,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
     long first_time;
     long second_time;
     private FavoriteDBHelper favoriteDbHelper;
+    private FragmentManager fragmentManager;
+    private MapFragment mapFragment;
+    private FragmentTransaction transaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,10 +80,27 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MapFragment map= new MapFragment();
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.fragment, map);
-                ft.commit();
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+
+                    fragmentManager = getSupportFragmentManager();
+                    mapFragment=new MapFragment();
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.fragment, mapFragment);
+                    ft.commit();
+                } else {
+                    if (checkPermission()) {
+                        Log.d("onCreate","4");
+                        fragmentManager = getSupportFragmentManager();
+                        mapFragment=new MapFragment();
+                        Log.d("permission","a");
+                        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                        ft.replace(R.id.fragment, mapFragment);
+                        ft.commit();
+                        Log.d("permission","b");
+                    } else {
+                        requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 12345);  //request하기
+                    }
+                }
             }
         });
         String[] category = new String[2];
@@ -117,13 +144,65 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-    }
+
+    } //oncreate
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
         //save last queries to disk
 
     }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) { //결과받기
+        if (requestCode == 12345) {
+            if (checkPermission()) {
+                Log.d("onCreate","5");
+                fragmentManager = getSupportFragmentManager();
+                mapFragment=new MapFragment();
+                transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.fragment, mapFragment);
+
+            } else {
+                Toast.makeText(this, "위치권한 필요", Toast.LENGTH_LONG).show();
+                finish(); //MainActivity.java종료(앱종료)
+            }
+        }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    private boolean checkPermission() {
+        if (PackageManager.PERMISSION_GRANTED != checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        /*
+        if(locationManager != null)
+            //위치수신종료
+            locationManager.removeUpdates(IListener);
+
+         */
+    }
+
+    @SuppressLint("MissingPermission")
+    @Override
+    protected void onResume() {
+        super.onResume(); //꼭필요
+        /*
+        //위치수신시작
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 10, IListener); //위치수신시간
+         */
+
+    }
+
 
     @Override
     public void onBackPressed() {
