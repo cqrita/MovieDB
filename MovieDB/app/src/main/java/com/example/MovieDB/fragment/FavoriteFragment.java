@@ -52,10 +52,6 @@ public class FavoriteFragment extends Fragment {
 
         FavoriteDBHelper favoriteDbHelper=  new FavoriteDBHelper(getActivity());
         movieList= favoriteDbHelper.getAllFavorite();
-//        SQLiteDatabase db = favoriteDbHelper.getReadableDatabase();
-//        Cursor cursor = db.rawQuery("select * from favorite");
-
-//        DB에서 movieLIst로 다 넣기
         adapter = new MovieListAdapter(getContext(), movieList);
 
         recyclerView.setAdapter(adapter);
