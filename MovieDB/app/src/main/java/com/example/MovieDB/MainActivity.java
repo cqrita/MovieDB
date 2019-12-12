@@ -17,6 +17,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.MovieDB.database.FavoriteDBHelper;
 import com.example.MovieDB.fragment.FavoriteFragment;
 import com.example.MovieDB.fragment.HomeFragment;
+import com.example.MovieDB.fragment.MapFragment;
 import com.example.MovieDB.fragment.SearchActorFragment;
 import com.example.MovieDB.fragment.SearchFragment;
 
@@ -69,9 +70,9 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SearchFragment search= SearchFragment.getInstance("Nothing");
+                MapFragment map= new MapFragment();
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.fragment, search);
+                ft.replace(R.id.fragment, map);
                 ft.commit();
             }
         });
