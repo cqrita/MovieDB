@@ -36,14 +36,11 @@ public class SearchFragment extends Fragment {
     private RecyclerView recyclerView;
     private ArrayList<Movie> movieList = new ArrayList<>();
     private boolean stop = false;
-    public static SearchFragment getInstance(String string)
-    {
-        Bundle args = new Bundle();
-        SearchFragment searchFragment = new SearchFragment();
-        args.putString("String",string);
-        searchFragment.setArguments(args);
-        return searchFragment;
+
+    public SearchFragment(String string) {
+        this.string = string;
     }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -81,8 +78,6 @@ public class SearchFragment extends Fragment {
         @Override
         protected Movie[] doInBackground(String... strings) {
             OkHttpClient client = new OkHttpClient();
-            string =  (String)getArguments().get("String");
-            Log.d("string",string);
             page=page+1;
             Request request = new Request.Builder()
                     .url("https://api.themoviedb.org/3/search/movie?api_key=ee74e4df4dd623e8eb831f2fd274328f&language=ko-KR&query="+string+"&page="+page)

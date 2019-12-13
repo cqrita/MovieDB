@@ -13,7 +13,6 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,22 +20,18 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
+
 
 import com.example.MovieDB.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -47,7 +42,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import butterknife.BindView;
+
 
 
 public class MapFragment extends Fragment implements OnMapReadyCallback {
@@ -168,49 +163,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
             locationManager.removeUpdates(IListener);
     }
 
-    //마커하나찍는 기본 예제
-
-    /*
-    public void oneMarker() {
-        // 서울 여의도에 대한 위치 설정
-        LatLng seoul = new LatLng(37.52487, 126.92723);
-
-
-        // 구글 맵에 표시할 마커에 대한 옵션 설정  (알파는 좌표의 투명도이다.)
-        MarkerOptions makerOptions = new MarkerOptions();
-        makerOptions
-                .position(seoul)
-                .title("원하는 위치(위도, 경도)에 마커를 표시했습니다.")
-                .snippet("여기는 여의도인거같네여!!")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
-                .alpha(0.5f);
-
-        // 마커를 생성한다. showInfoWindow를 쓰면 처음부터 마커에 상세정보가 뜨게한다. (안쓰면 마커눌러야뜸)
-        mMap.addMarker(makerOptions); //.showInfoWindow();
-
-        //정보창 클릭 리스너
-        mMap.setOnInfoWindowClickListener(infoWindowClickListener);
-
-        //마커 클릭 리스너
-        mMap.setOnMarkerClickListener(markerClickListener);
-
-        //카메라를 여의도 위치로 옮긴다.
-        // mMap.moveCamera(CameraUpdateFactory.newLatLng(seoul));
-        //처음 줌 레벨 설정 (해당좌표=>서울, 줌레벨(16)을 매개변수로 넣으면 된다.) (위에 코드대신 사용가능)(중첩되면 이걸 우선시하는듯)
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(seoul, 16));
-
-        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-            @Override
-            public boolean onMarkerClick(Marker marker) {
-                Toast.makeText(MapFragment.this, "눌렀습니다!!", Toast.LENGTH_LONG);
-                return false;
-            }
-        });
-
-
-
-    }
-    */
     ////////////////////////  구글맵 마커 여러개생성 및 띄우기 //////////////////////////
     public void manyMarker() {
 
@@ -360,16 +312,4 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         }
         return false;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }

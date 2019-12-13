@@ -8,7 +8,7 @@ import com.squareup.moshi.Json;
 import java.util.Arrays;
 import java.util.List;
 
-public class Movie implements Parcelable {
+public class Movie {
     private int id;
     private String title;
     private String original_title;
@@ -91,7 +91,6 @@ public class Movie implements Parcelable {
         this.vote_average = vote_average;
     }
 
-
     @Override
     public String toString() {
         return "Movie{" +
@@ -105,50 +104,5 @@ public class Movie implements Parcelable {
                 ", genre_ids=" + Arrays.toString(genre_ids) +
                 ", vote_average=" + vote_average +
                 '}';
-    }
-
-    protected Movie(Parcel in) {
-        id = in.readInt();
-        title = in.readString();
-        original_title = in.readString();
-        poster_path = in.readString();
-        overview = in.readString();
-        backdrop_path = in.readString();
-        release_date = in.readString();
-        genre_ids = in.createIntArray();
-        vote_average = in.readDouble();
-    }
-    public Movie(){
-
-    }
-
-    public static final Creator<Movie> CREATOR = new Creator<Movie>() {
-        @Override
-        public Movie createFromParcel(Parcel in) {
-            return new Movie(in);
-        }
-
-        @Override
-        public Movie[] newArray(int size) {
-            return new Movie[size];
-        }
-    };
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(id);
-        dest.writeString(title);
-        dest.writeString(original_title);
-        dest.writeString(poster_path);
-        dest.writeString(overview);
-        dest.writeString(backdrop_path);
-        dest.writeString(release_date);
-        dest.writeIntArray(genre_ids);
-        dest.writeDouble(vote_average);
     }
 }

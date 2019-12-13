@@ -126,12 +126,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 if(search){
-                    SearchFragment search= SearchFragment.getInstance(query);
+                    SearchFragment search= new SearchFragment(query);
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.fragment, search);
                     ft.commit();
                 }else{
-                    SearchActorFragment search= SearchActorFragment.getInstance(query);
+                    SearchActorFragment search= new SearchActorFragment(query);
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.fragment, search);
                     ft.commit();

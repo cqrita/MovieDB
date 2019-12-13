@@ -65,7 +65,7 @@ public class CastAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActorDetailFragment castDetailFragment = ActorDetailFragment.getInstance(Integer.parseInt(castList.get(position).getId()));
+                ActorDetailFragment castDetailFragment = new ActorDetailFragment(Integer.parseInt(castList.get(position).getId()));
                 FragmentTransaction transaction = ((FragmentActivity)context).getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.fragment, castDetailFragment).commitAllowingStateLoss();
             }

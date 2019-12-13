@@ -57,7 +57,7 @@ public class CastListAdapter extends RecyclerView.Adapter<CastListAdapter.Recycl
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActorDetailFragment castDetailFragment = ActorDetailFragment.getInstance(Integer.parseInt(mCastList.get(position).getId()));
+                ActorDetailFragment castDetailFragment = new ActorDetailFragment(Integer.parseInt(mCastList.get(position).getId()));
                 FragmentTransaction transaction = ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.fragment, castDetailFragment).commitAllowingStateLoss();
             }

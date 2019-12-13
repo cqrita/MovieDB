@@ -41,14 +41,11 @@ public class RecommendFragment extends Fragment {
     private RecyclerView recyclerView;
     private ArrayList<Movie> movieList = new ArrayList<>();
     private boolean stop = false;
-    public static RecommendFragment getInstance(String string)
-    {
-        Bundle args = new Bundle();
-        RecommendFragment recommendFragment = new RecommendFragment();
-        args.putString("String",string);
-        recommendFragment.setArguments(args);
-        return recommendFragment;
+
+    public RecommendFragment(String string) {
+        this.string = string;
     }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -86,7 +83,6 @@ public class RecommendFragment extends Fragment {
         @Override
         protected Movie[] doInBackground(String... strings) {
             OkHttpClient client = new OkHttpClient();
-            string =  (String)getArguments().get("String");
             Log.d("string",string);
             page=page+1;
             Request request = new Request.Builder()

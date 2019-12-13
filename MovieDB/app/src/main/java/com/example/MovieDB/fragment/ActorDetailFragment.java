@@ -46,20 +46,12 @@ public class ActorDetailFragment extends Fragment {
     TextView name;
     TextView castYear;
     TextView biography;
-
-    public ActorDetailFragment()
+    int castInt;
+    public ActorDetailFragment(int castInt)
     {
-        // Required empty public constructor
+        this.castInt = castInt;
     }
 
-    public static ActorDetailFragment getInstance(Integer cast)
-    {
-        Bundle args = new Bundle();
-        ActorDetailFragment actorDetailFragment = new ActorDetailFragment();
-        args.putInt("cast", cast);
-        actorDetailFragment.setArguments(args);
-        return actorDetailFragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -82,7 +74,6 @@ public class ActorDetailFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         if (getArguments() != null)
         {
-            int castInt = (Integer) getArguments().get("cast");
             poster = view.findViewById(R.id.cast_poster);
             name = view.findViewById(R.id.cast_name);
             castYear = view.findViewById(R.id.cast_year);

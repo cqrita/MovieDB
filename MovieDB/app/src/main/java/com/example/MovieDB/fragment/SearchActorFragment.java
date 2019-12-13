@@ -39,14 +39,11 @@ public class SearchActorFragment extends Fragment {
     private RecyclerView recyclerView;
     private ArrayList<Cast> castList = new ArrayList<>();
     private boolean stop = false;
-    public static SearchActorFragment getInstance(String string)
-    {
-        Bundle args = new Bundle();
-        SearchActorFragment searchActorFragment = new SearchActorFragment();
-        args.putString("String",string);
-        searchActorFragment.setArguments(args);
-        return searchActorFragment;
+
+    public SearchActorFragment(String string) {
+        this.string = string;
     }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -83,8 +80,6 @@ public class SearchActorFragment extends Fragment {
         @Override
         protected Cast[] doInBackground(String... strings) {
             OkHttpClient client = new OkHttpClient();
-            string =  (String)getArguments().get("String");
-            Log.d("string",string);
             page=page+1;
             Request request = new Request.Builder()
                     .url("https://api.themoviedb.org/3/search/person?api_key=ee74e4df4dd623e8eb831f2fd274328f&language=ko-KR&query="+string+"&page="+page+"&include_adult=false")

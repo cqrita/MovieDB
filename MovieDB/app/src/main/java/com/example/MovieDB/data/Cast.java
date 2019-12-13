@@ -3,7 +3,7 @@ package com.example.MovieDB.data;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Cast implements Parcelable {
+public class Cast  {
     private String id;
     private String name;
     private String profile_path;
@@ -77,43 +77,17 @@ public class Cast implements Parcelable {
         this.deathday = deathday;
     }
 
-    protected Cast(Parcel in) {
-        id = in.readString();
-        name = in.readString();
-        profile_path = in.readString();
-        order = in.readString();
-        character = in.readString();
-        biography = in.readString();
-        birthday = in.readString();
-        deathday = in.readString();
-    }
-
-    public static final Creator<Cast> CREATOR = new Creator<Cast>() {
-        @Override
-        public Cast createFromParcel(Parcel in) {
-            return new Cast(in);
-        }
-
-        @Override
-        public Cast[] newArray(int size) {
-            return new Cast[size];
-        }
-    };
-
     @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(id);
-        dest.writeString(name);
-        dest.writeString(profile_path);
-        dest.writeString(order);
-        dest.writeString(character);
-        dest.writeString(biography);
-        dest.writeString(birthday);
-        dest.writeString(deathday);
+    public String toString() {
+        return "Cast{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", profile_path='" + profile_path + '\'' +
+                ", order='" + order + '\'' +
+                ", character='" + character + '\'' +
+                ", biography='" + biography + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", deathday='" + deathday + '\'' +
+                '}';
     }
 }

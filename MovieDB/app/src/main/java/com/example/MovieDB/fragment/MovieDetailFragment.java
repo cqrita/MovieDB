@@ -29,7 +29,6 @@ import com.example.MovieDB.data.Cast;
 import com.example.MovieDB.data.Movie;
 import com.example.MovieDB.data.Review;
 import com.example.MovieDB.data.Trailer;
-//import com.example.MovieDB.database.FavoriteDBHelper;
 import com.example.MovieDB.database.FavoriteDBHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
@@ -119,7 +118,7 @@ public class MovieDetailFragment extends Fragment
                 recommend.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        RecommendFragment recommendFragment =RecommendFragment.getInstance(String.valueOf(movie.getId()));
+                        RecommendFragment recommendFragment =new RecommendFragment(String.valueOf(movie.getId()));
                         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                         ft.replace(R.id.fragment, recommendFragment);
                         ft.commit();
@@ -171,28 +170,6 @@ public class MovieDetailFragment extends Fragment
         }
     }
 
-
-//    private void setupTrailersAdapter(List<Trailer> trailerList) {
-//        trailerAdapter.setLayoutManager(
-//                new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
-//        trailerAdapter.setHasFixedSize(true);
-//        trailerAdapter.setAdapter(new TrailersAdapter(getContext(),trailerList));
-//        ViewCompat.setNestedScrollingEnabled(trailerAdapter, false);
-//    }
-//
-//    private void setupCastAdapter(List<Cast> castList) {
-//        castAdapter.setLayoutManager(
-//                new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
-//        castAdapter.setAdapter(new CastAdapter(getContext(), castList));
-//        ViewCompat.setNestedScrollingEnabled(castAdapter, false);
-//    }
-//
-//    private void setupReviewsAdapter(List<Review> reviewList) {
-//        reviewAdapter.setLayoutManager(
-//                new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-//        reviewAdapter.setAdapter(new ReviewsAdapter(getContext(), reviewList));
-//        ViewCompat.setNestedScrollingEnabled(reviewAdapter, false);
-//    }
     public class TrailerAsyncTask extends AsyncTask<Integer, Void, Trailer[]> {
 
         @Override
@@ -314,25 +291,6 @@ public class MovieDetailFragment extends Fragment
         }
     }
 
-    //DB에 저장하는 함수
-//    public void saveOrDeleteFavorite(){
-//        favoriteDbHelper.getAllFavorite();
-//        Cursor cursor = db.rawQuery("select * from favorite where _id=?",
-//                new String[]{String.valueOf(this.movie.getId())});
-//        if(cursor != null &&cursor.moveToFirst()) {
-//            favoriteDbHelper.deleteFavorite(movie.getId());
-//            Toast.makeText(getActivity().getApplicationContext(), "즐겨찾기에서 삭제되었습니다",Toast.LENGTH_SHORT).show();
-//            Log.d("DB", String.valueOf(movie != null) );
-//            Log.d("DB", "Deleted");
-//        } else {
-//            favoriteDbHelper.addFavorite(movie);
-//            Toast.makeText(getActivity().getApplicationContext(), "즐겨찾기에 추가되었습니다",
-//                    Toast.LENGTH_SHORT).show();
-//            Log.d("DB", String.valueOf(movie.getTitle()) );
-//            Log.d("DB", "Successfully added");
-//
-//        }
-//    }
     @Override
     public void onDestroyView()
     {
