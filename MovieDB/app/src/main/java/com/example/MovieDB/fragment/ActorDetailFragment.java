@@ -72,15 +72,12 @@ public class ActorDetailFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        if (getArguments() != null)
-        {
-            poster = view.findViewById(R.id.cast_poster);
-            name = view.findViewById(R.id.cast_name);
-            castYear = view.findViewById(R.id.cast_year);
-            biography = view.findViewById(R.id.cast_biography);
-            CastAsyncTask castAsyncTask = new CastAsyncTask();
-            castAsyncTask.execute(castInt);
-        }
+        poster = view.findViewById(R.id.cast_poster);
+        name = view.findViewById(R.id.cast_name);
+        castYear = view.findViewById(R.id.cast_year);
+        biography = view.findViewById(R.id.cast_biography);
+        CastAsyncTask castAsyncTask = new CastAsyncTask();
+        castAsyncTask.execute(castInt);
     }
     public class CastAsyncTask extends AsyncTask<Integer, Void, Cast> {
 
