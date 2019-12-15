@@ -18,7 +18,6 @@ import com.example.MovieDB.R;
 import com.example.MovieDB.adapter.MovieListAdapter;
 import com.example.MovieDB.data.Movie;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
@@ -33,7 +32,7 @@ public class HomeFragment extends Fragment {
     private int page=0;
     private RecyclerView recyclerView;
     private ArrayList<Movie> movieList = new ArrayList<>();
-    MovieListAdapter adapter;
+    private MovieListAdapter adapter;
     private boolean stop = false;
     @Nullable
     @Override
@@ -79,10 +78,9 @@ public class HomeFragment extends Fragment {
                     .build();
             try {
                 Response response = client.newCall(request).execute();
-                Gson gson = new GsonBuilder().create();
-                JsonParser parser = new JsonParser();
+                Gson gson = new Gson();
                 assert response.body() != null;
-                JsonElement rootObject = parser.parse(response.body().charStream())
+                JsonElement rootObject = JsonParser.parseReader(response.body().charStream())
                         .getAsJsonObject().get("results");
                 return gson.fromJson(rootObject, Movie[].class);
             } catch (Exception e) {

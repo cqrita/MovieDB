@@ -23,10 +23,9 @@ import com.example.MovieDB.database.FavoriteDBHelper;
 import java.util.ArrayList;
 
 public class FavoriteFragment extends Fragment {
-    private int page=0;
     private RecyclerView recyclerView;
     private ArrayList<Movie> movieList = new ArrayList<>();
-    MovieListAdapter adapter;
+    private MovieListAdapter adapter;
     private boolean stop = false;
     @Nullable
     @Override

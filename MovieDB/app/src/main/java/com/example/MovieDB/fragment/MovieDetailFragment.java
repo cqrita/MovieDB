@@ -46,22 +46,21 @@ import okhttp3.Response;
 
 public class MovieDetailFragment extends Fragment
 {
-    Movie movie;
-    ImageView poster;
-    TextView title;
-    TextView releaseDate;
-    RatingBar rating;
-    TextView overview;
-    Button recommend;
-    ArrayList<Trailer> trailerList =new ArrayList<>();
-    ArrayList<Cast> castList =new ArrayList<>();
-    ArrayList<Review> reviewList = new ArrayList<>();
-    FloatingActionButton favorite_button;
+    private Movie movie;
+    private ImageView poster;
+    private TextView title;
+    private TextView releaseDate;
+    private RatingBar rating;
+    private TextView overview;
+    private Button recommend;
+    private ArrayList<Trailer> trailerList =new ArrayList<>();
+    private ArrayList<Cast> castList =new ArrayList<>();
+    private ArrayList<Review> reviewList = new ArrayList<>();
+    private FloatingActionButton favorite_button;
     private RecyclerView castView;
     private RecyclerView trailerView;
     private RecyclerView reviewView;
     private FavoriteDBHelper favoriteDbHelper;
-    private SQLiteDatabase mDb;
 
 //    private Movie movie;
     public MovieDetailFragment(Movie movie)
@@ -196,9 +195,8 @@ public class MovieDetailFragment extends Fragment
                     .build();
             try {
                 Response response = client.newCall(request).execute();
-                Gson gson = new GsonBuilder().create();
-                JsonParser parser = new JsonParser();
-                JsonElement rootObject = parser.parse(response.body().charStream())
+                Gson gson = new Gson();
+                JsonElement rootObject = JsonParser.parseReader(response.body().charStream())
                         .getAsJsonObject().get("results");
                 Trailer[] posts = gson.fromJson(rootObject, Trailer[].class);
                 return posts;
@@ -238,9 +236,8 @@ public class MovieDetailFragment extends Fragment
                     .build();
             try {
                 Response response = client.newCall(request).execute();
-                Gson gson = new GsonBuilder().create();
-                JsonParser parser = new JsonParser();
-                JsonElement rootObject = parser.parse(response.body().charStream())
+                Gson gson = new Gson();
+                JsonElement rootObject = JsonParser.parseReader(response.body().charStream())
                         .getAsJsonObject().get("cast");
                 Cast[] posts = gson.fromJson(rootObject, Cast[].class);
                 return posts;
@@ -278,9 +275,8 @@ public class MovieDetailFragment extends Fragment
                     .build();
             try {
                 Response response = client.newCall(request).execute();
-                Gson gson = new GsonBuilder().create();
-                JsonParser parser = new JsonParser();
-                JsonElement rootObject = parser.parse(response.body().charStream())
+                Gson gson = new Gson();
+                JsonElement rootObject = JsonParser.parseReader(response.body().charStream())
                         .getAsJsonObject().get("results");
                 Review[] posts = gson.fromJson(rootObject, Review[].class);
                 return posts;

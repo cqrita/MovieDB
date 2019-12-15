@@ -20,7 +20,6 @@ import com.example.MovieDB.R;
 import com.example.MovieDB.adapter.CastListAdapter;
 import com.example.MovieDB.data.Cast;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
@@ -34,8 +33,8 @@ import okhttp3.Response;
 
 public class SearchActorFragment extends Fragment {
     private int page=0;
-    String string;
-    CastListAdapter adapter;
+    private String string;
+    private CastListAdapter adapter;
     private RecyclerView recyclerView;
     private ArrayList<Cast> castList = new ArrayList<>();
     private boolean stop = false;
@@ -86,10 +85,9 @@ public class SearchActorFragment extends Fragment {
                     .build();
             try {
                 Response response = client.newCall(request).execute();
-                Gson gson = new GsonBuilder().create();
-                JsonParser parser = new JsonParser();
+                Gson gson = new Gson();
                 assert response.body() != null;
-                JsonElement rootObject = parser.parse(response.body().charStream())
+                JsonElement rootObject = JsonParser.parseReader(response.body().charStream())
                         .getAsJsonObject().get("results");
                 return gson.fromJson(rootObject, Cast[].class);
             } catch (Exception e) {

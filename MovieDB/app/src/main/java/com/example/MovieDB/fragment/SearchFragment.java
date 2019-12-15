@@ -18,7 +18,6 @@ import com.example.MovieDB.R;
 import com.example.MovieDB.adapter.MovieListAdapter;
 import com.example.MovieDB.data.Movie;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
@@ -31,8 +30,8 @@ import okhttp3.Response;
 
 public class SearchFragment extends Fragment {
     private int page=0;
-    String string;
-    MovieListAdapter adapter;
+    private String string;
+    private MovieListAdapter adapter;
     private RecyclerView recyclerView;
     private ArrayList<Movie> movieList = new ArrayList<>();
     private boolean stop = false;
@@ -84,10 +83,9 @@ public class SearchFragment extends Fragment {
                     .build();
             try {
                 Response response = client.newCall(request).execute();
-                Gson gson = new GsonBuilder().create();
-                JsonParser parser = new JsonParser();
+                Gson gson = new Gson();
                 assert response.body() != null;
-                JsonElement rootObject = parser.parse(response.body().charStream())
+                JsonElement rootObject = JsonParser.parseReader(response.body().charStream())
                         .getAsJsonObject().get("results");
                 return gson.fromJson(rootObject, Movie[].class);
             } catch (Exception e) {

@@ -47,15 +47,15 @@ import java.io.OutputStream;
 
 public class MapFragment extends Fragment implements OnMapReadyCallback {
 
-    String theaterCode;
-    LatLng location;
-    String markerTitle;
-    String markerId;
+    private String theaterCode;
+    private LatLng location;
+    private String markerTitle;
+    private String markerId;
     private MapView mapView = null;
-    LocationManager locationManager;
+    private LocationManager locationManager;
     Location recentlocation;
-    double latitude;
-    double longitude;
+    private double latitude;
+    private double longitude;
 
     private void setDB(Context ctx) {
         Log.d("theater","1");

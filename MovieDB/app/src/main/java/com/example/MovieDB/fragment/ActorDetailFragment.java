@@ -41,12 +41,12 @@ import okhttp3.Response;
  * A simple {@link Fragment} subclass.
  */
 public class ActorDetailFragment extends Fragment {
-    Cast cast;
-    ImageView poster;
-    TextView name;
-    TextView castYear;
-    TextView biography;
-    int castInt;
+    private Cast cast;
+    private ImageView poster;
+    private TextView name;
+    private TextView castYear;
+    private TextView biography;
+    private int castInt;
     public ActorDetailFragment(int castInt)
     {
         this.castInt = castInt;
@@ -133,9 +133,8 @@ public class ActorDetailFragment extends Fragment {
                     .build();
             try {
                 Response response = client.newCall(request).execute();
-                Gson gson = new GsonBuilder().create();
-                JsonParser parser = new JsonParser();
-                JsonElement rootObject = parser.parse(response.body().charStream())
+                Gson gson = new Gson();
+                JsonElement rootObject = JsonParser.parseReader(response.body().charStream())
                         .getAsJsonObject();
                 Cast post = gson.fromJson(rootObject, Cast.class);
                 return post;
