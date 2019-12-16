@@ -31,7 +31,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class SearchActorFragment extends Fragment {
-    private int page = 1;
+    private int page = 0;
     private String string;
     private CastListAdapter adapter;
     private RecyclerView recyclerView;

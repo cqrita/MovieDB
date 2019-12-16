@@ -35,7 +35,7 @@ import okhttp3.Response;
  * create an instance of this fragment.
  */
 public class RecommendFragment extends Fragment {
-    private int page = 1;
+    private int page = 0;
     private String string;
     private MovieListAdapter adapter;
     private RecyclerView recyclerView;
