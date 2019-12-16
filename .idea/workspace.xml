@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d9b9d3e-3929-40ce-9bfa-c2b0beff6898" name="Default Changelist" comment="RecyclerView" />
+    <list default="true" id="8d9b9d3e-3929-40ce-9bfa-c2b0beff6898" name="Default Changelist" comment="RecyclerView">
+      <change beforePath="$PROJECT_DIR$/MovieDB/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_github_mancj_MaterialSearchBar_0_8_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_github_mancj_MaterialSearchBar_0_8_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_melnykov_floatingactionbutton_1_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_melnykov_floatingactionbutton_1_3_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_mikepenz_iconics_core_1_7_5_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_mikepenz_iconics_core_1_7_5_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_mikepenz_materialdrawer_4_0_5_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_mikepenz_materialdrawer_4_0_5_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_mikepenz_materialize_0_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_mikepenz_materialize_0_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_yqritc_recyclerview_flexibledivider_1_2_5_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/libraries/Gradle__com_yqritc_recyclerview_flexibledivider_1_2_5_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MovieDB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MovieDB/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MovieDB/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB/local.properties" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +25,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
+            <state relative-caret-position="414">
               <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
@@ -22,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/res/layout/activity_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+            <state relative-caret-position="72">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -52,38 +64,29 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="x" value="472" />
+    <option name="y" value="23" />
+    <option name="width" value="968" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Movie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Movie" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Movie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Movie" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Movie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Movie" type="462c0819:PsiDirectoryNode" />
-              <item name="MovieDB" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="FinalFinalMovie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalFinalMovie" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -134,11 +137,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.3395973" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.34406295" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -154,7 +157,7 @@
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
       <window_info anchor="right" id="Assistant" order="3" weight="0.33742005" />
-      <window_info active="true" anchor="right" id="Preview" order="4" visible="true" weight="0.17315437" />
+      <window_info anchor="right" id="Preview" order="4" visible="true" weight="0.17310444" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -176,9 +179,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.github/workflows/android.yml" />
     <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/fragment/MovieDetailFragment.java" />
-    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/data/MovieParser.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/data/MovieParser.java" />
     <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/data/Movie.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -211,9 +212,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/data/TheaterParser.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/data/TheaterParser.java" />
     <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/fragment/FavoriteFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -223,7 +222,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/java/com/example/MovieDB/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
+        <state relative-caret-position="414">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
@@ -233,8 +232,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MovieDB/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        <state relative-caret-position="72">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
