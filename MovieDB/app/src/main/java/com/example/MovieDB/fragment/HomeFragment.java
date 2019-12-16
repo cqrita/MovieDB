@@ -23,6 +23,7 @@ import com.google.gson.JsonParser;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -79,7 +80,7 @@ public class HomeFragment extends Fragment {
                 Response response = client.newCall(request).execute();
                 Gson gson = new Gson();
                 assert response.body() != null;
-                JsonElement rootObject = JsonParser.parseReader(response.body().charStream())
+                JsonElement rootObject = JsonParser.parseReader(Objects.requireNonNull(response.body()).charStream())
                         .getAsJsonObject().get("results");
                 return gson.fromJson(rootObject, Movie[].class);
             } catch (Exception e) {
