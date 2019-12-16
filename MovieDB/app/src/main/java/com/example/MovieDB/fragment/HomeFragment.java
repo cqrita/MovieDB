@@ -30,18 +30,40 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class HomeFragment extends Fragment {
-    private int page=0;
+    private int page = 1;
     private RecyclerView recyclerView;
     private ArrayList<Movie> movieList = new ArrayList<>();
     private MovieListAdapter adapter;
+    private ProgressDialog progressDialog;
     private boolean stop = false;
+    private MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
+        @Override
+        public void onResult(Movie[] result) {
+            ArrayList<Movie> movieList = new ArrayList<>();
+            if (result == null) {
+                stop = true;
+            }
+            assert result != null;
+            if (result.length > 0) {
+                movieList.addAll(Arrays.asList(result));
+            }
+            Log.d("IMDBNetwork", "adapter");
+            adapter.addMovieList(movieList);
+            adapter.notifyDataSetChanged();
+            progressDialog.dismiss();
+        }
+    };
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.home, container, false);
-        MyAsyncTask mAsyncTask = new MyAsyncTask();
+        progressDialog = new ProgressDialog(getContext());
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setMessage("\t로딩중...");
+        progressDialog.show();
+        MyAsyncTask mAsyncTask = new MyAsyncTask(httpCallback, page);
         mAsyncTask.execute();
         Log.d("IMDBNetwork","2");
         recyclerView = view.findViewById(R.id.home_recycler_view) ;
@@ -49,25 +71,53 @@ public class HomeFragment extends Fragment {
         adapter = new MovieListAdapter(getContext(), movieList);
         recyclerView.setAdapter(adapter);
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
+                @Override
+                public void onResult(Movie[] result) {
+                    ArrayList<Movie> movieList = new ArrayList<>();
+                    if (result != null) {
+                        if (result.length == 0) {
+                            stop = true;
+                        }
+                        movieList.addAll(Arrays.asList(result));
+                    } else {
+                        stop = true;
+                    }
+                    Log.d("IMDBNetwork", "adapter");
+                    adapter.addMovieList(movieList);
+                    adapter.notifyDataSetChanged();
+                    progressDialog.dismiss();
+                }
+            };
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                if (!recyclerView.canScrollVertically(1) && !stop) {
-                    MyAsyncTask mAsyncTask = new MyAsyncTask();
+                if (!recyclerView.canScrollVertically(1) & !stop) {
+                    progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                    progressDialog.setMessage("\t로딩중...");
+                    progressDialog.show();
+                    page = page + 1;
+                    MyAsyncTask mAsyncTask = new MyAsyncTask(httpCallback, page);
                     mAsyncTask.execute();
                 }
             }
         });
         return view;
     }
-    public class MyAsyncTask extends AsyncTask<String, Void, Movie[]> {
-        ProgressDialog progressDialog = new ProgressDialog(getContext());
+
+    public static class MyAsyncTask extends AsyncTask<String, Void, Movie[]> {
+        private HttpCallback httpCallback;
+        private int page;
+
+        MyAsyncTask(HttpCallback httpCallback, int page) {
+            this.httpCallback = httpCallback;
+            this.page = page;
+        }
+
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-            progressDialog.setMessage("\t로딩중...");
-            progressDialog.show();
+
         }
         @Override
         protected Movie[] doInBackground(String... strings) {
@@ -91,18 +141,13 @@ public class HomeFragment extends Fragment {
         @Override
         protected void onPostExecute(Movie[] result) {
             super.onPostExecute(result);
-            progressDialog.dismiss();
-            ArrayList<Movie> movieList = new ArrayList<>();
-            if(result== null){
-                stop=true;
+            if (this.httpCallback != null) {
+                this.httpCallback.onResult(result);
             }
-            assert result != null;
-            if(result.length > 0){
-                movieList.addAll(Arrays.asList(result));
-            }
-            Log.d("IMDBNetwork","adapter");
-            adapter.addMovieList(movieList);
-            adapter.notifyDataSetChanged();
+        }
+
+        interface HttpCallback {
+            void onResult(Movie[] result);
         }
     }
 }

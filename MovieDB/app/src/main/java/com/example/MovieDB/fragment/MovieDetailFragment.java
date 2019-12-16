@@ -91,10 +91,54 @@ public class MovieDetailFragment extends Fragment
         castView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
         reviewView = rootView.findViewById(R.id.list_reviews);
         reviewView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-
         return rootView;
     }
 
+    private TrailerAsyncTask.HttpCallback trailerCallback = new TrailerAsyncTask.HttpCallback() {
+        @Override
+        public void onResult(Trailer[] result) {
+            count = count + 1;
+            if (count == 3) {
+                progressDialog.dismiss();
+            }
+            Collections.addAll(trailerList, result);
+            TrailersAdapter adapter = new TrailersAdapter(getContext(), trailerList);
+            trailerView.setAdapter(adapter);
+            Log.d("trailers", String.valueOf(adapter.getItemCount()));
+        }
+    };
+    private CastAsyncTask.HttpCallback castCallback = new CastAsyncTask.HttpCallback() {
+        @Override
+        public void onResult(Cast[] result) {
+            count = count + 1;
+            if (count == 3) {
+                progressDialog.dismiss();
+            }
+            if (result != null) {
+                castList.addAll(Arrays.asList(result));
+                Log.d("Cast", String.valueOf(castList.size()));
+            } else {
+                Log.d("Cast", "error");
+            }
+            CastAdapter adapter = new CastAdapter(getContext(), castList);
+            castView.setAdapter(adapter);
+        }
+    };
+    private ReviewAsyncTask.HttpCallback reviewCallback = new ReviewAsyncTask.HttpCallback() {
+        @Override
+        public void onResult(Review[] result) {
+            count = count + 1;
+            if (count == 3) {
+                progressDialog.dismiss();
+            }
+            if (result != null) {
+                Collections.addAll(reviewList, result);
+            }
+            ReviewsAdapter adapter = new ReviewsAdapter(getContext(), reviewList);
+            reviewView.setAdapter(adapter);
+            Log.d("reviews", String.valueOf(adapter.getItemCount()));
+        }
+    };
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -165,16 +209,23 @@ public class MovieDetailFragment extends Fragment
                     }
                 });
                 Log.d("database", "++++++++++++++++++++++++");
-                TrailerAsyncTask trailerAsyncTask = new TrailerAsyncTask();
-                trailerAsyncTask.execute(movie.getId());
-                CastAsyncTask castAsyncTask = new CastAsyncTask();
-                castAsyncTask.execute(movie.getId());
-                ReviewAsyncTask reviewAsyncTask = new ReviewAsyncTask();
-                reviewAsyncTask.execute(movie.getId());
+                TrailerAsyncTask trailerAsyncTask = new TrailerAsyncTask(trailerCallback, movie.getId());
+                trailerAsyncTask.execute();
+                CastAsyncTask castAsyncTask = new CastAsyncTask(castCallback, movie.getId());
+                castAsyncTask.execute();
+                ReviewAsyncTask reviewAsyncTask = new ReviewAsyncTask(reviewCallback, movie.getId());
+                reviewAsyncTask.execute();
         }
     }
 
-    public class TrailerAsyncTask extends AsyncTask<Integer, Void, Trailer[]> {
+    public static class TrailerAsyncTask extends AsyncTask<Void, Void, Trailer[]> {
+        private HttpCallback trailerCallback;
+        private int ints;
+
+        TrailerAsyncTask(HttpCallback trailerCallback, int ints) {
+            this.trailerCallback = trailerCallback;
+            this.ints = ints;
+        }
 
         @Override
         protected void onPreExecute() {
@@ -183,20 +234,15 @@ public class MovieDetailFragment extends Fragment
 
         @Override
         protected void onPostExecute(Trailer[] trailers) {
-            super.onPostExecute(trailers);
-            count = count + 1;
-            if (count == 3) {
-                progressDialog.dismiss();
+            if (this.trailerCallback != null) {
+                this.trailerCallback.onResult(trailers);
             }
-            Collections.addAll(trailerList, trailers);
-            TrailersAdapter adapter=new TrailersAdapter(getContext(),trailerList);
-            trailerView.setAdapter(adapter);
-            Log.d("trailers",String.valueOf(adapter.getItemCount()));
+            super.onPostExecute(trailers);
         }
 
         @Override
-        protected Trailer[] doInBackground(Integer... ints) {
-            String m_id = String.valueOf(ints[0]);
+        protected Trailer[] doInBackground(Void... args) {
+            String m_id = String.valueOf(ints);
             Log.d("Trailer","https://api.themoviedb.org/3/movie/"+m_id+"/videos?api_key=ee74e4df4dd623e8eb831f2fd274328f");
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
@@ -214,8 +260,20 @@ public class MovieDetailFragment extends Fragment
             }
             return null;
         }
+
+        interface HttpCallback {
+            void onResult(Trailer[] result);
+        }
     }
-    public class CastAsyncTask extends AsyncTask<Integer, Void, Cast[]> {
+
+    public static class CastAsyncTask extends AsyncTask<Void, Void, Cast[]> {
+        private HttpCallback castCallback;
+        private int ints;
+
+        CastAsyncTask(HttpCallback castCallback, int ints) {
+            this.castCallback = castCallback;
+            this.ints = ints;
+        }
 
         @Override
         protected void onPreExecute() {
@@ -225,23 +283,14 @@ public class MovieDetailFragment extends Fragment
         @Override
         protected void onPostExecute(Cast[] casts) {
             super.onPostExecute(casts);
-            count = count + 1;
-            if (count == 3) {
-                progressDialog.dismiss();
+            if (this.castCallback != null) {
+                this.castCallback.onResult(casts);
             }
-            if(casts != null){
-                castList.addAll(Arrays.asList(casts));
-                Log.d("Cast",String.valueOf(castList.size()));
-            }else {
-                Log.d("Cast","error");
-            }
-            CastAdapter adapter=new CastAdapter(getContext(),castList);
-            castView.setAdapter(adapter);
         }
 
         @Override
-        protected Cast[] doInBackground(Integer... ints) {
-            String m_id = String.valueOf(ints[0]);
+        protected Cast[] doInBackground(Void... args) {
+            String m_id = String.valueOf(ints);
             Log.d("Cast","https://api.themoviedb.org/3/movie/"+m_id+"/casts?api_key=ee74e4df4dd623e8eb831f2fd274328f&language=ko-KR");
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
@@ -259,8 +308,20 @@ public class MovieDetailFragment extends Fragment
             }
             return null;
         }
+
+        interface HttpCallback {
+            void onResult(Cast[] result);
+        }
     }
-    public class ReviewAsyncTask extends AsyncTask<Integer, Void, Review[]> {
+
+    public static class ReviewAsyncTask extends AsyncTask<Void, Void, Review[]> {
+        private HttpCallback reviewCallback;
+        private int ints;
+
+        ReviewAsyncTask(HttpCallback reviewCallback, int ints) {
+            this.reviewCallback = reviewCallback;
+            this.ints = ints;
+        }
 
         @Override
         protected void onPreExecute() {
@@ -270,21 +331,14 @@ public class MovieDetailFragment extends Fragment
         @Override
         protected void onPostExecute(Review[] reviews) {
             super.onPostExecute(reviews);
-            count = count + 1;
-            if (count == 3) {
-                progressDialog.dismiss();
+            if (this.reviewCallback != null) {
+                this.reviewCallback.onResult(reviews);
             }
-            if(reviews != null){
-                Collections.addAll(reviewList, reviews);
-            }
-            ReviewsAdapter adapter=new ReviewsAdapter(getContext(),reviewList);
-            reviewView.setAdapter(adapter);
-            Log.d("reviews",String.valueOf(adapter.getItemCount()));
         }
 
         @Override
-        protected Review[]doInBackground(Integer... ints) {
-            String m_id = String.valueOf(ints[0]);
+        protected Review[] doInBackground(Void... args) {
+            String m_id = String.valueOf(ints);
             Log.d("Review","https://api.themoviedb.org/3/movie/"+m_id+"/reviews?api_key=ee74e4df4dd623e8eb831f2fd274328f");
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
@@ -302,6 +356,10 @@ public class MovieDetailFragment extends Fragment
             }
             return null;
         }
+
+        interface HttpCallback {
+            void onResult(Review[] result);
+        }
     }
 
     @Override
@@ -315,7 +373,5 @@ public class MovieDetailFragment extends Fragment
     {
         super.onDestroy();
     }
-
-
 }
 
