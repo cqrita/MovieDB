@@ -1,6 +1,7 @@
 package com.example.MovieDB.fragment;
 
 
+import android.app.ProgressDialog;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
@@ -33,7 +34,6 @@ import com.example.MovieDB.data.Trailer;
 import com.example.MovieDB.database.FavoriteDBHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
@@ -63,7 +63,8 @@ public class MovieDetailFragment extends Fragment
     private RecyclerView trailerView;
     private RecyclerView reviewView;
     private FavoriteDBHelper favoriteDbHelper;
-
+    ProgressDialog progressDialog = new ProgressDialog(getContext());
+    private int count = 0;
 //    private Movie movie;
     public MovieDetailFragment(Movie movie)
     {
@@ -97,10 +98,11 @@ public class MovieDetailFragment extends Fragment
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
             Log.d("detail",movie.getTitle());
             if (movie != null) {
+                progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                progressDialog.setMessage("\t로딩중...");
+                progressDialog.show();
                 poster = view.findViewById(R.id.movie_poster);
                 title =view.findViewById(R.id.movie_name);
                 releaseDate=view.findViewById(R.id.movie_year);
@@ -144,7 +146,7 @@ public class MovieDetailFragment extends Fragment
                         } else {
                             assert cursor != null;
                             Log.d("seungrok",
-                                    "추가전 cursor movetofirst"+String.valueOf(cursor.moveToFirst()));
+                                    "추가전 cursor movetofirst" + cursor.moveToFirst());
 
                             favoriteDbHelper.addFavorite(db,movie);
                             Toast.makeText(getContext(), "즐겨찾기에 추가되었습니다",Toast.LENGTH_SHORT).show();
@@ -153,7 +155,7 @@ public class MovieDetailFragment extends Fragment
                             Cursor cursor2 = db.rawQuery("select * from favorite where id =?",
                                     new String[]{String.valueOf(movie.getId())});
                             Log.d("seungrok",
-                                    "추가후 cursor movetofirst"+String.valueOf(cursor2.moveToFirst()));
+                                    "추가후 cursor movetofirst" + cursor2.moveToFirst());
                         }
                     }
                 });
@@ -164,9 +166,6 @@ public class MovieDetailFragment extends Fragment
                 castAsyncTask.execute(movie.getId());
                 ReviewAsyncTask reviewAsyncTask = new ReviewAsyncTask();
                 reviewAsyncTask.execute(movie.getId());
-
-
-
         }
     }
 
@@ -180,6 +179,10 @@ public class MovieDetailFragment extends Fragment
         @Override
         protected void onPostExecute(Trailer[] trailers) {
             super.onPostExecute(trailers);
+            count = count + 1;
+            if (count == 3) {
+                progressDialog.dismiss();
+            }
             Collections.addAll(trailerList, trailers);
             TrailersAdapter adapter=new TrailersAdapter(getContext(),trailerList);
             trailerView.setAdapter(adapter);
@@ -217,6 +220,10 @@ public class MovieDetailFragment extends Fragment
         @Override
         protected void onPostExecute(Cast[] casts) {
             super.onPostExecute(casts);
+            count = count + 1;
+            if (count == 3) {
+                progressDialog.dismiss();
+            }
             if(casts != null){
                 castList.addAll(Arrays.asList(casts));
                 Log.d("Cast",String.valueOf(castList.size()));
@@ -258,6 +265,10 @@ public class MovieDetailFragment extends Fragment
         @Override
         protected void onPostExecute(Review[] reviews) {
             super.onPostExecute(reviews);
+            count = count + 1;
+            if (count == 3) {
+                progressDialog.dismiss();
+            }
             if(reviews != null){
                 Collections.addAll(reviewList, reviews);
             }

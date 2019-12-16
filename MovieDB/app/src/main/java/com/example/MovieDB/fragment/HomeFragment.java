@@ -66,7 +66,6 @@ public class HomeFragment extends Fragment {
             super.onPreExecute();
             progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
             progressDialog.setMessage("\t로딩중...");
-            //show dialog
             progressDialog.show();
         }
         @Override

@@ -1,18 +1,18 @@
 package com.example.MovieDB.fragment;
 
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
 import com.example.MovieDB.R;
@@ -73,15 +73,19 @@ public class ActorDetailFragment extends Fragment {
         castAsyncTask.execute(castInt);
     }
     public class CastAsyncTask extends AsyncTask<Integer, Void, Cast> {
-
+        ProgressDialog progressDialog = new ProgressDialog(getContext());
         @Override
         protected void onPreExecute() {
+            progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            progressDialog.setMessage("\t로딩중...");
+            progressDialog.show();
             super.onPreExecute();
         }
 
         @Override
         protected void onPostExecute(Cast cast1) {
             super.onPostExecute(cast1);
+            progressDialog.dismiss();
             cast=cast1;
             Glide.with(Objects.requireNonNull(getContext()))
                     .load("https://image.tmdb.org/t/p/w500"+cast1.getProfile_path())

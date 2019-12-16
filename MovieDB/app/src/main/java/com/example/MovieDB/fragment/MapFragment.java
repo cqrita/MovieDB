@@ -2,6 +2,7 @@ package com.example.MovieDB.fragment;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
@@ -25,7 +26,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 
 import com.example.MovieDB.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -120,8 +120,12 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Log.d("onCreateMapView","yes!");
+        ProgressDialog progressDialog = new ProgressDialog(getContext());
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setMessage("\t로딩중...");
+        progressDialog.show();
         View rootView = inflater.inflate(R.layout.mapview, container, false);
-        mapView = (MapView) rootView.findViewById(R.id.map);
+        mapView = rootView.findViewById(R.id.map);
         Log.d("onCreateMapView","1");
         mapView.onCreate(savedInstanceState);
         Log.d("onCreateMapView","2");
@@ -140,6 +144,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         Log.d("Web","4");
 
         mWebView.loadUrl("https://www.cgv.co.kr/");
+        progressDialog.dismiss();
         Log.d("Web","5 - loadUrl");
         return rootView;
 
