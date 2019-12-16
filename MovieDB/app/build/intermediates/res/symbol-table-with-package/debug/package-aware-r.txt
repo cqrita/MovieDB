@@ -2147,6 +2147,7 @@ string abc_toolbar_collapse_description
 string action_search
 string app_name
 string appbar_scrolling_view_behavior
+string as
 string ayp_custom_action_left
 string ayp_custom_action_right
 string ayp_full_screen_button

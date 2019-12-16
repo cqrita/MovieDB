@@ -6,94 +6,94 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="23"
-8-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml
+8-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml
+9-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION_LOCATION" />
-11-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:4:5-90
-11-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:4:22-87
+11-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:4:5-90
+11-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:4:22-87
 12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-12-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:5:5-79
-12-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:5:22-76
+12-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:5:5-79
+12-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:5:22-76
 13    <uses-permission android:name="android.permission.INTERNET" />
-13-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:6:5-66
-13-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:6:22-64
+13-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:6:5-66
+13-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:6:22-64
 14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-14-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/7d34aeb7ddb19ff1b3ba84e40e1569ec/core-10.0.5/AndroidManifest.xml:12:5-79
-14-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/7d34aeb7ddb19ff1b3ba84e40e1569ec/core-10.0.5/AndroidManifest.xml:12:22-76
+14-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] C:\Users\user\.gradle\caches\transforms-2\files-2.1\7d34aeb7ddb19ff1b3ba84e40e1569ec\core-10.0.5\AndroidManifest.xml:12:5-79
+14-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] C:\Users\user\.gradle\caches\transforms-2\files-2.1\7d34aeb7ddb19ff1b3ba84e40e1569ec\core-10.0.5\AndroidManifest.xml:12:22-76
 15
 16    <uses-feature
-16-->[com.google.android.gms:play-services-maps:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/a3d702a77cbfacefb23de82416a0cb1f/play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+16-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
 17        android:glEsVersion="0x00020000"
-17-->[com.google.android.gms:play-services-maps:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/a3d702a77cbfacefb23de82416a0cb1f/play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+17-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
 18        android:required="true" />
-18-->[com.google.android.gms:play-services-maps:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/a3d702a77cbfacefb23de82416a0cb1f/play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+18-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
 19
 20    <application
-20-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:7:5-25:19
+20-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:7:5-24:19
 21        android:allowBackup="true"
-21-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:8:9-35
+21-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:8:9-35
 22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-22-->[androidx.core:core:1.1.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:24:18-86
+22-->[androidx.core:core:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
 23        android:debuggable="true"
 24        android:icon="@mipmap/ic_launcher"
-24-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:9:9-43
+24-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:9:9-43
 25        android:label="@string/app_name"
-25-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:10:9-41
+25-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:10:9-41
 26        android:networkSecurityConfig="@xml/network_security_config"
-26-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:14:9-69
+26-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:14:9-69
 27        android:roundIcon="@mipmap/ic_launcher_round"
-27-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:11:9-54
+27-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:11:9-54
 28        android:supportsRtl="true"
-28-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:12:9-35
+28-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:12:9-35
 29        android:testOnly="true"
 30        android:theme="@style/AppTheme" >
-30-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:13:9-40
+30-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:13:9-40
 31        <activity android:name="com.example.MovieDB.MainActivity" >
-31-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:15:9-21:20
-31-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:15:19-47
+31-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:15:9-20:20
+31-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:15:19-47
 32            <intent-filter>
-32-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:16:13-20:29
+32-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:16:13-19:29
 33                <action android:name="android.intent.action.MAIN" />
-33-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:17:17-69
-33-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:17:25-66
+33-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:17:17-69
+33-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:17:25-66
 34
 35                <category android:name="android.intent.category.LAUNCHER" />
-35-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:19:17-77
-35-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:19:27-74
+35-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:18:17-77
+35-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:18:27-74
 36            </intent-filter>
 37        </activity>
 38
 39        <meta-data
-39-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:22:9-24:70
+39-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:21:9-23:70
 40            android:name="com.google.android.geo.API_KEY"
-40-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:23:13-58
+40-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:22:13-58
 41            android:value="AIzaSyAFdyErPaOWanCHYnsUoqkuwi13fKNzykE" />
-41-->/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/AndroidManifest.xml:24:13-68
+41-->D:\Users\user\gitProjects\MovieDB\MovieDB\app\src\main\AndroidManifest.xml:23:13-68
 42        <!-- Needs to be explicitly declared on P+ -->
 43        <uses-library
-43-->[com.google.android.gms:play-services-maps:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/a3d702a77cbfacefb23de82416a0cb1f/play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+43-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
 44            android:name="org.apache.http.legacy"
-44-->[com.google.android.gms:play-services-maps:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/a3d702a77cbfacefb23de82416a0cb1f/play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
+44-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
 45            android:required="false" />
-45-->[com.google.android.gms:play-services-maps:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/a3d702a77cbfacefb23de82416a0cb1f/play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
+45-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
 46
 47        <activity
-47-->[com.google.android.gms:play-services-base:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+47-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
 48            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-48-->[com.google.android.gms:play-services-base:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+48-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
 49            android:exported="false"
-49-->[com.google.android.gms:play-services-base:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+49-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
 50            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-50-->[com.google.android.gms:play-services-base:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+50-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
 51
 52        <meta-data
-52-->[com.google.android.gms:play-services-basement:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/fad628d277a41d68798559d525d492d0/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+52-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\a3d2cae62627971da1ece173e93cc8f1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
 53            android:name="com.google.android.gms.version"
-53-->[com.google.android.gms:play-services-basement:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/fad628d277a41d68798559d525d492d0/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+53-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\a3d2cae62627971da1ece173e93cc8f1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
 54            android:value="@integer/google_play_services_version" />
-54-->[com.google.android.gms:play-services-basement:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/fad628d277a41d68798559d525d492d0/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+54-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\a3d2cae62627971da1ece173e93cc8f1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
 55    </application>
 56
 57</manifest>

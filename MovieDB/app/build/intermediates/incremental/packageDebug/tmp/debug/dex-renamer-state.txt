@@ -1,7 +1,13 @@
-#Mon Dec 16 19:15:21 KST 2019
-base.0=/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
+#Mon Dec 16 22:51:49 KST 2019
+path.3=classes.dex
+path.2=classes.dex
 path.1=classes.dex
-renamed.1=classes2.dex
 path.0=classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
-base.1=/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex
+base.3=D\:\\Users\\user\\gitProjects\\MovieDB\\MovieDB\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+base.2=D\:\\Users\\user\\gitProjects\\MovieDB\\MovieDB\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+base.1=D\:\\Users\\yoonseungrok\\FinalFinalMovie\\MovieDB\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+base.0=D\:\\Users\\yoonseungrok\\FinalFinalMovie\\MovieDB\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex

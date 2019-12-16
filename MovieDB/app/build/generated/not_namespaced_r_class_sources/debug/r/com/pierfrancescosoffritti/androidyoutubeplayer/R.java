@@ -975,15 +975,15 @@ public final class R {
         public static final int abc_shareactionprovider_share_with = 0x7f0e0018;
         public static final int abc_shareactionprovider_share_with_application = 0x7f0e0019;
         public static final int abc_toolbar_collapse_description = 0x7f0e001a;
-        public static final int ayp_custom_action_left = 0x7f0e001e;
-        public static final int ayp_custom_action_right = 0x7f0e001f;
-        public static final int ayp_full_screen_button = 0x7f0e0020;
-        public static final int ayp_live = 0x7f0e0021;
-        public static final int ayp_null_time = 0x7f0e0022;
-        public static final int ayp_open_video_in_youtube = 0x7f0e0023;
-        public static final int ayp_play_button = 0x7f0e0024;
-        public static final int search_menu_title = 0x7f0e007d;
-        public static final int status_bar_notification_info_overflow = 0x7f0e007e;
+        public static final int ayp_custom_action_left = 0x7f0e001f;
+        public static final int ayp_custom_action_right = 0x7f0e0020;
+        public static final int ayp_full_screen_button = 0x7f0e0021;
+        public static final int ayp_live = 0x7f0e0022;
+        public static final int ayp_null_time = 0x7f0e0023;
+        public static final int ayp_open_video_in_youtube = 0x7f0e0024;
+        public static final int ayp_play_button = 0x7f0e0025;
+        public static final int search_menu_title = 0x7f0e007e;
+        public static final int status_bar_notification_info_overflow = 0x7f0e007f;
     }
     public static final class style {
         private style() {}

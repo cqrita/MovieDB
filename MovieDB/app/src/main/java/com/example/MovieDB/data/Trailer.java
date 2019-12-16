@@ -3,6 +3,8 @@ package com.example.MovieDB.data;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.annotation.NonNull;
+
 public class Trailer {
     private String id;
     private String key;
@@ -41,6 +43,7 @@ public class Trailer {
         this.name = name;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Trailer{" +

@@ -3,6 +3,8 @@ package com.example.MovieDB.data;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.annotation.NonNull;
+
 import com.squareup.moshi.Json;
 
 import java.util.Arrays;
@@ -91,6 +93,7 @@ public class Movie {
         this.vote_average = vote_average;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Movie{" +

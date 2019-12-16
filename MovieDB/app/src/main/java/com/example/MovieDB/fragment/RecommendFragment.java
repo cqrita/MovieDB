@@ -24,6 +24,7 @@ import com.google.gson.JsonParser;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -41,7 +42,7 @@ public class RecommendFragment extends Fragment {
     private ArrayList<Movie> movieList = new ArrayList<>();
     private boolean stop = false;
 
-    public RecommendFragment(String string) {
+    RecommendFragment(String string) {
         this.string = string;
     }
 
@@ -61,7 +62,7 @@ public class RecommendFragment extends Fragment {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                if (!recyclerView.canScrollVertically(1)&& stop==false) {
+                if (!recyclerView.canScrollVertically(1)&& !stop) {
                     MyAsyncTask mAsyncTask = new MyAsyncTask();
                     mAsyncTask.execute();
                 }
@@ -91,7 +92,7 @@ public class RecommendFragment extends Fragment {
                 Response response = client.newCall(request).execute();
                 Gson gson = new Gson();
                 assert response.body() != null;
-                JsonElement rootObject = JsonParser.parseReader(response.body().charStream())
+                JsonElement rootObject = JsonParser.parseReader(Objects.requireNonNull(response.body()).charStream())
                         .getAsJsonObject().get("results");
                 return gson.fromJson(rootObject, Movie[].class);
             } catch (Exception e) {

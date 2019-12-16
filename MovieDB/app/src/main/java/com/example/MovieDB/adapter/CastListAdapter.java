@@ -50,7 +50,6 @@ public class CastListAdapter extends RecyclerView.Adapter<CastListAdapter.Recycl
         Glide.with(mContext)
                 .load(url)
                 .centerCrop()
-                .crossFade()
                 .error(R.drawable.ic_launcher_background)
                 .into(holder.imageCastProfile);
         holder.textCastName.setText(mCastList.get(position).getName());

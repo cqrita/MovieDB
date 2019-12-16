@@ -3,6 +3,8 @@ package com.example.MovieDB.data;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.annotation.NonNull;
+
 public class Review  {
     private String author;
     private String content;
@@ -23,6 +25,7 @@ public class Review  {
         this.content = content;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Review{" +

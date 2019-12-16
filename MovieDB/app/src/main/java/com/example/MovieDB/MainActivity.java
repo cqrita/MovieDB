@@ -17,11 +17,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.MovieDB.database.FavoriteDBHelper;
 import com.example.MovieDB.fragment.FavoriteFragment;
 import com.example.MovieDB.fragment.HomeFragment;
 import com.example.MovieDB.fragment.MapFragment;
@@ -32,13 +30,9 @@ import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
-    private List<String> lastSearches;
-    private DrawerLayout drawer;
-    private Spinner spinner;
     private boolean search=true;
     long first_time;
     long second_time;
-    private FavoriteDBHelper favoriteDbHelper;
     private FragmentManager fragmentManager;
     private MapFragment mapFragment;
     private FragmentTransaction transaction;
@@ -106,16 +100,12 @@ public class MainActivity extends AppCompatActivity {
         String[] category = new String[2];
         category[0] = "영화";
         category[1] = "배우";
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,category);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,R.layout.support_simple_spinner_dropdown_item,category);
         spinner.setAdapter(arrayAdapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position==0){
-                    search=true;
-                }else{
-                    search=false;
-                }
+                search= position == 0;
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {

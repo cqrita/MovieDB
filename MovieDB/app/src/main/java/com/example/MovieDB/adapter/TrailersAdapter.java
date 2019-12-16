@@ -22,10 +22,10 @@ import java.util.List;
  * @author Yassin Ajdi.
  */
 public class TrailersAdapter extends RecyclerView.Adapter<TrailersAdapter.RecyclerViewHolders>  {
-    public List<Trailer> trailerList;
+    private List<Trailer> trailerList;
     public Context context;
-    public YouTubePlayerView videoTrailerView;
-    public com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer videoTrailer;
+    private YouTubePlayerView videoTrailerView;
+    private com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer videoTrailer;
     public class RecyclerViewHolders extends RecyclerView.ViewHolder {
         public TextView trailerName;
         private String currentVideoId;

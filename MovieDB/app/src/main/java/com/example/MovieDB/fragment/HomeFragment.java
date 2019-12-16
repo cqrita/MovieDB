@@ -51,7 +51,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                if (!recyclerView.canScrollVertically(1) && stop==false) {
+                if (!recyclerView.canScrollVertically(1) && !stop) {
                     MyAsyncTask mAsyncTask = new MyAsyncTask();
                     mAsyncTask.execute();
                 }
@@ -96,6 +96,7 @@ public class HomeFragment extends Fragment {
             if(result== null){
                 stop=true;
             }
+            assert result != null;
             if(result.length > 0){
                 movieList.addAll(Arrays.asList(result));
             }

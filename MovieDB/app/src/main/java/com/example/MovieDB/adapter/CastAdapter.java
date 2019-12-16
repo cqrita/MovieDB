@@ -24,7 +24,6 @@ public class CastAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private ImageView imageCastProfile;
     private TextView textCastName;
-    private TextView order;
     private TextView character;
     private List<Cast> castList;
 
@@ -33,7 +32,6 @@ public class CastAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             super(view);
             imageCastProfile = view.findViewById(R.id.imageCastProfile);
             textCastName =view.findViewById(R.id.textCastName);
-            order=view.findViewById(R.id.order);
             character= view.findViewById(R.id.character);
         }
     }
@@ -60,7 +58,6 @@ public class CastAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 .load("https://image.tmdb.org/t/p/w185"+castList.get(position).getProfile_path())
                 .into(imageCastProfile);
         textCastName.setText(castList.get(position).getName());
-        order.setText(castList.get(position).getOrder());
         character.setText(castList.get(position).getCharacter());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

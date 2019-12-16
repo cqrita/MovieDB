@@ -15,6 +15,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -39,6 +40,7 @@ import com.google.gson.JsonParser;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Objects;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -93,7 +95,7 @@ public class MovieDetailFragment extends Fragment
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
 
@@ -105,10 +107,9 @@ public class MovieDetailFragment extends Fragment
                 rating =view.findViewById(R.id.movie_rating);
                 overview= view.findViewById(R.id.movie_description);
                 recommend = view.findViewById(R.id.recommend);
-                Glide.with(getContext())
+                Glide.with(Objects.requireNonNull(getContext()))
                         .load("https://image.tmdb.org/t/p/w500"+movie.getPoster_path())
                         .centerCrop()
-                        .crossFade()
                         .into(poster);
                 title.setText(movie.getTitle());
                 releaseDate.setText(movie.getRelease_date());
@@ -118,7 +119,7 @@ public class MovieDetailFragment extends Fragment
                     @Override
                     public void onClick(View view) {
                         RecommendFragment recommendFragment =new RecommendFragment(String.valueOf(movie.getId()));
-                        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                        FragmentTransaction ft = Objects.requireNonNull(getActivity()).getSupportFragmentManager().beginTransaction();
                         ft.replace(R.id.fragment, recommendFragment);
                         ft.commit();
                     }
@@ -138,15 +139,15 @@ public class MovieDetailFragment extends Fragment
                                 new String[]{String.valueOf(movie.getId())});
                         if(cursor != null &&cursor.moveToFirst()) {
                             favoriteDbHelper.deleteFavorite(db,movie);
-                            Toast.makeText(getActivity().getApplicationContext(), "즐겨찾기에서 삭제되었습니다",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "즐겨찾기에서 삭제되었습니다",Toast.LENGTH_SHORT).show();
                             Log.d("seungrok", movie.getTitle()+ "삭제");
                         } else {
+                            assert cursor != null;
                             Log.d("seungrok",
                                     "추가전 cursor movetofirst"+String.valueOf(cursor.moveToFirst()));
 
                             favoriteDbHelper.addFavorite(db,movie);
-                            Toast.makeText(getActivity().getApplicationContext(), "즐겨찾기에 추가되었습니다",
-                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "즐겨찾기에 추가되었습니다",Toast.LENGTH_SHORT).show();
                             Log.d("seungrok", movie.getTitle()+"추가");
 
                             Cursor cursor2 = db.rawQuery("select * from favorite where id =?",
@@ -196,10 +197,10 @@ public class MovieDetailFragment extends Fragment
             try {
                 Response response = client.newCall(request).execute();
                 Gson gson = new Gson();
-                JsonElement rootObject = JsonParser.parseReader(response.body().charStream())
+                assert response.body() != null;
+                JsonElement rootObject = JsonParser.parseReader(Objects.requireNonNull(response.body()).charStream())
                         .getAsJsonObject().get("results");
-                Trailer[] posts = gson.fromJson(rootObject, Trailer[].class);
-                return posts;
+                return gson.fromJson(rootObject, Trailer[].class);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -237,10 +238,10 @@ public class MovieDetailFragment extends Fragment
             try {
                 Response response = client.newCall(request).execute();
                 Gson gson = new Gson();
-                JsonElement rootObject = JsonParser.parseReader(response.body().charStream())
+                assert response.body() != null;
+                JsonElement rootObject = JsonParser.parseReader(Objects.requireNonNull(response.body()).charStream())
                         .getAsJsonObject().get("cast");
-                Cast[] posts = gson.fromJson(rootObject, Cast[].class);
-                return posts;
+                return gson.fromJson(rootObject, Cast[].class);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -276,10 +277,10 @@ public class MovieDetailFragment extends Fragment
             try {
                 Response response = client.newCall(request).execute();
                 Gson gson = new Gson();
+                assert response.body() != null;
                 JsonElement rootObject = JsonParser.parseReader(response.body().charStream())
                         .getAsJsonObject().get("results");
-                Review[] posts = gson.fromJson(rootObject, Review[].class);
-                return posts;
+                return gson.fromJson(rootObject, Review[].class);
             } catch (Exception e) {
                 e.printStackTrace();
             }

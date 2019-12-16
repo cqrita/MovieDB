@@ -41,8 +41,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-
-
+import java.util.Objects;
 
 
 public class MapFragment extends Fragment implements OnMapReadyCallback {
@@ -53,7 +52,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     private String markerId;
     private MapView mapView = null;
     private LocationManager locationManager;
-    Location recentlocation;
     private double latitude;
     private double longitude;
 
@@ -84,7 +82,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     }
 
     class ProductDBHelper extends SQLiteOpenHelper {  //새로 생성한 adapter 속성은 SQLiteOpenHelper이다.
-        public ProductDBHelper(Context context) {
+        ProductDBHelper(Context context) {
             super(context, "theater.db", null, 1);    // db명과 버전만 정의 한다.
             // TODO Auto-generated constructor stub
         }
@@ -101,7 +99,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     }
 
 
-    GoogleMap mMap;
+    private GoogleMap mMap;
 
     public MapFragment() {
         super();
@@ -164,9 +162,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     }
 
     ////////////////////////  구글맵 마커 여러개생성 및 띄우기 //////////////////////////
-    public void manyMarker() {
+    private void manyMarker() {
 
-        setDB(getActivity());
+        setDB(Objects.requireNonNull(getActivity()));
         ProductDBHelper mHelper = new ProductDBHelper(getActivity());
         SQLiteDatabase db = mHelper.getWritableDatabase();
 
@@ -211,7 +209,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     // oneMarker(); 는 동작하지않으나 manyMarker(); 는 snippet정보가 없어 동작이가능하다.
 
     //정보창 클릭 리스너
-    GoogleMap.OnInfoWindowClickListener infoWindowClickListener = new GoogleMap.OnInfoWindowClickListener() {
+    private GoogleMap.OnInfoWindowClickListener infoWindowClickListener = new GoogleMap.OnInfoWindowClickListener() {
         @Override
         public void onInfoWindowClick(Marker marker) {
             String markerId = marker.getId();
@@ -228,7 +226,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     };
 
     //마커 클릭 리스너
-    GoogleMap.OnMarkerClickListener markerClickListener = new GoogleMap.OnMarkerClickListener() {
+    private GoogleMap.OnMarkerClickListener markerClickListener = new GoogleMap.OnMarkerClickListener() {
         @Override
         public boolean onMarkerClick(Marker marker) {
             markerId = marker.getId();
@@ -253,7 +251,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
 
         getLocationManager(); //2
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (getActivity().checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && getActivity().checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (Objects.requireNonNull(getActivity()).checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && getActivity().checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 // TODO: Consider calling
                 //    Activity#requestPermissions
                 // here to request the missing permissions, and then overriding
@@ -273,7 +271,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
 
 
     //지속적으로 위치 공급자로부터 위치정보를 받아온다.
-    LocationListener IListener = new LocationListener() { //계속 듣고 있다가 반응한다.
+    private LocationListener IListener = new LocationListener() { //계속 듣고 있다가 반응한다.
 
         @Override
         public void onLocationChanged(Location location) { //위치의 변화가 있을 때.
@@ -299,16 +297,12 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
 
     private void getLocationManager() { //LOCATION_SERVICE 시스템 서비스를 이용할 수 있다.
         Log.d("locationManager","locationManager activated");
-        locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+        locationManager = (LocationManager) Objects.requireNonNull(getActivity()).getSystemService(Context.LOCATION_SERVICE);
     }
 
     private boolean checkPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (PackageManager.PERMISSION_GRANTED != getActivity().checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION)) {
-                return false;
-            } else {
-                return true;
-            }
+            return PackageManager.PERMISSION_GRANTED == Objects.requireNonNull(getActivity()).checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION);
         }
         return false;
     }

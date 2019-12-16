@@ -52,10 +52,9 @@ import java.util.ArrayList;
         Glide.with(mContext)
                 .load(url)
                 .centerCrop()
-                .crossFade()
                 .error(R.drawable.ic_launcher_background)
                 .into(holder.imageView);
-        holder.userrating.setText("평점: "+String.valueOf(mMovieList.get(position).getVote_average()));//나중에 레이팅바로변경
+        holder.userrating.setText("평점: "+ mMovieList.get(position).getVote_average());//나중에 레이팅바로변경
         holder.textView.setText(mMovieList.get(position).getTitle());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

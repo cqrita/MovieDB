@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.MovieDB.MainActivity;
 import com.example.MovieDB.R;
 import com.example.MovieDB.adapter.MovieListAdapter;
 import com.example.MovieDB.data.Movie;
@@ -26,7 +27,6 @@ public class FavoriteFragment extends Fragment {
     private RecyclerView recyclerView;
     private ArrayList<Movie> movieList = new ArrayList<>();
     private MovieListAdapter adapter;
-    private boolean stop = false;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -36,11 +36,9 @@ public class FavoriteFragment extends Fragment {
         Log.d("seungrok","FavoriteFragment");
         recyclerView = view.findViewById(R.id.favorite_recycler_view) ;
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(),4));
-
         FavoriteDBHelper favoriteDbHelper=  new FavoriteDBHelper(getActivity());
         movieList= favoriteDbHelper.getAllFavorite();
         adapter = new MovieListAdapter(getContext(), movieList);
-
         recyclerView.setAdapter(adapter);
         return view;
     }

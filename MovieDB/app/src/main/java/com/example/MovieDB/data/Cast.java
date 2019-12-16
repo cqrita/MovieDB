@@ -3,6 +3,8 @@ package com.example.MovieDB.data;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.annotation.NonNull;
+
 public class Cast  {
     private String id;
     private String name;
@@ -77,6 +79,7 @@ public class Cast  {
         this.deathday = deathday;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Cast{" +
