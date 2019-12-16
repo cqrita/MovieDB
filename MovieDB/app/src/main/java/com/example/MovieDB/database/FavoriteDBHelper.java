@@ -6,16 +6,24 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
 import com.example.MovieDB.data.Movie;
+
 import java.util.ArrayList;
 
 
 public class FavoriteDBHelper extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "favorite.db";
-    private static final int DATABASE_VERSION = 1;
-    public static final String LOGTAG = "FAVORITE";
-    SQLiteDatabase db;
+    private static final String DATABASE_NAME = "favoriteDatabase";
 
+    private static final int DATABASE_VERSION = 1;
+    //table name
+    private static final String TABLE_FAVORITE = "favorite";
+
+    public static final String LOGTAG = "FAVORITE";
+
+    SQLiteOpenHelper dbhandler;
+    SQLiteDatabase db;
     public FavoriteDBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -25,8 +33,9 @@ public class FavoriteDBHelper extends SQLiteOpenHelper {
         create(db);
     }
     public void create(SQLiteDatabase db) {
-        final String SQL_CREATE_TABLE = "CREATE TABLE " +
-                FavoriteContract.FavoriteEntry.TABLE_NAME + " (" +
+        Log.d("seungrok", "Table생성");
+        final String CREATE_TABLE = "CREATE TABLE " +
+                FavoriteContract.FavoriteEntry.TABLE_NAME + "(" +
                 FavoriteContract.FavoriteEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 FavoriteContract.FavoriteEntry.COLUMN_MOVIEID + " INTEGER, " +
                 FavoriteContract.FavoriteEntry.COLUMN_TITLE + " TEXT NOT NULL, " +
@@ -35,7 +44,7 @@ public class FavoriteDBHelper extends SQLiteOpenHelper {
                 FavoriteContract.FavoriteEntry.COLUMN_VOTE_AVERAGE + " REAL NOT NULL " +
                 ")";
         try{
-            db.execSQL(SQL_CREATE_TABLE);
+            db.execSQL(CREATE_TABLE);
         }catch(SQLException e){
             //
         }
@@ -43,8 +52,11 @@ public class FavoriteDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        if (i != i1) {
+            // Simplest implementation is to drop all old tables and recreate them
             sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + FavoriteContract.FavoriteEntry.TABLE_NAME);
             onCreate(sqLiteDatabase);
+        }
         }
     public void addFavorite(SQLiteDatabase db, Movie movie){
         db.beginTransaction();

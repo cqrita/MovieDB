@@ -26,8 +26,6 @@ import com.example.MovieDB.fragment.MapFragment;
 import com.example.MovieDB.fragment.SearchActorFragment;
 import com.example.MovieDB.fragment.SearchFragment;
 
-import java.util.List;
-
 
 public class MainActivity extends AppCompatActivity {
     private boolean search=true;
@@ -36,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     private FragmentManager fragmentManager;
     private MapFragment mapFragment;
     private FragmentTransaction transaction;
+    //
+//    public static Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -164,11 +164,7 @@ public class MainActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     private boolean checkPermission() {
-        if (PackageManager.PERMISSION_GRANTED != checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION)) {
-            return false;
-        } else {
-            return true;
-        }
+        return PackageManager.PERMISSION_GRANTED == checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION);
     }
 
     @Override
@@ -207,5 +203,15 @@ public class MainActivity extends AppCompatActivity {
         }
         first_time = System.currentTimeMillis();
     }
+//    public boolean CheckAppFirstExecute(){
+//        SharedPreferences pref = getSharedPreferences("IsFirst" , Activity.MODE_PRIVATE);
+//        boolean isFirst = pref.getBoolean("isFirst", false);
+//        if(!isFirst){ //최초 실행시 true 저장
+//            SharedPreferences.Editor editor = pref.edit();
+//            editor.putBoolean("isFirst", true);
+//            editor.commit();
+//        }
+//        return !isFirst;
+//    }
 }
 

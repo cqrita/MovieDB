@@ -138,6 +138,8 @@ public class MovieDetailFragment extends Fragment
                         Log.d("favorite","favorite button clicked");
                         //DB에 저장
                         SQLiteDatabase db = favoriteDbHelper.getWritableDatabase();
+
+
                         Cursor cursor = db.rawQuery("select * from favorite where id =?",
                                 new String[]{String.valueOf(movie.getId())});
                         if(cursor != null &&cursor.moveToFirst()) {
