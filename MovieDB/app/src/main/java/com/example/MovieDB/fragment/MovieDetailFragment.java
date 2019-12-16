@@ -63,7 +63,7 @@ public class MovieDetailFragment extends Fragment
     private RecyclerView trailerView;
     private RecyclerView reviewView;
     private FavoriteDBHelper favoriteDbHelper;
-    ProgressDialog progressDialog = new ProgressDialog(getContext());
+    ProgressDialog progressDialog;
     private int count = 0;
 //    private Movie movie;
     public MovieDetailFragment(Movie movie)
@@ -100,6 +100,7 @@ public class MovieDetailFragment extends Fragment
         super.onViewCreated(view, savedInstanceState);
             Log.d("detail",movie.getTitle());
             if (movie != null) {
+                progressDialog = new ProgressDialog(getContext());
                 progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                 progressDialog.setMessage("\t로딩중...");
                 progressDialog.show();
