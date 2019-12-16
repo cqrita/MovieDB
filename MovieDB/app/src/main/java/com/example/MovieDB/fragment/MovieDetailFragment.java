@@ -63,7 +63,7 @@ public class MovieDetailFragment extends Fragment
     private RecyclerView trailerView;
     private RecyclerView reviewView;
     private FavoriteDBHelper favoriteDbHelper;
-    ProgressDialog progressDialog;
+    private ProgressDialog progressDialog;
     private int count = 0;
 //    private Movie movie;
     public MovieDetailFragment(Movie movie)
