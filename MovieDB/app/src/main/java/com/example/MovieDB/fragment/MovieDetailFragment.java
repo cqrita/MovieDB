@@ -157,7 +157,9 @@ public class MovieDetailFragment extends Fragment
                                     new String[]{String.valueOf(movie.getId())});
                             Log.d("seungrok",
                                     "추가후 cursor movetofirst" + cursor2.moveToFirst());
+                            cursor2.close();
                         }
+                        cursor.close();
                     }
                 });
                 Log.d("database", "++++++++++++++++++++++++");
@@ -290,7 +292,7 @@ public class MovieDetailFragment extends Fragment
                 Response response = client.newCall(request).execute();
                 Gson gson = new Gson();
                 assert response.body() != null;
-                JsonElement rootObject = JsonParser.parseReader(response.body().charStream())
+                JsonElement rootObject = JsonParser.parseReader(Objects.requireNonNull(response.body()).charStream())
                         .getAsJsonObject().get("results");
                 return gson.fromJson(rootObject, Review[].class);
             } catch (Exception e) {
