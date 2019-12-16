@@ -31,7 +31,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class SearchActorFragment extends Fragment {
-    private int page = 0;
+    private int page = 1;
     private String string;
     private CastListAdapter adapter;
     private RecyclerView recyclerView;
@@ -130,7 +130,6 @@ public class SearchActorFragment extends Fragment {
         @Override
         protected Cast[] doInBackground(String... strings) {
             OkHttpClient client = new OkHttpClient();
-            page=page+1;
             Request request = new Request.Builder()
                     .url("https://api.themoviedb.org/3/search/person?api_key=ee74e4df4dd623e8eb831f2fd274328f&language=ko-KR&query="+string+"&page="+page+"&include_adult=false")
                     .build();

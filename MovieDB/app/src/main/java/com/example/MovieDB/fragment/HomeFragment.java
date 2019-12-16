@@ -30,7 +30,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class HomeFragment extends Fragment {
-    private int page = 0;
+    private int page = 1;
     private RecyclerView recyclerView;
     private ArrayList<Movie> movieList = new ArrayList<>();
     private MovieListAdapter adapter;
@@ -122,7 +122,6 @@ public class HomeFragment extends Fragment {
         @Override
         protected Movie[] doInBackground(String... strings) {
             OkHttpClient client = new OkHttpClient();
-            page=page+1;
             Request request = new Request.Builder()
                     .url("https://api.themoviedb.org/3/movie/upcoming?api_key=ee74e4df4dd623e8eb831f2fd274328f&language=ko-KR&page="+page)
                     .build();
