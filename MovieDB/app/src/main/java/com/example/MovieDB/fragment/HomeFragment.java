@@ -39,7 +39,6 @@ public class HomeFragment extends Fragment {
     MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
         @Override
         public void onResult(Movie[] result) {
-            progressDialog.dismiss();
             ArrayList<Movie> movieList = new ArrayList<>();
             if (result == null) {
                 stop = true;
@@ -51,6 +50,7 @@ public class HomeFragment extends Fragment {
             Log.d("IMDBNetwork", "adapter");
             adapter.addMovieList(movieList);
             adapter.notifyDataSetChanged();
+            progressDialog.dismiss();
         }
     };
     @Nullable
@@ -74,24 +74,25 @@ public class HomeFragment extends Fragment {
             MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
                 @Override
                 public void onResult(Movie[] result) {
-                    progressDialog.dismiss();
                     ArrayList<Movie> movieList = new ArrayList<>();
-                    if (result == null) {
-                        stop = true;
-                    }
-                    assert result != null;
-                    if (result.length > 0) {
+                    if (result != null) {
+                        if (result.length == 0) {
+                            stop = true;
+                        }
                         movieList.addAll(Arrays.asList(result));
+                    } else {
+                        stop = true;
                     }
                     Log.d("IMDBNetwork", "adapter");
                     adapter.addMovieList(movieList);
                     adapter.notifyDataSetChanged();
+                    progressDialog.dismiss();
                 }
             };
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                if (!recyclerView.canScrollVertically(1) && !stop) {
+                if (!recyclerView.canScrollVertically(1) & !stop) {
                     progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                     progressDialog.setMessage("\t로딩중...");
                     progressDialog.show();
@@ -108,7 +109,7 @@ public class HomeFragment extends Fragment {
         private HttpCallback httpCallback;
         private int page;
 
-        public MyAsyncTask(HttpCallback httpCallback, int page) {
+        MyAsyncTask(HttpCallback httpCallback, int page) {
             this.httpCallback = httpCallback;
             this.page = page;
         }

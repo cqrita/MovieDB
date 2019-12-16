@@ -220,7 +220,7 @@ public class MovieDetailFragment extends Fragment
         private HttpCallback trailerCallback;
         private int ints;
 
-        public TrailerAsyncTask(HttpCallback trailerCallback, int ints) {
+        TrailerAsyncTask(HttpCallback trailerCallback, int ints) {
             this.trailerCallback = trailerCallback;
             this.ints = ints;
         }
@@ -268,7 +268,7 @@ public class MovieDetailFragment extends Fragment
         private HttpCallback castCallback;
         private int ints;
 
-        public CastAsyncTask(HttpCallback castCallback, int ints) {
+        CastAsyncTask(HttpCallback castCallback, int ints) {
             this.castCallback = castCallback;
             this.ints = ints;
         }
@@ -316,7 +316,7 @@ public class MovieDetailFragment extends Fragment
         private HttpCallback reviewCallback;
         private int ints;
 
-        public ReviewAsyncTask(HttpCallback reviewCallback, int ints) {
+        ReviewAsyncTask(HttpCallback reviewCallback, int ints) {
             this.reviewCallback = reviewCallback;
             this.ints = ints;
         }

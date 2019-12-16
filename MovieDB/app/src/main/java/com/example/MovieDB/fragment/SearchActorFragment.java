@@ -41,17 +41,20 @@ public class SearchActorFragment extends Fragment {
     MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
         @Override
         public void onResult(Cast[] result) {
-            progressDialog.dismiss();
             ArrayList<Cast> castList = new ArrayList<>();
             if (result == null) {
                 stop = true;
             }
             if (result != null) {
+                if (result.length == 0) {
+                    stop = true;
+                }
                 castList.addAll(Arrays.asList(result));
             }
             Log.d("IMDBNetwork", "adapter");
             adapter.addCastList(castList);
             adapter.notifyDataSetChanged();
+            progressDialog.dismiss();
         }
     };
 
@@ -81,20 +84,23 @@ public class SearchActorFragment extends Fragment {
                 MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
                     @Override
                     public void onResult(Cast[] result) {
-                        progressDialog.dismiss();
                         ArrayList<Cast> castList = new ArrayList<>();
                         if (result == null) {
                             stop = true;
                         }
                         if (result != null) {
+                            if (result.length == 0) {
+                                stop = true;
+                            }
                             castList.addAll(Arrays.asList(result));
                         }
                         Log.d("IMDBNetwork", "adapter");
                         adapter.addCastList(castList);
                         adapter.notifyDataSetChanged();
+                        progressDialog.dismiss();
                     }
                 };
-                if (!recyclerView.canScrollVertically(1)&& !stop) {
+                if (!recyclerView.canScrollVertically(1) & !stop) {
                     progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                     progressDialog.setMessage("\t로딩중...");
                     progressDialog.show();
@@ -112,7 +118,7 @@ public class SearchActorFragment extends Fragment {
         private int page;
         private String string;
 
-        public MyAsyncTask(HttpCallback httpCallback, int page, String string) {
+        MyAsyncTask(HttpCallback httpCallback, int page, String string) {
             this.httpCallback = httpCallback;
             this.page = page;
             this.string = string;

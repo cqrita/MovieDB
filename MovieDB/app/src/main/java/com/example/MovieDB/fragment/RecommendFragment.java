@@ -49,9 +49,11 @@ public class RecommendFragment extends Fragment {
     MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
         @Override
         public void onResult(Movie[] result) {
-            progressDialog.dismiss();
             ArrayList<Movie> movieList = new ArrayList<>();
             if (result != null) {
+                if (result.length == 0) {
+                    stop = true;
+                }
                 movieList.addAll(Arrays.asList(result));
             } else {
                 stop = true;
@@ -59,6 +61,7 @@ public class RecommendFragment extends Fragment {
             Log.d("IMDBNetwork", "adapter");
             adapter.addMovieList(movieList);
             adapter.notifyDataSetChanged();
+            progressDialog.dismiss();
         }
     };
     @Nullable
@@ -83,9 +86,11 @@ public class RecommendFragment extends Fragment {
                 MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
                     @Override
                     public void onResult(Movie[] result) {
-                        progressDialog.dismiss();
                         ArrayList<Movie> movieList = new ArrayList<>();
                         if (result != null) {
+                            if (result.length == 0) {
+                                stop = true;
+                            }
                             movieList.addAll(Arrays.asList(result));
                         } else {
                             stop = true;
@@ -93,9 +98,10 @@ public class RecommendFragment extends Fragment {
                         Log.d("IMDBNetwork", "adapter");
                         adapter.addMovieList(movieList);
                         adapter.notifyDataSetChanged();
+                        progressDialog.dismiss();
                     }
                 };
-                if (!recyclerView.canScrollVertically(1)&& !stop) {
+                if (!recyclerView.canScrollVertically(1) & !stop) {
                     progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                     progressDialog.setMessage("\t로딩중...");
                     progressDialog.show();
@@ -113,7 +119,7 @@ public class RecommendFragment extends Fragment {
         private int page;
         private String string;
 
-        public MyAsyncTask(HttpCallback httpCallback, int page, String string) {
+        MyAsyncTask(HttpCallback httpCallback, int page, String string) {
             this.httpCallback = httpCallback;
             this.page = page;
             this.string = string;

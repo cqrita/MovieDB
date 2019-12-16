@@ -62,12 +62,12 @@ public class ActorDetailFragment extends Fragment {
             progressDialog.dismiss();
             cast = cast1;
             Glide.with(Objects.requireNonNull(getContext()))
-                    .load("https://image.tmdb.org/t/p/w500" + cast1.getProfile_path())
+                    .load("https://image.tmdb.org/t/p/w500" + cast.getProfile_path())
                     .centerCrop()
                     .into(poster);
             name.setText(cast.getName());
             biography.setText(cast.getBiography());
-            if (cast1.getDeathday() == null) {
+            if (cast.getDeathday() == null && cast.getBirthday() != null) {
                 SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                 Date date = null;
                 try {
