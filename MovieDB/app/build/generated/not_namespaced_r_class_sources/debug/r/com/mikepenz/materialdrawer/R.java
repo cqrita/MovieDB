@@ -804,13 +804,13 @@ public final class R {
         public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f070059;
         public static final int abc_textfield_search_default_mtrl_alpha = 0x7f07005a;
         public static final int abc_textfield_search_material = 0x7f07005b;
-        public static final int material_drawer_badge = 0x7f07009f;
-        public static final int material_drawer_circle_mask = 0x7f0700a0;
-        public static final int material_drawer_shadow_bottom = 0x7f0700a1;
-        public static final int material_drawer_shadow_left = 0x7f0700a2;
-        public static final int material_drawer_shadow_right = 0x7f0700a3;
-        public static final int material_drawer_shadow_top = 0x7f0700a4;
-        public static final int notification_template_icon_bg = 0x7f0700b0;
+        public static final int material_drawer_badge = 0x7f0700a0;
+        public static final int material_drawer_circle_mask = 0x7f0700a1;
+        public static final int material_drawer_shadow_bottom = 0x7f0700a2;
+        public static final int material_drawer_shadow_left = 0x7f0700a3;
+        public static final int material_drawer_shadow_right = 0x7f0700a4;
+        public static final int material_drawer_shadow_top = 0x7f0700a5;
+        public static final int notification_template_icon_bg = 0x7f0700b1;
     }
     public static final class id {
         private id() {}

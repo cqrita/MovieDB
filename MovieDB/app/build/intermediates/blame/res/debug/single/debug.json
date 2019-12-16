@@ -1452,6 +1452,10 @@
         "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable/abc_ratingbar_small_material.xml"
     },
     {
+        "merged": "/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/build/intermediates/res/merged/debug/drawable_ic_add_white_24dp.png.flat",
+        "source": "/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/src/main/res/drawable/ic_add_white_24dp.png"
+    },
+    {
         "merged": "/Users/yoonseungrok/FinalFinalMovie/MovieDB/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "/Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },

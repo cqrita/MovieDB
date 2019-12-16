@@ -1592,6 +1592,7 @@ drawable fab_shadow
 drawable fab_shadow_mini
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_add_white_24dp
 drawable ic_arrow_left_black_48dp
 drawable ic_back_animated
 drawable ic_back_vector

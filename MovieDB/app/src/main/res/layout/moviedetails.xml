@@ -118,6 +118,20 @@ tools:context=".MainActivity">
         </ScrollView>
     </LinearLayout>
 
+<!--    <com.melnykov.fab.FloatingActionButton-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_alignParentBottom="true"-->
+<!--    android:layout_alignParentEnd="true"-->
+<!--    android:layout_alignParentRight="true"-->
+<!--    android:layout_margin="16dp"-->
+<!--    android:src="@drawable/ic_add_white_24dp"-->
+<!--    fab:fab_colorNormal="@color/accent"-->
+<!--    fab:fab_colorPressed="@color/primary"-->
+<!--    fab:fab_colorRipple="@color/primary_light"-->
+<!--    fab:fab_shadow="true"-->
+<!--    fab:fab_type="normal"-->
+<!--    />-->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_favorite"
         android:layout_width="wrap_content"
@@ -130,7 +144,8 @@ tools:context=".MainActivity">
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_gravity="end|bottom"/>
+        android:layout_gravity="end|bottom"
+        />
 </RelativeLayout>
 
     <!--        app:srcCompat="?attr/actionModeShareDrawable" 이거는 아이콘 소스  -->
