@@ -38,7 +38,7 @@ public class SearchActorFragment extends Fragment {
     private ProgressDialog progressDialog;
     private ArrayList<Cast> castList = new ArrayList<>();
     private boolean stop = false;
-    MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
+    private MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
         @Override
         public void onResult(Cast[] result) {
             ArrayList<Cast> castList = new ArrayList<>();

@@ -36,7 +36,7 @@ public class HomeFragment extends Fragment {
     private MovieListAdapter adapter;
     private ProgressDialog progressDialog;
     private boolean stop = false;
-    MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
+    private MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
         @Override
         public void onResult(Movie[] result) {
             ArrayList<Movie> movieList = new ArrayList<>();

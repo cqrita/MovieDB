@@ -37,7 +37,7 @@ public class SearchFragment extends Fragment {
     private ProgressDialog progressDialog;
     private ArrayList<Movie> movieList = new ArrayList<>();
     private boolean stop = false;
-    MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
+    private MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
         @Override
         public void onResult(Movie[] result) {
             progressDialog.dismiss();

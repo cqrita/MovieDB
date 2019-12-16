@@ -46,7 +46,7 @@ public class RecommendFragment extends Fragment {
         this.string = string;
     }
 
-    MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
+    private MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
         @Override
         public void onResult(Movie[] result) {
             ArrayList<Movie> movieList = new ArrayList<>();
