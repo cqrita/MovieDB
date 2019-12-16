@@ -42,6 +42,7 @@ public class ActorDetailFragment extends Fragment {
     private TextView castYear;
     private TextView biography;
     private int castInt;
+    private ProgressDialog progressDialog;
     public ActorDetailFragment(int castInt)
     {
         this.castInt = castInt;
@@ -55,45 +56,18 @@ public class ActorDetailFragment extends Fragment {
         setRetainInstance(true);
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState)
-    {
-        return inflater.inflate(R.layout.castdetails, container, false);
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        poster = view.findViewById(R.id.cast_poster);
-        name = view.findViewById(R.id.cast_name);
-        castYear = view.findViewById(R.id.cast_year);
-        biography = view.findViewById(R.id.cast_biography);
-        CastAsyncTask castAsyncTask = new CastAsyncTask();
-        castAsyncTask.execute(castInt);
-    }
-    public class CastAsyncTask extends AsyncTask<Integer, Void, Cast> {
-        ProgressDialog progressDialog = new ProgressDialog(getContext());
+    private CastAsyncTask.HttpCallback httpCallback = new CastAsyncTask.HttpCallback() {
         @Override
-        protected void onPreExecute() {
-            progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-            progressDialog.setMessage("\t로딩중...");
-            progressDialog.show();
-            super.onPreExecute();
-        }
-
-        @Override
-        protected void onPostExecute(Cast cast1) {
-            super.onPostExecute(cast1);
+        public void onResult(Cast cast1) {
             progressDialog.dismiss();
-            cast=cast1;
+            cast = cast1;
             Glide.with(Objects.requireNonNull(getContext()))
-                    .load("https://image.tmdb.org/t/p/w500"+cast1.getProfile_path())
+                    .load("https://image.tmdb.org/t/p/w500" + cast1.getProfile_path())
                     .centerCrop()
                     .into(poster);
             name.setText(cast.getName());
             biography.setText(cast.getBiography());
-            if(cast1.getDeathday()==null){
+            if (cast1.getDeathday() == null) {
                 SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                 Date date = null;
                 try {
@@ -108,18 +82,63 @@ public class ActorDetailFragment extends Fragment {
                 int year = cal.get(Calendar.YEAR);
                 int month = cal.get(Calendar.MONTH);
                 int day = cal.get(Calendar.DAY_OF_MONTH);
-                cal.set(year, month+1, day);
+                cal.set(year, month + 1, day);
                 int age = today.get(Calendar.YEAR) - cal.get(Calendar.YEAR);
-                if (today.get(Calendar.DAY_OF_YEAR) < cal.get(Calendar.DAY_OF_YEAR)){
+                if (today.get(Calendar.DAY_OF_YEAR) < cal.get(Calendar.DAY_OF_YEAR)) {
                     age--;
                 }
                 castYear.setText(String.valueOf(age));
             }
         }
+    };
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState)
+    {
+        return inflater.inflate(R.layout.castdetails, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        progressDialog = new ProgressDialog(getContext());
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setMessage("\t로딩중...");
+        progressDialog.show();
+        super.onViewCreated(view, savedInstanceState);
+        poster = view.findViewById(R.id.cast_poster);
+        name = view.findViewById(R.id.cast_name);
+        castYear = view.findViewById(R.id.cast_year);
+        biography = view.findViewById(R.id.cast_biography);
+        CastAsyncTask castAsyncTask = new CastAsyncTask(httpCallback, castInt);
+        castAsyncTask.execute();
+    }
+
+    public static class CastAsyncTask extends AsyncTask<Void, Void, Cast> {
+        private HttpCallback httpCallback;
+        private int ints;
+
+        CastAsyncTask(HttpCallback httpCallback, int ints) {
+            this.httpCallback = httpCallback;
+            this.ints = ints;
+        }
 
         @Override
-        protected Cast doInBackground(Integer... ints) {
-            String m_id = String.valueOf(ints[0]);
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(Cast cast1) {
+            super.onPostExecute(cast1);
+            if (this.httpCallback != null) {
+                this.httpCallback.onResult(cast1);
+            }
+
+        }
+
+        @Override
+        protected Cast doInBackground(Void... args) {
+            String m_id = String.valueOf(ints);
             Log.d("CastDetail", "https://api.themoviedb.org/3/person/"+m_id+"?api_key=ee74e4df4dd623e8eb831f2fd274328f");
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
@@ -136,6 +155,10 @@ public class ActorDetailFragment extends Fragment {
                 e.printStackTrace();
             }
             return null;
+        }
+
+        interface HttpCallback {
+            void onResult(Cast cast1);
         }
     }
     @Override

@@ -4,6 +4,10 @@ package com.example.MovieDB.fragment;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,18 +15,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.example.MovieDB.R;
 import com.example.MovieDB.adapter.CastListAdapter;
 import com.example.MovieDB.data.Cast;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,12 +31,29 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class SearchActorFragment extends Fragment {
-    private int page=0;
+    private int page = 1;
     private String string;
     private CastListAdapter adapter;
     private RecyclerView recyclerView;
+    private ProgressDialog progressDialog;
     private ArrayList<Cast> castList = new ArrayList<>();
     private boolean stop = false;
+    MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
+        @Override
+        public void onResult(Cast[] result) {
+            progressDialog.dismiss();
+            ArrayList<Cast> castList = new ArrayList<>();
+            if (result == null) {
+                stop = true;
+            }
+            if (result != null) {
+                castList.addAll(Arrays.asList(result));
+            }
+            Log.d("IMDBNetwork", "adapter");
+            adapter.addCastList(castList);
+            adapter.notifyDataSetChanged();
+        }
+    };
 
     public SearchActorFragment(String string) {
         this.string = string;
@@ -50,7 +65,11 @@ public class SearchActorFragment extends Fragment {
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.search, container, false);
-        SearchActorFragment.MyAsyncTask mAsyncTask = new SearchActorFragment.MyAsyncTask();
+        progressDialog = new ProgressDialog(getContext());
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setMessage("\t로딩중...");
+        progressDialog.show();
+        MyAsyncTask mAsyncTask = new MyAsyncTask(httpCallback, page, string);
         mAsyncTask.execute();
         recyclerView = view.findViewById(R.id.search_recycler_view) ;
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(),4));
@@ -59,23 +78,48 @@ public class SearchActorFragment extends Fragment {
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
+                MyAsyncTask.HttpCallback httpCallback = new MyAsyncTask.HttpCallback() {
+                    @Override
+                    public void onResult(Cast[] result) {
+                        progressDialog.dismiss();
+                        ArrayList<Cast> castList = new ArrayList<>();
+                        if (result == null) {
+                            stop = true;
+                        }
+                        if (result != null) {
+                            castList.addAll(Arrays.asList(result));
+                        }
+                        Log.d("IMDBNetwork", "adapter");
+                        adapter.addCastList(castList);
+                        adapter.notifyDataSetChanged();
+                    }
+                };
                 if (!recyclerView.canScrollVertically(1)&& !stop) {
-                    SearchActorFragment.MyAsyncTask mAsyncTask = new SearchActorFragment.MyAsyncTask();
+                    progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                    progressDialog.setMessage("\t로딩중...");
+                    progressDialog.show();
+                    page = page + 1;
+                    MyAsyncTask mAsyncTask = new MyAsyncTask(httpCallback, page, string);
                     mAsyncTask.execute();
                 }
             }
         });
         return view;
     }
-    public class MyAsyncTask extends AsyncTask<String, Void, Cast[]> {
-        ProgressDialog progressDialog = new ProgressDialog(getContext());
+
+    public static class MyAsyncTask extends AsyncTask<String, Void, Cast[]> {
+        private HttpCallback httpCallback;
+        private int page;
+        private String string;
+
+        public MyAsyncTask(HttpCallback httpCallback, int page, String string) {
+            this.httpCallback = httpCallback;
+            this.page = page;
+            this.string = string;
+        }
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-            progressDialog.setMessage("\t로딩중...");
-            progressDialog.show();
         }
         @Override
         protected Cast[] doInBackground(String... strings) {
@@ -99,17 +143,13 @@ public class SearchActorFragment extends Fragment {
         @Override
         protected void onPostExecute(Cast[] result) {
             super.onPostExecute(result);
-            progressDialog.dismiss();
-            ArrayList<Cast> castList = new ArrayList<>();
-            if(result== null){
-                stop=true;
+            if (this.httpCallback != null) {
+                this.httpCallback.onResult(result);
             }
-            if(result!=null){
-                castList.addAll(Arrays.asList(result));
-            }
-            Log.d("IMDBNetwork","adapter");
-            adapter.addCastList(castList);
-            adapter.notifyDataSetChanged();
+        }
+
+        interface HttpCallback {
+            void onResult(Cast[] result);
         }
     }
 }
