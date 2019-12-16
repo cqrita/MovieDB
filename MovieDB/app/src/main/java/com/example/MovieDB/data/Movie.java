@@ -1,14 +1,10 @@
 package com.example.MovieDB.data;
 
-import android.os.Parcel;
-import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 
-import com.squareup.moshi.Json;
-
 import java.util.Arrays;
-import java.util.List;
+
 
 public class Movie {
     private int id;
