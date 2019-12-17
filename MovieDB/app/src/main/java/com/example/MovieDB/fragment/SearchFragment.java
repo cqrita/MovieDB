@@ -133,7 +133,7 @@ public class SearchFragment extends Fragment {
             Api api = new Api();
             String api_key = api.getApikey2();
             Request request = new Request.Builder()
-                    .url("https://api.themoviedb.org/3/search/movie?api_key=" + api_key +
+                    .url("https://api.themoviedb.org/3/search/movie?api_key=" + Api.apikey2 +
                             "&language=ko-KR" + "&query=" + string + "&page=" + page)
                     .build();
             try {

@@ -133,11 +133,9 @@ public class RecommendFragment extends Fragment {
         @Override
         protected Movie[] doInBackground(String... strings) {
             OkHttpClient client = new OkHttpClient();
-            Api api = new Api();
-            String api_key = api.getApikey2();
             Request request = new Request.Builder()
                     .url("https://api.themoviedb.org/3/movie/" + string +
-                            "/recommendations?api_key=" + api_key +
+                            "/recommendations?api_key=" + Api.apikey2 +
                             "&language=ko-KR&page=" + page)
                     .build();
             try {

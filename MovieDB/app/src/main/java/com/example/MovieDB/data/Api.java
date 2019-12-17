@@ -1,17 +1,12 @@
 package com.example.MovieDB.data;
 
-public class Api {
-    //Google
-    private String apikey1 = "AIzaSyAFdyErPaOWanCHYnsUoqkuwi13fKNzykE";
-    //MovieDB
-    private String apikey2 = "ee74e4df4dd623e8eb831f2fd274328f";
 
-    public String getApikey1() {
-        return apikey1;
-    }
+import com.example.MovieDB.BuildConfig;
+
+public final class Api {
+    public static final String apikey2 = BuildConfig.apikey2;
 
     public String getApikey2() {
         return apikey2;
     }
-
 }

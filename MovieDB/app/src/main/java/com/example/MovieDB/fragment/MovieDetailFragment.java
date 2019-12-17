@@ -244,12 +244,9 @@ public class MovieDetailFragment extends Fragment
         @Override
         protected Trailer[] doInBackground(Void... args) {
             String m_id = String.valueOf(ints);
-            Api api = new Api();
-            String api_key = api.getApikey2();
-            Log.d("Trailer", "https://api.themoviedb.org/3/movie/" + m_id + "/videos?api_key=" + api_key);
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
-                    .url("https://api.themoviedb.org/3/movie/"+m_id+"/videos?api_key=ee74e4df4dd623e8eb831f2fd274328f")
+                    .url("https://api.themoviedb.org/3/movie/" + m_id + "/videos?api_key=" + Api.apikey2)
                     .build();
             try {
                 Response response = client.newCall(request).execute();
@@ -294,10 +291,9 @@ public class MovieDetailFragment extends Fragment
         @Override
         protected Cast[] doInBackground(Void... args) {
             String m_id = String.valueOf(ints);
-            Log.d("Cast","https://api.themoviedb.org/3/movie/"+m_id+"/casts?api_key=ee74e4df4dd623e8eb831f2fd274328f&language=ko-KR");
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
-                    .url("https://api.themoviedb.org/3/movie/"+m_id+"/casts?api_key=ee74e4df4dd623e8eb831f2fd274328f&language=ko-KR")
+                    .url("https://api.themoviedb.org/3/movie/" + m_id + "/casts?api_key=" + Api.apikey2 + "&language=ko-KR")
                     .build();
             try {
                 Response response = client.newCall(request).execute();
@@ -342,10 +338,9 @@ public class MovieDetailFragment extends Fragment
         @Override
         protected Review[] doInBackground(Void... args) {
             String m_id = String.valueOf(ints);
-            Log.d("Review","https://api.themoviedb.org/3/movie/"+m_id+"/reviews?api_key=ee74e4df4dd623e8eb831f2fd274328f");
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
-                    .url("https://api.themoviedb.org/3/movie/"+m_id+"/reviews?api_key=ee74e4df4dd623e8eb831f2fd274328f")
+                    .url("https://api.themoviedb.org/3/movie/" + m_id + "/reviews?api_key=" + Api.apikey2)
                     .build();
             try {
                 Response response = client.newCall(request).execute();

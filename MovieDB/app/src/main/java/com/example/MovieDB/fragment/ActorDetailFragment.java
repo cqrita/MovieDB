@@ -4,7 +4,6 @@ package com.example.MovieDB.fragment;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
 import com.example.MovieDB.R;
+import com.example.MovieDB.data.Api;
 import com.example.MovieDB.data.Cast;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -139,10 +139,9 @@ public class ActorDetailFragment extends Fragment {
         @Override
         protected Cast doInBackground(Void... args) {
             String m_id = String.valueOf(ints);
-            Log.d("CastDetail", "https://api.themoviedb.org/3/person/"+m_id+"?api_key=ee74e4df4dd623e8eb831f2fd274328f");
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
-                    .url("https://api.themoviedb.org/3/person/"+m_id+"?api_key=ee74e4df4dd623e8eb831f2fd274328f")
+                    .url("https://api.themoviedb.org/3/person/" + m_id + "?api_key=" + Api.apikey2)
                     .build();
             try {
                 Response response = client.newCall(request).execute();
