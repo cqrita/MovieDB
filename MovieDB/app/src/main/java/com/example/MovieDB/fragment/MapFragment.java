@@ -224,7 +224,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
                 theaterCode = "0"+theaterCode;
             }
 
-            Toast.makeText(getActivity(), "정보창 클릭 Marker ID : " + theaterCode, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "해당 cgv 예매페이지로 이동합니다. ", Toast.LENGTH_SHORT).show();
             mWebView.loadUrl("http://section.cgv.co.kr/theater/timetable/Default.aspx?code=" + theaterCode);
             Log.d("url","http://section.cgv.co.kr/theater/timetable/Default.aspx?code=" + theaterCode);
         }
@@ -238,7 +238,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
             //선택한 타겟위치
             location = marker.getPosition();
             markerTitle = marker.getTitle();
-            Toast.makeText(getActivity(), "마커 클릭 Marker ID : " + markerId + "(" + location.latitude + " " + location.longitude + ")", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), markerTitle + "cgv입니다. 예매페이지로 이동하려면 정보창을 눌러주세요.", Toast.LENGTH_SHORT).show();
             theaterCode = marker.getSnippet();
             return false;
         }
@@ -282,8 +282,45 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         public void onLocationChanged(Location location) { //위치의 변화가 있을 때.
             latitude = location.getLatitude();
             longitude = location.getLongitude();
-            Log.d("Location", "The location is changed");
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 16));
+            Log.d("Here", "The location is changed");
+
+
+            setDB(Objects.requireNonNull(getActivity()));
+            ProductDBHelper mHelper = new ProductDBHelper(getActivity());
+            SQLiteDatabase db = mHelper.getWritableDatabase();
+
+            Cursor cursor = db.rawQuery("SELECT name,lon,lat,theaterCode from theater_address;", null); //쿼리문
+            cursor.moveToFirst();
+            Log.d("cursor1", cursor.getString(0));
+            Log.d("cursor1", String.valueOf(cursor.getDouble(1)));
+
+            double mindistance = 10000000;
+            String nearCGV;
+            double selected_lat = 0;
+            double selected_lon = 0;
+
+
+            if (cursor.moveToFirst()) {
+                Log.d("cursor1", "if statement");
+                // for loop를 통한 n개의 마커 생성
+                for (int idx = 0; idx < 27; idx++) {
+
+                    float cgv_lon = cursor.getFloat(1);
+                    float cgv_lat = cursor.getFloat(2);
+                    double distance = Math.pow((longitude - cgv_lon), 2) + Math.pow((latitude - cgv_lat), 2);
+                    if (distance < mindistance) {
+                        mindistance = distance;
+                        nearCGV = cursor.getString(0);
+                        selected_lat = cgv_lat;
+                        selected_lon = cgv_lon;
+                        Log.d("Here", "min changed to " + nearCGV);
+                    }
+                    cursor.moveToNext();
+                }
+                Log.d("Here", "lat: " + selected_lat);
+
+            }
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(selected_lat, selected_lon), 14));
 
         }
 
