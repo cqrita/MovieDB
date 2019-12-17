@@ -131,9 +131,13 @@ public class SearchActorFragment extends Fragment {
         @Override
         protected Cast[] doInBackground(String... strings) {
             OkHttpClient client = new OkHttpClient();
+            Log.d("string", "https://api.themoviedb" +
+                    ".org/3/search/person?api_key=" +
+                    Api.apikey2 + "&language=ko-KR&query=" + string +
+                    "&page=" + page + "&include_adult=false");
             Request request = new Request.Builder()
                     .url("https://api.themoviedb" +
-                            ".org/3/search/person?api_key=+" +
+                            ".org/3/search/person?api_key=" +
                             Api.apikey2 + "&language=ko-KR&query=" + string +
                             "&page=" + page + "&include_adult=false")
                     .build();
