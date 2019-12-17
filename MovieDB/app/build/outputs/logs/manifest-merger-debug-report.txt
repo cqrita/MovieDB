@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
+ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.android.material:material:1.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.mancj:MaterialSearchBar:0.8.2] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/e022a6cc52aabb0757c7d338b532ca55/jetified-MaterialSearchBar-0.8.2/AndroidManifest.xml:2:1-17:12
 MERGED from [com.mikepenz:materialdrawer:4.0.5] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/5389a29458a18ca5ab14ce0f1d57f49b/jetified-materialdrawer-4.0.5/AndroidManifest.xml:2:1-12:12
@@ -54,41 +54,41 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/yoonseungr
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/3819fb4fef2e012192b32762458ba145/savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/fdd65d8b6066fd289a68b42931dc03a2/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/64ed055c454b36433d45a77285ee24d6/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
 	package
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:3:5-34
-		INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:3:5-34
+		INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
-		INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
+		INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
-		INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:1-26:12
+		INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_COARSE_LOCATION_LOCATION
-ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:4:5-90
+ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:4:5-90
 	android:name
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:4:22-87
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:4:22-87
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:5:5-79
+ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:5:5-79
 	android:name
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:5:22-76
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:5:22-76
 uses-permission#android.permission.INTERNET
-ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:6:5-66
+ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:6:5-66
 MERGED from [com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/7d34aeb7ddb19ff1b3ba84e40e1569ec/core-10.0.5/AndroidManifest.xml:11:5-67
 MERGED from [com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/7d34aeb7ddb19ff1b3ba84e40e1569ec/core-10.0.5/AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/a3d702a77cbfacefb23de82416a0cb1f/play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/a3d702a77cbfacefb23de82416a0cb1f/play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:6:22-64
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:6:22-64
 application
-ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:7:5-24:19
+ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:7:5-24:19
 MERGED from [com.google.android.material:material:1.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.github.mancj:MaterialSearchBar:0.8.2] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/e022a6cc52aabb0757c7d338b532ca55/jetified-MaterialSearchBar-0.8.2/AndroidManifest.xml:11:5-15:19
@@ -116,43 +116,43 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/yoon
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:10:9-41
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:11:9-54
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:11:9-54
 	android:icon
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:9:9-43
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:8:9-35
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:13:9-40
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:13:9-40
 	android:networkSecurityConfig
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:14:9-69
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:14:9-69
 activity#com.example.MovieDB.MainActivity
-ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:15:9-20:20
+ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:15:9-20:20
 	android:name
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:15:19-47
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:15:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:16:13-19:29
+ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:16:13-19:29
 action#android.intent.action.MAIN
-ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:17:17-69
+ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:17:25-66
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:18:17-77
+ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:18:27-74
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:18:27-74
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:21:9-23:71
+ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:21:9-23:71
 	android:value
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:23:13-68
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:23:13-68
 	android:name
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:22:13-58
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml:22:13-58
 uses-sdk
-INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
-INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
 MERGED from [com.google.android.material:material:1.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.github.mancj:MaterialSearchBar:0.8.2] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/e022a6cc52aabb0757c7d338b532ca55/jetified-MaterialSearchBar-0.8.2/AndroidManifest.xml:7:5-9:41
@@ -253,16 +253,16 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/yoonseungrok/.gradle/
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/fdd65d8b6066fd289a68b42931dc03a2/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/64ed055c454b36433d45a77285ee24d6/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/64ed055c454b36433d45a77285ee24d6/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
-INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
-		ADDED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/yoonseungrok/FinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yoonseungrok/FinalFinalFinalFinal/MovieDB/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/7d34aeb7ddb19ff1b3ba84e40e1569ec/core-10.0.5/AndroidManifest.xml:12:5-79
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/yoonseungrok/.gradle/caches/transforms-2/files-2.1/a3d702a77cbfacefb23de82416a0cb1f/play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
