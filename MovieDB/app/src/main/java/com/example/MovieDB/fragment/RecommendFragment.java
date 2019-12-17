@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.MovieDB.R;
 import com.example.MovieDB.adapter.MovieListAdapter;
+import com.example.MovieDB.data.Api;
 import com.example.MovieDB.data.Movie;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -132,8 +133,12 @@ public class RecommendFragment extends Fragment {
         @Override
         protected Movie[] doInBackground(String... strings) {
             OkHttpClient client = new OkHttpClient();
+            Api api = new Api();
+            String api_key = api.getApikey2();
             Request request = new Request.Builder()
-                    .url("https://api.themoviedb.org/3/movie/"+string+"/recommendations?api_key=ee74e4df4dd623e8eb831f2fd274328f&language=ko-KR&page="+page)
+                    .url("https://api.themoviedb.org/3/movie/" + string +
+                            "/recommendations?api_key=" + api_key +
+                            "&language=ko-KR&page=" + page)
                     .build();
             try {
                 Response response = client.newCall(request).execute();

@@ -27,6 +27,7 @@ import com.example.MovieDB.R;
 import com.example.MovieDB.adapter.CastAdapter;
 import com.example.MovieDB.adapter.ReviewsAdapter;
 import com.example.MovieDB.adapter.TrailersAdapter;
+import com.example.MovieDB.data.Api;
 import com.example.MovieDB.data.Cast;
 import com.example.MovieDB.data.Movie;
 import com.example.MovieDB.data.Review;
@@ -243,7 +244,9 @@ public class MovieDetailFragment extends Fragment
         @Override
         protected Trailer[] doInBackground(Void... args) {
             String m_id = String.valueOf(ints);
-            Log.d("Trailer","https://api.themoviedb.org/3/movie/"+m_id+"/videos?api_key=ee74e4df4dd623e8eb831f2fd274328f");
+            Api api = new Api();
+            String api_key = api.getApikey2();
+            Log.d("Trailer", "https://api.themoviedb.org/3/movie/" + m_id + "/videos?api_key=" + api_key);
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
                     .url("https://api.themoviedb.org/3/movie/"+m_id+"/videos?api_key=ee74e4df4dd623e8eb831f2fd274328f")
